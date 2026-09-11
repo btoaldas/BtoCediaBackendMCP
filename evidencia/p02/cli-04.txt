@@ -1,0 +1,50 @@
+=== Procesando Validación de Lista de Usuarios ===
+
+[1] Usuario: 'alberto_adm' [ADMIN] | Estado General: ✗ INVÁLIDO
+    - Email:    'alberto@empresa.com' -> ✓ OK
+    - Password: [Robustez: Fuerte (Opcional - Admin)] -> ✓ OK
+    - Alerta de lote/cuenta: El correo 'alberto@empresa.com' está duplicado en el lote.
+-----------------------------------------------------------------
+[2] Usuario: 'admin_sso' [ADMIN] | Estado General: ✓ VÁLIDO
+    - Email:    'sso.admin@empresa.com' -> ✓ OK
+    - Password: [Robustez: Opcional (Sin contraseña)] -> ✓ OK
+-----------------------------------------------------------------
+[3] Usuario: 'admin_temporal' [ADMIN] | Estado General: ✓ VÁLIDO
+    - Email:    'admin.temp@empresa.com' -> ✓ OK
+    - Password: [Robustez: Débil (Opcional - Admin)] -> ✓ OK
+-----------------------------------------------------------------
+[4] Usuario: 'maria_dev' [ESTÁNDAR] | Estado General: ✓ VÁLIDO
+    - Email:    'maria.gonzalez@dominio.org' -> ✓ OK
+    - Password: [Robustez: Fuerte] -> ✓ OK
+-----------------------------------------------------------------
+[5] Usuario: 'carlos_qa' [ESTÁNDAR] | Estado General: ✗ INVÁLIDO
+    - Email:    'carlos..invalido@dominio.com' -> ✗ ERROR
+        * La parte local no puede contener puntos consecutivos.
+    - Password: [Robustez: Media] -> ✗ ERROR
+        * Contiene un patrón trivial o inseguro: 'password'.
+-----------------------------------------------------------------
+[6] Usuario: 'lucia_ops' [ESTÁNDAR] | Estado General: ✗ INVÁLIDO
+    - Email:    'lucia@sub.empresa.co.uk' -> ✓ OK
+    - Password: [Robustez: Débil] -> ✗ ERROR
+        * Debe tener al menos 8 caracteres (actual: 5).
+        * Debe contener al menos una letra mayúscula.
+        * Debe contener al menos un número.
+        * Debe contener al menos un carácter especial.
+-----------------------------------------------------------------
+[7] Usuario: 'usuario_duplicado' [ESTÁNDAR] | Estado General: ✗ INVÁLIDO
+    - Email:    'alberto@empresa.com' -> ✓ OK
+    - Password: [Robustez: Fuerte] -> ✓ OK
+    - Alerta de lote/cuenta: El correo 'alberto@empresa.com' está duplicado en el lote.
+-----------------------------------------------------------------
+[8] Usuario: '' [ESTÁNDAR] | Estado General: ✗ INVÁLIDO
+    - Email:    'sin_arroba.net' -> ✗ ERROR
+        * Falta el carácter '@'.
+    - Password: [Robustez: Media] -> ✗ ERROR
+        * Contiene un patrón trivial o inseguro: 'password'.
+    - Alerta de lote/cuenta: El nombre de usuario no puede estar vacío.
+-----------------------------------------------------------------
+
+=== Resumen de Ejecución ===
+Total procesados:   8
+Usuarios válidos:   3
+Usuarios inválidos: 5

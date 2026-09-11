@@ -1,0 +1,13 @@
+SEGUNDA REPRODUCCIÓN DE LA FALLA — entrada JSON sintética
+EJECUCIÓN UTC: 2026-09-11T00:54:53.014011+00:00
+{"username":"usuario_entrada","email":"entrada@example.com","password":"12345","is_admin":"false"}
+tipo is_admin: str
+validez contraseña directa: False
+validez usuario en lote: True
+Traceback (most recent call last):
+  File "<PROJECT_ROOT>/s3/demostrar_falla.py", line 19, in <module>
+    assert not result.is_valid, "FALLA: el texto 'false' activa la exención de administrador"
+           ^^^^^^^^^^^^^^^^^^^
+AssertionError: FALLA: el texto 'false' activa la exención de administrador
+
+EXIT_CODE=1

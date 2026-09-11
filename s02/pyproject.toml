@@ -1,0 +1,13 @@
+[project]
+name = "course-gemini-memory"
+version = "0.1.0"
+description = "Gemini conversation memory and bounded error recovery laboratory"
+requires-python = ">=3.12,<3.13"
+dependencies = ["google-genai>=1.0", "python-dotenv>=1.0"]
+
+[dependency-groups]
+dev = ["pytest>=8", "pytest-cov>=5"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

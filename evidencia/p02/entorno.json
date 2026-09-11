@@ -1,0 +1,11 @@
+{
+  "recorded_at_utc": "2026-09-11T00:35:00.324792+00:00",
+  "python": "Python 3.12.13",
+  "uv": "uv 0.11.14 (3fdfdc7d4 2026-05-12 aarch64-apple-darwin)",
+  "initial_files": {
+    "pyproject.toml": "499014fa6a1c975efcc1e58ea758b973c44befd5677c5e296a378bd3e7257b32",
+    "README.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    ".python-version": "7b55f8e67b5623c4bef3fa691288da9437d79d3aba156de48d481db32ac7d16d",
+    "main.py": "2c9df40c2dcf0eeec387673c3e3e41f4c3d97e9f0b7f5504388008255e2f0c54"
+  }
+}

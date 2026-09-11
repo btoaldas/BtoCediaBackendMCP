@@ -1,0 +1,10 @@
+RONDA 3 — predicción previa en evidencia/p02/prediccion-03.json
+EJECUCIÓN UTC: 2026-09-11T00:52:26.848119+00:00
+DOS USUARIOS AGREGADOS; LISTA COMPLETA (datos sintéticos):
+[{"username": "usuario_1", "email": "ana@example.com", "password": "Ab3!xy7Z"}, {"username": "usuario_2", "email": "bruno@example.com", "password": "K9#mQ!9vLp@4WxZ"}]
+{"usuario": "usuario_1", "valido": true, "email": {"is_valid": true, "errors": [], "strength": null}, "password": {"is_valid": true, "errors": [], "strength": "Fuerte"}, "errores_extra": []}
+{"usuario": "usuario_2", "valido": true, "email": {"is_valid": true, "errors": [], "strength": null}, "password": {"is_valid": true, "errors": [], "strength": "Fuerte"}, "errores_extra": []}
+REGRESIÓN: 6 contraseñas + 3 emails conservan resultado.
+REGLA NO PEDIDA: email duplicado invalida ambos usuarios: ["El correo 'dup@example.com' está duplicado en el lote."]
+REGLA NO PEDIDA: username vacío rechazado: ['El nombre de usuario no puede estar vacío.']
+Prueba terminada: lista en memoria con dataclass User y resultados por campo.

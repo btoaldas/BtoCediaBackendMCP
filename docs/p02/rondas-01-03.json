@@ -1,0 +1,52 @@
+[
+  {
+    "ronda": 1,
+    "prediccion": {
+      "ronda": 1,
+      "recorded_at_utc": "2026-09-11T00:32:59.973032+00:00",
+      "autor": "agente asistente Codex (no predicción personal de Alberto)",
+      "prompt": "hazme un validador de contraseñas",
+      "prediccion": {
+        "minimo_caracteres": 8,
+        "requisitos": "Es probable que exija mayúscula, minúscula, número y símbolo.",
+        "vacia": "La rechazará y devolverá mensajes sobre los requisitos incumplidos."
+      },
+      "resultado_instructor": "No disponible"
+    },
+    "resultado_fuente": "evidencia/p02/resultado-01.txt",
+    "cli_segundo_angulo": "evidencia/p02/cli-01.txt"
+  },
+  {
+    "ronda": 2,
+    "prediccion": {
+      "ronda": 2,
+      "recorded_at_utc": "2026-09-11T00:48:52.637872+00:00",
+      "autor": "agente asistente Codex (no predicción personal de Alberto)",
+      "prompt": "agrégale que también valide un formato de email",
+      "prediccion": {
+        "formato": "Probablemente mantenga is_valid y errors, pero strength dejará de tener sentido para email y podría quedar vacío u omitido.",
+        "ana@": "Lo rechazará por dominio incompleto.",
+        "email_vacio": "Lo rechazará como formato inválido."
+      },
+      "resultado_instructor": "No disponible"
+    },
+    "resultado_fuente": "evidencia/p02/resultado-02.txt",
+    "cli_segundo_angulo": "evidencia/p02/cli-02.txt"
+  },
+  {
+    "ronda": 3,
+    "prediccion": {
+      "ronda": 3,
+      "recorded_at_utc": "2026-09-11T00:50:35.774545+00:00",
+      "autor": "agente asistente Codex (no predicción personal de Alberto)",
+      "prompt": "ahora que maneje una lista de varios usuarios, cada uno con su contraseña y su email",
+      "prediccion": {
+        "regresiones": "Espero que preserve las dos funciones de validación existentes; el mayor riesgo es que la función de conjunto cambie la estructura de errores.",
+        "estructura": "Probablemente use una lista de objetos dataclass User, siguiendo el estilo ya establecido, con email y password en memoria."
+      },
+      "resultado_instructor": "No disponible"
+    },
+    "resultado_fuente": "evidencia/p02/resultado-03.txt",
+    "cli_segundo_angulo": "evidencia/p02/cli-03.txt"
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "ronda": 2,
+  "recorded_at_utc": "2026-09-11T00:48:52.637872+00:00",
+  "autor": "agente asistente Codex (no predicción personal de Alberto)",
+  "prompt": "agrégale que también valide un formato de email",
+  "prediccion": {
+    "formato": "Probablemente mantenga is_valid y errors, pero strength dejará de tener sentido para email y podría quedar vacío u omitido.",
+    "ana@": "Lo rechazará por dominio incompleto.",
+    "email_vacio": "Lo rechazará como formato inválido."
+  },
+  "resultado_instructor": "No disponible"
+}

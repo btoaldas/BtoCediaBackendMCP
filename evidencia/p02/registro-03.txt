@@ -1,0 +1,20 @@
+REGISTRO DE EJECUCIÓN REAL — extracto renderizado; no captura de UI
+PRÁCTICA 2 / RONDA 3
+Autor de predicción: agente asistente Codex; no vivencia atribuida al estudiante.
+PREDICCIÓN PREVIA UTC: 2026-09-11T00:50:35.774545+00:00
+PEDIDO LITERAL: ahora que maneje una lista de varios usuarios, cada uno con su contraseña y su email
+regresiones: Espero que preserve las dos funciones de validación existentes; el mayor riesgo es que la función de conjunto cambie la estructura de errores.
+estructura: Probablemente use una lista de objetos dataclass User, siguiendo el estilo ya establecido, con email y password en memoria.
+
+EXTRACTO DE SALIDA PYTHON REAL:
+EJECUCIÓN UTC: 2026-09-11T00:52:26.848119+00:00
+DOS USUARIOS AGREGADOS; LISTA COMPLETA (datos sintéticos):
+[{"username": "usuario_1", "email": "ana@example.com", "password": "Ab3!xy7Z"}, {"username": "usuario_2", "email": "bruno@example.com", "password": "K9#mQ!9vLp@4WxZ"}]
+{"usuario": "usuario_1", "valido": true, "email": {"is_valid": true, "errors": [], "strength": null}, "password": {"is_valid": true, "errors": [], "strength": "Fuerte"}, "errores_extra": []}
+{"usuario": "usuario_2", "valido": true, "email": {"is_valid": true, "errors": [], "strength": null}, "password": {"is_valid": true, "errors": [], "strength": "Fuerte"}, "errores_extra": []}
+REGRESIÓN: 6 contraseñas + 3 emails conservan resultado.
+REGLA NO PEDIDA: email duplicado invalida ambos usuarios: ["El correo 'dup@example.com' está duplicado en el lote."]
+REGLA NO PEDIDA: username vacío rechazado: ['El nombre de usuario no puede estar vacío.']
+
+Fuentes originales: prediccion-03.json; resultado-03.txt
+Comparación con el instructor: no disponible.

@@ -1,0 +1,67 @@
+Run started UTC: 2026-09-11T00:51:20.175687+00:00
+Source: actual Gemini API execution
+
+REAL_PROVIDER_RATE_LIMIT model=gemini-2.5-flash maximum_requests=20 time=2026-09-11T00:51:20.463033+00:00
+REQUEST 1
+USAGE prompt=33 output=2 total_token_count=35 finish=FinishReason.STOP
+OK.
+REQUEST 2
+USAGE prompt=33 output=2 total_token_count=35 finish=FinishReason.STOP
+OK.
+REQUEST 3
+USAGE prompt=33 output=1 total_token_count=34 finish=FinishReason.STOP
+OK
+REQUEST 4
+USAGE prompt=33 output=2 total_token_count=35 finish=FinishReason.STOP
+OK.
+REQUEST 5
+USAGE prompt=33 output=2 total_token_count=35 finish=FinishReason.STOP
+OK.
+REQUEST 6
+USAGE prompt=33 output=2 total_token_count=35 finish=FinishReason.STOP
+OK.
+REQUEST 7
+USAGE prompt=33 output=2 total_token_count=35 finish=FinishReason.STOP
+OK.
+REQUEST 8
+USAGE prompt=33 output=2 total_token_count=35 finish=FinishReason.STOP
+OK.
+REQUEST 9
+USAGE prompt=33 output=2 total_token_count=35 finish=FinishReason.STOP
+OK.
+REQUEST 10
+USAGE prompt=33 output=2 total_token_count=35 finish=FinishReason.STOP
+OK.
+REQUEST 11
+USAGE prompt=33 output=2 total_token_count=35 finish=FinishReason.STOP
+OK.
+REQUEST 12
+USAGE prompt=33 output=2 total_token_count=35 finish=FinishReason.STOP
+OK.
+REQUEST 13
+USAGE prompt=33 output=2 total_token_count=35 finish=FinishReason.STOP
+OK.
+REQUEST 14
+USAGE prompt=33 output=2 total_token_count=35 finish=FinishReason.STOP
+OK.
+REQUEST 15
+USAGE prompt=33 output=2 total_token_count=35 finish=FinishReason.STOP
+OK.
+REQUEST 16
+USAGE prompt=33 output=2 total_token_count=35 finish=FinishReason.STOP
+OK.
+REQUEST 17
+USAGE prompt=33 output=2 total_token_count=35 finish=FinishReason.STOP
+OK.
+REQUEST 18
+USAGE prompt=33 output=2 total_token_count=35 finish=FinishReason.STOP
+OK.
+REQUEST 19
+USAGE prompt=33 output=2 total_token_count=35 finish=FinishReason.STOP
+OK.
+REQUEST 20
+USAGE prompt=33 output=2 total_token_count=35 finish=FinishReason.STOP
+OK.
+RATE_LIMIT_OBSERVED=False: no 429 occurred within the bounded experiment.
+
+Process exit: 2

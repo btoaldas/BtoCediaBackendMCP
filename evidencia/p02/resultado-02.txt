@@ -1,0 +1,12 @@
+RONDA 2 — predicción previa en evidencia/p02/prediccion-02.json
+EJECUCIÓN UTC: 2026-09-11T00:50:35.715053+00:00
+{"email": "ana@correo.com", "result": {"is_valid": true, "errors": [], "strength": null}}
+{"email": "ana@", "result": {"is_valid": false, "errors": ["El dominio (después del '@') no puede estar vacío."], "strength": null}}
+{"email": "", "result": {"is_valid": false, "errors": ["La dirección de correo no puede estar vacía."], "strength": null}}
+{"regresion_contrasena": "12345", "sin_cambios": true}
+{"regresion_contrasena": "password", "sin_cambios": true}
+{"regresion_contrasena": "", "sin_cambios": true}
+{"regresion_contrasena": "Ab3!xy7", "sin_cambios": true}
+{"regresion_contrasena": "Ab3!xy7Z", "sin_cambios": true}
+{"regresion_contrasena": "Password1!", "sin_cambios": true}
+3 emails comprobados y 6 regresiones de contraseña sin diferencias.

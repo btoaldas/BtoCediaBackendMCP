@@ -1,0 +1,3 @@
+hazme un validador de contraseñas
+
+Nota operativa del entorno: no uses herramientas, no leas archivos, no escribas archivos y no ejecutes comandos. Devuelve el código Python en tu respuesta; el operador lo guardará y ejecutará.

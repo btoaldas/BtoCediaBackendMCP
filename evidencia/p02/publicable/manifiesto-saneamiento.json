@@ -1,0 +1,8 @@
+{
+  "original_conservado": "falla-reproducida.txt",
+  "derivado_publicable": "publicable/falla-reproducida.txt",
+  "transformacion": "Prefijo absoluto de la carpeta del proyecto sustituido por <PROJECT_ROOT>; contenido restante intacto.",
+  "sha256_original": "d89b8d701e572de30d1cecf62f7009437356d2e9a1fda968edb62615f4ac470d",
+  "sha256_derivado": "b447ea57a8472e86111d677f3ae37293b9fe59d88cb03bf75608ed948e1b1e95",
+  "codigo_generado_modificado": false
+}

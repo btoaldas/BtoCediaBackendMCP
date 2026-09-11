@@ -1,0 +1,211 @@
+{
+  "version": 1,
+  "creado_utc": "2026-09-11T01:16:56.721397+00:00",
+  "creado_local": "2026-09-10T20:16:56.721397-05:00",
+  "metodo": "Capturas reales de la página local usando FireShot instalado en Microsoft Edge, operado mediante CUA nativo. Guardar como imagen en diálogo macOS. Copia binaria sin recorte, edición ni re-renderización posterior.",
+  "url_visor": "http://127.0.0.1:8932/visor-evidencia.html",
+  "tab_id": "1621279694",
+  "visor_sha256": "b8dccc83520f6ad643f4e8cb167f56ea22880d17dcabb1cd82e3d1a10b82cc57",
+  "naturaleza": "Captura de pantalla real del visor de registros renderizados a partir de ejecuciones reales y predicciones prospectivas del asistente. No es captura de terminal, de la interacción original con agy, ni del aula/instructor. No acredita participación sincrónica del estudiante.",
+  "nota_temporal": "El visor preservado dice comparación con instructor no disponible: corresponde al estado del registro mostrado, no afirma que la posterior revisión de la grabación siga pendiente. Incorporar las conclusiones posteriores aparte sin alterar esta captura.",
+  "qa": [
+    "Las cuatro imágenes PNG se abrieron e inspeccionaron visualmente tras descargarse.",
+    "Las tres capturas por sección contienen encabezado, predicción, resultado y fuentes legibles; la de cierre incluye el fallo observado y EXIT_CODE=1.",
+    "La captura completa contiene las tres rondas y el cierre.",
+    "Copias verificadas byte a byte iguales a los originales; formato PNG íntegro.",
+    "Zoom de la pestaña local restaurado a 100% al terminar."
+  ],
+  "archivos": [
+    {
+      "archivo": "captura-visor-p02-completo-20260910.png",
+      "original": "Downloads/FireShot/captura-visor-p02-completo-20260910.png",
+      "sha256": "d653286247ea2d544b56a5a916b90378cf0a76ea704050959f8a094e1fd02afb",
+      "bytes": 3046995,
+      "dimensiones_px": [
+        2236,
+        6645
+      ],
+      "fireshot_capture_id": 21,
+      "zoom_pagina_porcentaje": 100,
+      "alcance": "pagina_completa",
+      "rondas": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "archivo_descargado_mtime_utc": "2026-09-11T01:07:27.320729+00:00",
+      "fuentes_del_registro": [
+        {
+          "archivo": "registro-01.png",
+          "sha256": "31db0555c1dee88f9e6bf7ad1308b173c7b0246d0781e741470febca1e872caa"
+        },
+        {
+          "archivo": "registro-01.txt",
+          "sha256": "938ac5f378c23aa537ca6440d3e8760d082b91e3429cfb2ab6f5cd2d49513775"
+        },
+        {
+          "archivo": "prediccion-01.json",
+          "sha256": "1ed43370464a1dcd9d749dc432636d4fe3f2a76b7c1d296d870cba6df924e82a"
+        },
+        {
+          "archivo": "resultado-01.txt",
+          "sha256": "0ddd95771828df13e5c1805b251ad4e21aa34080cf6ad9a5d04584e6fa362506"
+        },
+        {
+          "archivo": "registro-02.png",
+          "sha256": "7a072fd227310b5777dfdba06d85d3db51ce26f2ed2c2415ba4f99630e8a4b24"
+        },
+        {
+          "archivo": "registro-02.txt",
+          "sha256": "205e368294179f64dc9a911d499e98348534c58492b5e2786684b5223ff0fff1"
+        },
+        {
+          "archivo": "prediccion-02.json",
+          "sha256": "76faf6216a66efc040d8d7e1c03ab2f18f1e900a631028f063e788750ab5a67c"
+        },
+        {
+          "archivo": "resultado-02.txt",
+          "sha256": "5d39b5f386ea882cbf275a77e796a6cc7cb4b112bc4568f92a26f48bb5010e24"
+        },
+        {
+          "archivo": "registro-03.png",
+          "sha256": "01b21ee4305d745128d5c22cfbd8b098dfe70787661806de19b007b158cd37e4"
+        },
+        {
+          "archivo": "registro-03.txt",
+          "sha256": "d58a30999bab5feac2fa5171871cd73196e6faf45f09f0b75dd0d76494240c1b"
+        },
+        {
+          "archivo": "prediccion-03.json",
+          "sha256": "530d8151d8d55bf7b9096dc4995428e7bd8bee548691998c183e9462c0fcba8d"
+        },
+        {
+          "archivo": "resultado-03.txt",
+          "sha256": "08a23c0dfb8e20c6561e4450223a054b883b3ea9d61211919440bbafbc9ad6f1"
+        },
+        {
+          "archivo": "registro-04.png",
+          "sha256": "807949b737850f01f86c12e8d53d453daf46d810eda05b55bf215e21a7d561c0"
+        },
+        {
+          "archivo": "registro-04.txt",
+          "sha256": "19e4ebb02da37b40abc77bd56eebf9bc2fe70a7769a9bfdb83ad9a0d63971f71"
+        },
+        {
+          "archivo": "prediccion-04.json",
+          "sha256": "b0eddb6041cb033ccc43ea641e39202b0f50f156081c0170ddbab529cc004304"
+        },
+        {
+          "archivo": "resultado-04.txt",
+          "sha256": "19662a423275e8f6f32dbe82f2672f1e805fc35031f7d45b627a81884c0bfcc8"
+        }
+      ]
+    },
+    {
+      "archivo": "captura-visor-p02-ronda-1-20260910.png",
+      "original": "Downloads/FireShot/captura-visor-p02-ronda-1-20260910.png",
+      "sha256": "b7810c3ad33a8b839c768f62ea8e9e9c79ef8c24df11956110414a6193ce4ccb",
+      "bytes": 719602,
+      "dimensiones_px": [
+        3008,
+        1450
+      ],
+      "fireshot_capture_id": 25,
+      "zoom_pagina_porcentaje": 75,
+      "alcance": "area_visible",
+      "rondas": [
+        1
+      ],
+      "archivo_descargado_mtime_utc": "2026-09-11T01:12:55.670533+00:00",
+      "fuentes_del_registro": [
+        {
+          "archivo": "registro-01.png",
+          "sha256": "31db0555c1dee88f9e6bf7ad1308b173c7b0246d0781e741470febca1e872caa"
+        },
+        {
+          "archivo": "registro-01.txt",
+          "sha256": "938ac5f378c23aa537ca6440d3e8760d082b91e3429cfb2ab6f5cd2d49513775"
+        },
+        {
+          "archivo": "prediccion-01.json",
+          "sha256": "1ed43370464a1dcd9d749dc432636d4fe3f2a76b7c1d296d870cba6df924e82a"
+        },
+        {
+          "archivo": "resultado-01.txt",
+          "sha256": "0ddd95771828df13e5c1805b251ad4e21aa34080cf6ad9a5d04584e6fa362506"
+        }
+      ]
+    },
+    {
+      "archivo": "captura-visor-p02-ronda-2-20260910.png",
+      "original": "Downloads/FireShot/captura-visor-p02-ronda-2-20260910.png",
+      "sha256": "b6ae98d20e9a84abfa43bc7a7978a742f1eba8abe69000318037beb457b0e9b9",
+      "bytes": 593683,
+      "dimensiones_px": [
+        3008,
+        1450
+      ],
+      "fireshot_capture_id": 26,
+      "zoom_pagina_porcentaje": 75,
+      "alcance": "area_visible",
+      "rondas": [
+        2
+      ],
+      "archivo_descargado_mtime_utc": "2026-09-11T01:13:58.765055+00:00",
+      "fuentes_del_registro": [
+        {
+          "archivo": "registro-02.png",
+          "sha256": "7a072fd227310b5777dfdba06d85d3db51ce26f2ed2c2415ba4f99630e8a4b24"
+        },
+        {
+          "archivo": "registro-02.txt",
+          "sha256": "205e368294179f64dc9a911d499e98348534c58492b5e2786684b5223ff0fff1"
+        },
+        {
+          "archivo": "prediccion-02.json",
+          "sha256": "76faf6216a66efc040d8d7e1c03ab2f18f1e900a631028f063e788750ab5a67c"
+        },
+        {
+          "archivo": "resultado-02.txt",
+          "sha256": "5d39b5f386ea882cbf275a77e796a6cc7cb4b112bc4568f92a26f48bb5010e24"
+        }
+      ]
+    },
+    {
+      "archivo": "captura-visor-p02-cierre-20260910.png",
+      "original": "Downloads/FireShot/captura-visor-p02-cierre-20260910.png",
+      "sha256": "0d265a43bd96d36b1793181d7ff80af58670cceda811a91eae76a7814c27b3f6",
+      "bytes": 822315,
+      "dimensiones_px": [
+        3008,
+        1450
+      ],
+      "fireshot_capture_id": 27,
+      "zoom_pagina_porcentaje": 67,
+      "alcance": "area_visible",
+      "rondas": [
+        4
+      ],
+      "archivo_descargado_mtime_utc": "2026-09-11T01:15:06.138225+00:00",
+      "fuentes_del_registro": [
+        {
+          "archivo": "registro-04.png",
+          "sha256": "807949b737850f01f86c12e8d53d453daf46d810eda05b55bf215e21a7d561c0"
+        },
+        {
+          "archivo": "registro-04.txt",
+          "sha256": "19e4ebb02da37b40abc77bd56eebf9bc2fe70a7769a9bfdb83ad9a0d63971f71"
+        },
+        {
+          "archivo": "prediccion-04.json",
+          "sha256": "b0eddb6041cb033ccc43ea641e39202b0f50f156081c0170ddbab529cc004304"
+        },
+        {
+          "archivo": "resultado-04.txt",
+          "sha256": "19662a423275e8f6f32dbe82f2672f1e805fc35031f7d45b627a81884c0bfcc8"
+        }
+      ]
+    }
+  ]
+}

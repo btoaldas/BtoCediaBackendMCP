@@ -1,0 +1,252 @@
+REAL_PROVIDER_RATE_LIMIT model=gemini-2.5-flash maximum_logical_requests=20 protocol=guide_count_with_history time=2026-09-11T00:58:00.114555+00:00
+REQUEST 1
+USAGE prompt=33 output=1 total_token_count=34 finish=FinishReason.STOP
+1
+REQUEST 2
+USAGE prompt=41 output=3 total_token_count=44 finish=FinishReason.STOP
+1
+2
+REQUEST 3
+USAGE prompt=51 output=5 total_token_count=56 finish=FinishReason.STOP
+1
+2
+3
+REQUEST 4
+USAGE prompt=63 output=7 total_token_count=70 finish=FinishReason.STOP
+1
+2
+3
+4
+REQUEST 5
+USAGE prompt=77 output=9 total_token_count=86 finish=FinishReason.STOP
+1
+2
+3
+4
+5
+REQUEST 6
+USAGE prompt=93 output=11 total_token_count=104 finish=FinishReason.STOP
+1
+2
+3
+4
+5
+6
+REQUEST 7
+USAGE prompt=111 output=13 total_token_count=124 finish=FinishReason.STOP
+1
+2
+3
+4
+5
+6
+7
+REQUEST 8
+USAGE prompt=131 output=15 total_token_count=146 finish=FinishReason.STOP
+1
+2
+3
+4
+5
+6
+7
+8
+REQUEST 9
+USAGE prompt=153 output=17 total_token_count=170 finish=FinishReason.STOP
+1
+2
+3
+4
+5
+6
+7
+8
+9
+REQUEST 10
+USAGE prompt=178 output=20 total_token_count=198 finish=FinishReason.STOP
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+REQUEST 11
+USAGE prompt=198 output=23 total_token_count=221 finish=FinishReason.STOP
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+REQUEST 12
+USAGE prompt=219 output=26 total_token_count=245 finish=FinishReason.STOP
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+REQUEST 13
+USAGE prompt=241 output=29 total_token_count=270 finish=FinishReason.STOP
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+REQUEST 14
+USAGE prompt=264 output=32 total_token_count=296 finish=FinishReason.STOP
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+REQUEST 15
+USAGE prompt=288 output=35 total_token_count=323 finish=FinishReason.STOP
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+REQUEST 16
+USAGE prompt=313 output=38 total_token_count=351 finish=FinishReason.STOP
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+REQUEST 17
+USAGE prompt=339 output=41 total_token_count=380 finish=FinishReason.STOP
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+REQUEST 18
+USAGE prompt=366 output=44 total_token_count=410 finish=FinishReason.STOP
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+REQUEST 19
+USAGE prompt=394 output=47 total_token_count=441 finish=FinishReason.STOP
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+REQUEST 20
+USAGE prompt=421 output=50 total_token_count=471 finish=FinishReason.STOP
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+RATE_LIMIT_OBSERVED=False: no 429 occurred within the bounded experiment.

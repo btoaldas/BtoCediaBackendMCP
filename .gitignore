@@ -10,3 +10,25 @@ __pycache__/
 privado/
 materiales/
 CLAUDE.local.md
+
+# Local authenticated CLI state
+.antigravitycli/
+
+# Provider debug logs and local test caches
+*provider.log
+.coverage
+.coverage.*
+.ruff_cache/
+
+# Student reports and raw session evidence stay local
+informes/
+evidencia-p03-init.txt
+evidencia/p02/agy-ronda-01*.meta.json
+evidencia/p02/onboarding-autorizado.txt
+evidencia/p02/telemetry-verificado.txt
+evidencia/p02/falla-reproducida.txt
+evidencia/p03-p04/*.log
+evidencia/p03-p04/phase-snapshots/
+s4/mi-proyecto-speckit/tdd-logs/
+evidencia/p03-p04/entorno-fresco/
+s4/mi-proyecto-speckit/.agents/skills/qa-report/generar_reporte_guia_original.py

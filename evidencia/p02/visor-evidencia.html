@@ -1,0 +1,81 @@
+<!doctype html><html lang="es"><meta charset="utf-8"><title>Práctica 2 — evidencia real</title><style>body{font:18px system-ui;margin:2rem;background:#eef3f5;color:#153342}h1{font-size:30px}article{background:white;padding:25px;margin:30px auto;max-width:1400px;border:1px solid #bbcbd1}img{width:100%;height:auto}pre{white-space:pre-wrap;font:15px monospace}a{color:#165a78}</style><h1>Práctica 2: evolución registrada</h1><p>Predicciones del asistente antes de cada llamada real a agy. No se afirma participación sincrónica ni comparación disponible con el instructor.</p><nav><a href="#ronda-1">Ronda 1</a> · <a href="#ronda-2">Ronda 2</a> · <a href="#ronda-3">Ronda 3</a> · <a href="#ronda-4">Cierre</a></nav><article id="ronda-1"><h2>PRÁCTICA 2 / RONDA 1</h2><p>Visor de evidencia conservada. La imagen es un registro renderizado de logs reales.</p><img src="registro-01.png" alt="Registro de la ronda 1"><details><summary>Fuente textual completa del registro</summary><pre>REGISTRO DE EJECUCIÓN REAL — extracto renderizado; no captura de UI
+PRÁCTICA 2 / RONDA 1
+Autor de predicción: agente asistente Codex; no vivencia atribuida al estudiante.
+PREDICCIÓN PREVIA UTC: 2026-09-11T00:32:59.973032+00:00
+PEDIDO LITERAL: hazme un validador de contraseñas
+minimo_caracteres: 8
+requisitos: Es probable que exija mayúscula, minúscula, número y símbolo.
+vacia: La rechazará y devolverá mensajes sobre los requisitos incumplidos.
+
+EXTRACTO DE SALIDA PYTHON REAL:
+EJECUCIÓN UTC: 2026-09-11T00:48:03.476228+00:00
+{&quot;input&quot;: &quot;12345&quot;, &quot;result&quot;: {&quot;is_valid&quot;: false, &quot;errors&quot;: [&quot;Debe tener al menos 8 caracteres (actual: 5).&quot;, &quot;Debe contener al menos una letra mayúscula.&quot;, &quot;Debe contener al menos una letra minúscula.&quot;, &quot;Debe contener al menos un carácter especial.&quot;], &quot;strength&quot;: &quot;Débil&quot;}}
+{&quot;input&quot;: &quot;password&quot;, &quot;result&quot;: {&quot;is_valid&quot;: false, &quot;errors&quot;: [&quot;Debe contener al menos una letra mayúscula.&quot;, &quot;Debe contener al menos un número.&quot;, &quot;Debe contener al menos un carácter especial.&quot;, &quot;Contiene un patrón trivial o inseguro: &#x27;password&#x27;.&quot;], &quot;strength&quot;: &quot;Débil&quot;}}
+{&quot;input&quot;: &quot;&quot;, &quot;result&quot;: {&quot;is_valid&quot;: false, &quot;errors&quot;: [&quot;Debe tener al menos 8 caracteres (actual: 0).&quot;, &quot;Debe contener al menos una letra mayúscula.&quot;, &quot;Debe contener al menos una letra minúscula.&quot;, &quot;Debe contener al menos un número.&quot;, &quot;Debe contener al menos un carácter especial.&quot;], &quot;strength&quot;: &quot;Débil&quot;}}
+
+Fuentes originales: prediccion-01.json; resultado-01.txt
+Comparación con el instructor: no disponible.
+</pre></details></article><article id="ronda-2"><h2>PRÁCTICA 2 / RONDA 2</h2><p>Visor de evidencia conservada. La imagen es un registro renderizado de logs reales.</p><img src="registro-02.png" alt="Registro de la ronda 2"><details><summary>Fuente textual completa del registro</summary><pre>REGISTRO DE EJECUCIÓN REAL — extracto renderizado; no captura de UI
+PRÁCTICA 2 / RONDA 2
+Autor de predicción: agente asistente Codex; no vivencia atribuida al estudiante.
+PREDICCIÓN PREVIA UTC: 2026-09-11T00:48:52.637872+00:00
+PEDIDO LITERAL: agrégale que también valide un formato de email
+formato: Probablemente mantenga is_valid y errors, pero strength dejará de tener sentido para email y podría quedar vacío u omitido.
+ana@: Lo rechazará por dominio incompleto.
+email_vacio: Lo rechazará como formato inválido.
+
+EXTRACTO DE SALIDA PYTHON REAL:
+EJECUCIÓN UTC: 2026-09-11T00:50:35.715053+00:00
+{&quot;email&quot;: &quot;ana@correo.com&quot;, &quot;result&quot;: {&quot;is_valid&quot;: true, &quot;errors&quot;: [], &quot;strength&quot;: null}}
+{&quot;email&quot;: &quot;ana@&quot;, &quot;result&quot;: {&quot;is_valid&quot;: false, &quot;errors&quot;: [&quot;El dominio (después del &#x27;@&#x27;) no puede estar vacío.&quot;], &quot;strength&quot;: null}}
+{&quot;email&quot;: &quot;&quot;, &quot;result&quot;: {&quot;is_valid&quot;: false, &quot;errors&quot;: [&quot;La dirección de correo no puede estar vacía.&quot;], &quot;strength&quot;: null}}
+3 emails comprobados y 6 regresiones de contraseña sin diferencias.
+
+Fuentes originales: prediccion-02.json; resultado-02.txt
+Comparación con el instructor: no disponible.
+</pre></details></article><article id="ronda-3"><h2>PRÁCTICA 2 / RONDA 3</h2><p>Visor de evidencia conservada. La imagen es un registro renderizado de logs reales.</p><img src="registro-03.png" alt="Registro de la ronda 3"><details><summary>Fuente textual completa del registro</summary><pre>REGISTRO DE EJECUCIÓN REAL — extracto renderizado; no captura de UI
+PRÁCTICA 2 / RONDA 3
+Autor de predicción: agente asistente Codex; no vivencia atribuida al estudiante.
+PREDICCIÓN PREVIA UTC: 2026-09-11T00:50:35.774545+00:00
+PEDIDO LITERAL: ahora que maneje una lista de varios usuarios, cada uno con su contraseña y su email
+regresiones: Espero que preserve las dos funciones de validación existentes; el mayor riesgo es que la función de conjunto cambie la estructura de errores.
+estructura: Probablemente use una lista de objetos dataclass User, siguiendo el estilo ya establecido, con email y password en memoria.
+
+EXTRACTO DE SALIDA PYTHON REAL:
+EJECUCIÓN UTC: 2026-09-11T00:52:26.848119+00:00
+DOS USUARIOS AGREGADOS; LISTA COMPLETA (datos sintéticos):
+[{&quot;username&quot;: &quot;usuario_1&quot;, &quot;email&quot;: &quot;ana@example.com&quot;, &quot;password&quot;: &quot;Ab3!xy7Z&quot;}, {&quot;username&quot;: &quot;usuario_2&quot;, &quot;email&quot;: &quot;bruno@example.com&quot;, &quot;password&quot;: &quot;K9#mQ!9vLp@4WxZ&quot;}]
+{&quot;usuario&quot;: &quot;usuario_1&quot;, &quot;valido&quot;: true, &quot;email&quot;: {&quot;is_valid&quot;: true, &quot;errors&quot;: [], &quot;strength&quot;: null}, &quot;password&quot;: {&quot;is_valid&quot;: true, &quot;errors&quot;: [], &quot;strength&quot;: &quot;Fuerte&quot;}, &quot;errores_extra&quot;: []}
+{&quot;usuario&quot;: &quot;usuario_2&quot;, &quot;valido&quot;: true, &quot;email&quot;: {&quot;is_valid&quot;: true, &quot;errors&quot;: [], &quot;strength&quot;: null}, &quot;password&quot;: {&quot;is_valid&quot;: true, &quot;errors&quot;: [], &quot;strength&quot;: &quot;Fuerte&quot;}, &quot;errores_extra&quot;: []}
+REGRESIÓN: 6 contraseñas + 3 emails conservan resultado.
+REGLA NO PEDIDA: email duplicado invalida ambos usuarios: [&quot;El correo &#x27;dup@example.com&#x27; está duplicado en el lote.&quot;]
+REGLA NO PEDIDA: username vacío rechazado: [&#x27;El nombre de usuario no puede estar vacío.&#x27;]
+
+Fuentes originales: prediccion-03.json; resultado-03.txt
+Comparación con el instructor: no disponible.
+</pre></details></article><article id="ronda-4"><h2>PRÁCTICA 2 / CIERRE</h2><p>Visor de evidencia conservada. La imagen es un registro renderizado de logs reales.</p><img src="registro-04.png" alt="Registro de la ronda 4"><details><summary>Fuente textual completa del registro</summary><pre>REGISTRO DE EJECUCIÓN REAL — extracto renderizado; no captura de UI
+PRÁCTICA 2 / CIERRE
+Autor de predicción: agente asistente Codex; no vivencia atribuida al estudiante.
+PREDICCIÓN PREVIA UTC: 2026-09-11T00:52:26.904771+00:00
+PEDIDO LITERAL: ahora que la validación de contraseña sea opcional para usuarios administradores
+riesgo: Podría saltarse toda la validación del usuario al reconocer un administrador y aceptar también un email inválido.
+opcional: Espero que agregue un indicador de administrador y una opción para solicitar expresamente validar su contraseña cuando se quiera.
+limite: No está escrito quién asigna el rol ni si opcional significa saltar siempre o permitir elegir.
+
+EXTRACTO DE SALIDA PYTHON REAL:
+EJECUCIÓN UTC: 2026-09-11T00:54:52.917583+00:00
+{&quot;caso&quot;: &quot;admin_email_invalido&quot;, &quot;is_admin&quot;: true, &quot;tipo_is_admin&quot;: &quot;bool&quot;, &quot;valido&quot;: false, &quot;email_valido&quot;: false, &quot;password&quot;: {&quot;is_valid&quot;: true, &quot;errors&quot;: [], &quot;strength&quot;: &quot;Opcional (Sin contraseña)&quot;}}
+{&quot;caso&quot;: &quot;booleano_false&quot;, &quot;is_admin&quot;: false, &quot;tipo_is_admin&quot;: &quot;bool&quot;, &quot;valido&quot;: false, &quot;email_valido&quot;: true, &quot;password&quot;: {&quot;is_valid&quot;: false, &quot;errors&quot;: [&quot;Debe tener al menos 8 caracteres (actual: 5).&quot;, &quot;Debe contener al menos una letra mayúscula.&quot;, &quot;Debe contener al menos una letra minúscula.&quot;, &quot;Debe contener al menos un carácter especial.&quot;], &quot;strength&quot;: &quot;Débil&quot;}}
+{&quot;caso&quot;: &quot;cadena_false&quot;, &quot;is_admin&quot;: &quot;false&quot;, &quot;tipo_is_admin&quot;: &quot;str&quot;, &quot;valido&quot;: true, &quot;email_valido&quot;: true, &quot;password&quot;: {&quot;is_valid&quot;: true, &quot;errors&quot;: [], &quot;strength&quot;: &quot;Débil (Opcional - Admin)&quot;}}
+FALLA OBSERVADA: is_admin=&#x27;false&#x27; (str) y &#x27;usuario&#x27; (str) activan la exención.
+CAUSA: if user.is_admin usa truthiness; dataclass no impone el tipo bool en ejecución.
+La hipótesis de saltarse el email NO ocurrió: ana@ sigue rechazado para admin.
+tipo is_admin: str
+validez contraseña directa: False
+validez usuario en lote: True
+AssertionError: FALLA: el texto &#x27;false&#x27; activa la exención de administrador
+EXIT_CODE=1
+
+Fuentes originales: prediccion-04.json; resultado-04.txt; falla-reproducida.txt
+Comparación con el instructor: no disponible.
+</pre></details></article></html>

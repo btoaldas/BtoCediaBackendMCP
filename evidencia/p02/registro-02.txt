@@ -1,0 +1,18 @@
+REGISTRO DE EJECUCIÓN REAL — extracto renderizado; no captura de UI
+PRÁCTICA 2 / RONDA 2
+Autor de predicción: agente asistente Codex; no vivencia atribuida al estudiante.
+PREDICCIÓN PREVIA UTC: 2026-09-11T00:48:52.637872+00:00
+PEDIDO LITERAL: agrégale que también valide un formato de email
+formato: Probablemente mantenga is_valid y errors, pero strength dejará de tener sentido para email y podría quedar vacío u omitido.
+ana@: Lo rechazará por dominio incompleto.
+email_vacio: Lo rechazará como formato inválido.
+
+EXTRACTO DE SALIDA PYTHON REAL:
+EJECUCIÓN UTC: 2026-09-11T00:50:35.715053+00:00
+{"email": "ana@correo.com", "result": {"is_valid": true, "errors": [], "strength": null}}
+{"email": "ana@", "result": {"is_valid": false, "errors": ["El dominio (después del '@') no puede estar vacío."], "strength": null}}
+{"email": "", "result": {"is_valid": false, "errors": ["La dirección de correo no puede estar vacía."], "strength": null}}
+3 emails comprobados y 6 regresiones de contraseña sin diferencias.
+
+Fuentes originales: prediccion-02.json; resultado-02.txt
+Comparación con el instructor: no disponible.

@@ -1,0 +1,12 @@
+{
+  "command": [
+    "uv",
+    "run",
+    "--project",
+    "s3/experimento",
+    "python",
+    "s3/demostrar_falla.py"
+  ],
+  "exit_code": 1,
+  "expected_failure": true
+}

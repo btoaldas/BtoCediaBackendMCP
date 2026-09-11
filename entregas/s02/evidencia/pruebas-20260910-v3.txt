@@ -1,0 +1,4 @@
+Pruebas deterministas con dobles explícitos. No son llamadas ni errores reales de Gemini.
+
+........................                                                 [100%]
+24 passed in 0.20s

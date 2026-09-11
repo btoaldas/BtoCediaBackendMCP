@@ -1,0 +1,25 @@
+REGISTRO DE EJECUCIÓN REAL — extracto renderizado; no captura de UI
+PRÁCTICA 2 / CIERRE
+Autor de predicción: agente asistente Codex; no vivencia atribuida al estudiante.
+PREDICCIÓN PREVIA UTC: 2026-09-11T00:52:26.904771+00:00
+PEDIDO LITERAL: ahora que la validación de contraseña sea opcional para usuarios administradores
+riesgo: Podría saltarse toda la validación del usuario al reconocer un administrador y aceptar también un email inválido.
+opcional: Espero que agregue un indicador de administrador y una opción para solicitar expresamente validar su contraseña cuando se quiera.
+limite: No está escrito quién asigna el rol ni si opcional significa saltar siempre o permitir elegir.
+
+EXTRACTO DE SALIDA PYTHON REAL:
+EJECUCIÓN UTC: 2026-09-11T00:54:52.917583+00:00
+{"caso": "admin_email_invalido", "is_admin": true, "tipo_is_admin": "bool", "valido": false, "email_valido": false, "password": {"is_valid": true, "errors": [], "strength": "Opcional (Sin contraseña)"}}
+{"caso": "booleano_false", "is_admin": false, "tipo_is_admin": "bool", "valido": false, "email_valido": true, "password": {"is_valid": false, "errors": ["Debe tener al menos 8 caracteres (actual: 5).", "Debe contener al menos una letra mayúscula.", "Debe contener al menos una letra minúscula.", "Debe contener al menos un carácter especial."], "strength": "Débil"}}
+{"caso": "cadena_false", "is_admin": "false", "tipo_is_admin": "str", "valido": true, "email_valido": true, "password": {"is_valid": true, "errors": [], "strength": "Débil (Opcional - Admin)"}}
+FALLA OBSERVADA: is_admin='false' (str) y 'usuario' (str) activan la exención.
+CAUSA: if user.is_admin usa truthiness; dataclass no impone el tipo bool en ejecución.
+La hipótesis de saltarse el email NO ocurrió: ana@ sigue rechazado para admin.
+tipo is_admin: str
+validez contraseña directa: False
+validez usuario en lote: True
+AssertionError: FALLA: el texto 'false' activa la exención de administrador
+EXIT_CODE=1
+
+Fuentes originales: prediccion-04.json; resultado-04.txt; falla-reproducida.txt
+Comparación con el instructor: no disponible.

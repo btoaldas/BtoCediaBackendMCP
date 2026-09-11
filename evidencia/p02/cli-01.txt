@@ -1,0 +1,23 @@
+=== Pruebas del Validador ===
+
+Contraseña: 'pass'
+Estado:     ✗ INVÁLIDA (Débil)
+ - Debe tener al menos 8 caracteres (actual: 4).
+ - Debe contener al menos una letra mayúscula.
+ - Debe contener al menos un número.
+ - Debe contener al menos un carácter especial.
+
+Contraseña: 'password123!'
+Estado:     ✗ INVÁLIDA (Media)
+ - Debe contener al menos una letra mayúscula.
+ - Contiene un patrón trivial o inseguro: 'password'.
+
+Contraseña: 'Temporal2024'
+Estado:     ✗ INVÁLIDA (Media)
+ - Debe contener al menos un carácter especial.
+
+Contraseña: 'Temp2024!'
+Estado:     ✓ VÁLIDA (Fuerte)
+
+Contraseña: 'K9#mQ!9vLp@4WxZ'
+Estado:     ✓ VÁLIDA (Fuerte)

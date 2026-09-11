@@ -1,0 +1,5 @@
+{"ronda": 1, "prediccion_previa": true, "pedido_literal": true, "codigo_identico_a_respuesta_agy": true, "sha256": "f62b9a4f0b14f78c3804865635c8b54d6c4588b187f8d8793f79e0cdafa7a182"}
+{"ronda": 2, "prediccion_previa": true, "pedido_literal": true, "codigo_identico_a_respuesta_agy": true, "sha256": "a78276f1798ea5316ea164443201b4a4fd2d88ea4179a2a2e0320f3bf8d7f27e"}
+{"ronda": 3, "prediccion_previa": true, "pedido_literal": true, "codigo_identico_a_respuesta_agy": true, "sha256": "e0c8ad89e216d86f4f0fd1349d38c1360a5d17630fd5eda7de0e22f3e90f809e"}
+{"ronda": 4, "prediccion_previa": true, "pedido_literal": true, "codigo_identico_a_respuesta_agy": true, "sha256": "8378dec396b1602d611d6b735e4c047073cc31b78495118a54ecae38dabbf8da"}
+4 rondas trazables: predicciones previas, código exacto y evolución enlazada.

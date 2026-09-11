@@ -1,0 +1,10 @@
+RONDA 1 — predicción previa en evidencia/p02/prediccion-01.json
+EJECUCIÓN UTC: 2026-09-11T00:48:03.476228+00:00
+POLÍTICA REAL: {"min_length": 8, "max_length": 128, "require_uppercase": true, "require_lowercase": true, "require_digit": true, "require_special": true, "disallow_whitespace": true, "special_chars": "!@#$%^&*()-_=+[]{}|;:,.<>?/~`", "forbidden_substrings": ["123456", "password", "contrasena", "admin", "qwerty", "111111"]}
+{"input": "12345", "result": {"is_valid": false, "errors": ["Debe tener al menos 8 caracteres (actual: 5).", "Debe contener al menos una letra mayúscula.", "Debe contener al menos una letra minúscula.", "Debe contener al menos un carácter especial."], "strength": "Débil"}}
+{"input": "password", "result": {"is_valid": false, "errors": ["Debe contener al menos una letra mayúscula.", "Debe contener al menos un número.", "Debe contener al menos un carácter especial.", "Contiene un patrón trivial o inseguro: 'password'."], "strength": "Débil"}}
+{"input": "", "result": {"is_valid": false, "errors": ["Debe tener al menos 8 caracteres (actual: 0).", "Debe contener al menos una letra mayúscula.", "Debe contener al menos una letra minúscula.", "Debe contener al menos un número.", "Debe contener al menos un carácter especial."], "strength": "Débil"}}
+{"input": "Ab3!xy7", "result": {"is_valid": false, "errors": ["Debe tener al menos 8 caracteres (actual: 7)."], "strength": "Media"}}
+{"input": "Ab3!xy7Z", "result": {"is_valid": true, "errors": [], "strength": "Fuerte"}}
+{"input": "Password1!", "result": {"is_valid": false, "errors": ["Contiene un patrón trivial o inseguro: 'password'."], "strength": "Media"}}
+6 casos comprobados; los 3 exigidos por la guía fueron rechazados.

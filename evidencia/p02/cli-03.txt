@@ -1,0 +1,42 @@
+=== Procesando Validación de Lista de Usuarios ===
+
+[1] Usuario: 'alberto_adm' | Estado General: ✗ INVÁLIDO
+    - Email:    'alberto@empresa.com' -> ✓ OK
+    - Password: [Robustez: Fuerte] -> ✓ OK
+    - Alerta de lote/cuenta: El correo 'alberto@empresa.com' está duplicado en el lote.
+-----------------------------------------------------------------
+[2] Usuario: 'maria_dev' | Estado General: ✓ VÁLIDO
+    - Email:    'maria.gonzalez@dominio.org' -> ✓ OK
+    - Password: [Robustez: Fuerte] -> ✓ OK
+-----------------------------------------------------------------
+[3] Usuario: 'carlos_qa' | Estado General: ✗ INVÁLIDO
+    - Email:    'carlos..invalido@dominio.com' -> ✗ ERROR
+        * La parte local no puede contener puntos consecutivos.
+    - Password: [Robustez: Media] -> ✗ ERROR
+        * Contiene un patrón trivial o inseguro: 'password'.
+-----------------------------------------------------------------
+[4] Usuario: 'lucia_ops' | Estado General: ✗ INVÁLIDO
+    - Email:    'lucia@sub.empresa.co.uk' -> ✓ OK
+    - Password: [Robustez: Débil] -> ✗ ERROR
+        * Debe tener al menos 8 caracteres (actual: 5).
+        * Debe contener al menos una letra mayúscula.
+        * Debe contener al menos un número.
+        * Debe contener al menos un carácter especial.
+-----------------------------------------------------------------
+[5] Usuario: 'usuario_duplicado' | Estado General: ✗ INVÁLIDO
+    - Email:    'alberto@empresa.com' -> ✓ OK
+    - Password: [Robustez: Fuerte] -> ✓ OK
+    - Alerta de lote/cuenta: El correo 'alberto@empresa.com' está duplicado en el lote.
+-----------------------------------------------------------------
+[6] Usuario: '' | Estado General: ✗ INVÁLIDO
+    - Email:    'sin_arroba.net' -> ✗ ERROR
+        * Falta el carácter '@'.
+    - Password: [Robustez: Media] -> ✗ ERROR
+        * Contiene un patrón trivial o inseguro: 'password'.
+    - Alerta de lote/cuenta: El nombre de usuario no puede estar vacío.
+-----------------------------------------------------------------
+
+=== Resumen de Ejecución ===
+Total procesados: 6
+Usuarios válidos:   1
+Usuarios inválidos: 5
