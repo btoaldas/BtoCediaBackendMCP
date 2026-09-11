@@ -1,0 +1,147 @@
+P3 — VISOR DE REGISTROS CONSERVADOS; NO TERMINAL ORIGINAL
+
+INVOCACIONES
+/speckit-specify Convertir una temperatura entre Celsius, Fahrenheit y Kelvin desde CLI. Aceptar valor y unidades C/F/K sin distinguir mayúsculas. Convertir C↔F, C↔K y F↔K correctamente. Presentar exactamente dos decimales y unidad destino. Rechazar valores bajo cero absoluto (-273.15 C, -459.67 F y 0 K). Entradas vacías o no numéricas producen error legible exit 2; éxito exit 0. Mismas unidades conserva valor; negativos físicamente válidos se aceptan. Añadir decisiones explícitas para NaN/Infinity y magnitud/longitud excesivas. Proyecto laboratorio Python 3.12 stdlib con uv. Sigue la skill real instalada. No crees ni cambies ramas Git ni commits ni remotos: usa SPECIFY_FEATURE=001-conversor-temperatura y crea artefactos bajo specs/001-conversor-temperatura sin alterar Git padre; si script requiere Git no lo ejecutes sin opción de omitirlo. No borres archivos, no accedas a carpetas hermanas ni credenciales. Tu alcance es esta carpeta.
+
+/speckit-plan Python 3.12 + uv, CLI con argparse, lógica pura separada en src/temperatura/dominio.py y CLI en src/temperatura/cli.py, paquete ejecutable python -m temperatura. Decimal para precisión de límites; sin BD ni red. La spec vigente vive en specs/001-conversor-temperatura/spec.md. Sigue skill oficial. SPECIFY_FEATURE=001-conversor-temperatura. No checkout ni commits ni remotos, no borres. No metas complejidad HTTP ni autenticación.
+
+/speckit-tasks Usa la spec y plan de specs/001-conversor-temperatura. SPECIFY_FEATURE=001-conversor-temperatura. Ordena implementación del dominio, CLI y pruebas reales trazadas a FR. Pruebas unitarias función aislada, integración directa en memoria CLI→dominio, e2e por subprocess en tests/e2e. No crees test-spec separado. No git checkout/commit/push ni borrar.
+
+/speckit-implement Implementa las tareas de specs/001-conversor-temperatura. SPECIFY_FEATURE=001-conversor-temperatura. Ejecuta tests reales y los casos 0 C F, -273.15 C K, NaN C F. Python 3.12 + uv. No git checkout, commit, push, reset ni borrar archivos. No uses archivos privados ni otras carpetas. Los 7 skills qa y 3 agentes copiados de la guía ya existen: presérvalos. Puedes añadir archivos dentro de esta carpeta. Registra resultados verificables, sin afirmar que pasó algo que no ejecutaste.
+
+RESULTADOS
+{
+  "fases": [
+    [
+      "/speckit-specify",
+      "Especificación",
+      "spec.md + checklists/requirements.md",
+      "3 historias, 18 escenarios, 13 requisitos funcionales."
+    ],
+    [
+      "/speckit-plan",
+      "Diseño y contrato",
+      "plan.md · research.md · data-model.md · contracts/cli-contract.md · quickstart.md",
+      "Python 3.12, Decimal; dominio y CLI separados."
+    ],
+    [
+      "/speckit-tasks",
+      "Desglose trazable",
+      "tasks.md",
+      "33 tareas; pruebas unitarias, integración en memoria y e2e."
+    ],
+    [
+      "/speckit-implement",
+      "Código y pruebas",
+      "src/temperatura/ · tests/ · tdd-logs/",
+      "Estados rojos y verdes conservados; suite base P3."
+    ]
+  ],
+  "suite": {
+    "passed": 55,
+    "failed": 0,
+    "unit": 19,
+    "integration": 27,
+    "e2e": 9,
+    "lineas_cubiertas": 108,
+    "lineas_totales": 122
+  },
+  "tdd": [
+    {
+      "archivo": "us1_red.log",
+      "resumen": "1 error in 0.06s",
+      "exit_code": 2
+    },
+    {
+      "archivo": "us1_primer_intento_empaquetado_fallido.log",
+      "resumen": "2 failed, 12 passed in 0.06s",
+      "exit_code": 1
+    },
+    {
+      "archivo": "us1_green.log",
+      "resumen": "14 passed in 0.07s",
+      "exit_code": 0
+    },
+    {
+      "archivo": "us2_red.log",
+      "resumen": "7 failed, 5 passed, 14 deselected in 0.09s",
+      "exit_code": 1
+    },
+    {
+      "archivo": "us2_green.log",
+      "resumen": "12 passed, 14 deselected in 0.07s",
+      "exit_code": 0
+    },
+    {
+      "archivo": "us3_red.log",
+      "resumen": "14 failed, 8 passed, 26 deselected in 0.17s",
+      "exit_code": 1
+    },
+    {
+      "archivo": "us3_green.log",
+      "resumen": "22 passed, 26 deselected in 0.11s",
+      "exit_code": 0
+    },
+    {
+      "archivo": "final_suite.log",
+      "resumen": "55 passed in 0.30s",
+      "exit_code": 0
+    }
+  ],
+  "entorno_nuevo": {
+    "primer_intento": {
+      "sync_exit": 0,
+      "cli_exit": 1,
+      "passed": 46,
+      "failed": 8,
+      "causa": "Proyecto virtual sin build-system; la instalación editable manual ocultaba el defecto."
+    },
+    "despues_correccion": {
+      "sync_exit": 0,
+      "cli_exit": 0,
+      "stdout": "32.00 F\n",
+      "passed": 55,
+      "failed": 0,
+      "segundos": 0.27
+    }
+  }
+}
+COMPARACIÓN ORIGINAL
+# Comparación P3 — especificación manual y Spec Kit
+
+Comparación de dos implementaciones del mismo conversor de temperatura. Las
+observaciones son técnicas, basadas en archivos y ejecuciones reales; no se
+atribuyen sensaciones personales al estudiante ni tiempos que no se midieron.
+
+| Aspecto de la guía | Spec a mano | Spec Kit |
+|---|---|---|
+| ¿Cubrió los mismos casos borde? | Definió entrada ausente/no numérica, unidad igual, cero absoluto exacto y negativos válidos. La implementación además rechazó NaN por iniciativa de agy. | Conservó esos casos y explicitó NaN/Infinity, longitud bruta de 32 caracteres, magnitud máxima de 1e12, notación científica, redondeo half-up y cero con signo. |
+| ¿Qué generó Spec Kit que no estaba escrito? | Un objetivo, cinco criterios verificables y cuatro casos borde en una spec breve. | Tres historias, 18 escenarios de aceptación, 13 requisitos funcionales, modelo de datos, contrato CLI, plan, investigación, quickstart, checklist y 33 tareas. |
+| ¿Qué se sintió más rápido de arrancar? | No se registró una percepción personal. Objetivamente requirió una spec y una llamada de generación de código. | No se registró una percepción personal. Requirió inicialización oficial y cuatro fases explícitas antes de cerrar implementación. |
+| ¿Cuál generó más confianza en el resultado? | Evidencia acotada: tres casos comparativos y 19 comprobaciones independientes de criterios. | Evidencia más amplia: tres capas de pruebas, estados rojos conservados, cobertura y segunda revisión desde un entorno nuevo; esta última detectó un fallo de empaquetado que las primeras pruebas no mostraban. |
+
+La petición a Spec Kit incluyó expresamente límites y valores no finitos. Por
+eso, la ampliación de detalle no se atribuye exclusivamente a la herramienta:
+también influyó una petición más precisa. La constitución inicial era una
+plantilla sin ratificar, no una aprobación; `tasks.md` documenta esa distinción.
+
+## Los mismos tres casos
+
+Corrida real: `evidencia/p03-p04/comparacion-corridas/20260911T012725.506823Z/casos.json`.
+
+| Tipo | Entrada | Spec manual (`conversor_agy.py`) | Spec Kit (`python -m temperatura`) |
+|---|---|---|---|
+| Normal | `0 C F` | `32.00 F`, exit 0, stderr vacío | `32.00 F`, exit 0, stderr vacío |
+| Borde definido | `-273.15 C K` | `0.00 K`, exit 0, stderr vacío | `0.00 K`, exit 0, stderr vacío |
+| No contemplado en la spec manual | `NaN C F` | stdout vacío, error argparse en stderr, exit 2 | stdout vacío, error de literal no permitido en stderr, exit 2 |
+
+Los tres resultados coinciden en comportamiento observable. Tres casos no
+prueban equivalencia completa entre las dos implementaciones.
+
+## Cierre técnico propuesto
+
+Para un proyecto pequeño y acotado, una spec manual con criterios comprobables
+puede bastar; para uno mediano con varios requisitos y trazabilidad, Spec Kit
+aporta una secuencia de especificación, diseño, tareas y pruebas revisables.
+Esta es una recomendación técnica derivada de la práctica, no una preferencia
+personal atribuida al estudiante.

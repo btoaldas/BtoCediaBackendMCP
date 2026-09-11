@@ -1,0 +1,254 @@
+{
+  "tipo": "Resumen derivado de ejecuciones reales; originales conservados localmente",
+  "version": "P3 base antes de QA P4",
+  "herramientas": {
+    "agy": "1.2.0; Gemini 3.8 Flash High",
+    "specify_commit": "c173bf19a6654e3b05386ec3599349a55282b897",
+    "python": "3.12.13"
+  },
+  "flujo": [
+    "/speckit-specify",
+    "/speckit-plan",
+    "/speckit-tasks",
+    "/speckit-implement"
+  ],
+  "suite": {
+    "passed": 55,
+    "failed": 0,
+    "unit": 19,
+    "integration": 27,
+    "e2e": 9,
+    "lineas_cubiertas": 108,
+    "lineas_totales": 122
+  },
+  "casos": [
+    {
+      "version": "manual-agy",
+      "tipo": "normal",
+      "command": [
+        "uv",
+        "run",
+        "python",
+        "conversor_agy.py",
+        "0",
+        "C",
+        "F"
+      ],
+      "exit_code": 0,
+      "stdout": "32.00 F\n",
+      "stderr": ""
+    },
+    {
+      "version": "manual-agy",
+      "tipo": "borde",
+      "command": [
+        "uv",
+        "run",
+        "python",
+        "conversor_agy.py",
+        "-273.15",
+        "C",
+        "K"
+      ],
+      "exit_code": 0,
+      "stdout": "0.00 K\n",
+      "stderr": ""
+    },
+    {
+      "version": "manual-agy",
+      "tipo": "no contemplado manual",
+      "command": [
+        "uv",
+        "run",
+        "python",
+        "conversor_agy.py",
+        "NaN",
+        "C",
+        "F"
+      ],
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "usage: conversor_agy.py [-h] valor origen destino\nconversor_agy.py: error: argument valor: Valor no numérico o inválido: 'NaN'\n"
+    },
+    {
+      "version": "speckit",
+      "tipo": "normal",
+      "command": [
+        "uv",
+        "run",
+        "python",
+        "-m",
+        "temperatura",
+        "0",
+        "C",
+        "F"
+      ],
+      "exit_code": 0,
+      "stdout": "32.00 F\n",
+      "stderr": ""
+    },
+    {
+      "version": "speckit",
+      "tipo": "borde",
+      "command": [
+        "uv",
+        "run",
+        "python",
+        "-m",
+        "temperatura",
+        "-273.15",
+        "C",
+        "K"
+      ],
+      "exit_code": 0,
+      "stdout": "0.00 K\n",
+      "stderr": ""
+    },
+    {
+      "version": "speckit",
+      "tipo": "no contemplado manual",
+      "command": [
+        "uv",
+        "run",
+        "python",
+        "-m",
+        "temperatura",
+        "NaN",
+        "C",
+        "F"
+      ],
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "Error: Los valores literales 'nan' e 'inf' no están permitidos.\n"
+    }
+  ],
+  "tdd": [
+    {
+      "archivo": "us1_red.log",
+      "resumen": "1 error in 0.06s",
+      "exit_code": 2
+    },
+    {
+      "archivo": "us1_primer_intento_empaquetado_fallido.log",
+      "resumen": "2 failed, 12 passed in 0.06s",
+      "exit_code": 1
+    },
+    {
+      "archivo": "us1_green.log",
+      "resumen": "14 passed in 0.07s",
+      "exit_code": 0
+    },
+    {
+      "archivo": "us2_red.log",
+      "resumen": "7 failed, 5 passed, 14 deselected in 0.09s",
+      "exit_code": 1
+    },
+    {
+      "archivo": "us2_green.log",
+      "resumen": "12 passed, 14 deselected in 0.07s",
+      "exit_code": 0
+    },
+    {
+      "archivo": "us3_red.log",
+      "resumen": "14 failed, 8 passed, 26 deselected in 0.17s",
+      "exit_code": 1
+    },
+    {
+      "archivo": "us3_green.log",
+      "resumen": "22 passed, 26 deselected in 0.11s",
+      "exit_code": 0
+    },
+    {
+      "archivo": "final_suite.log",
+      "resumen": "55 passed in 0.30s",
+      "exit_code": 0
+    }
+  ],
+  "fuentes": [
+    {
+      "archivo": "s4/mi-proyecto-speckit/tdd-logs/us1_red.log",
+      "sha256": "9f7a7c7e9d4028f88472cc9f18ced0c211bbf1525d8de3353f51dc62385a3e36"
+    },
+    {
+      "archivo": "s4/mi-proyecto-speckit/tdd-logs/us1_primer_intento_empaquetado_fallido.log",
+      "sha256": "02fcaafdc6add479134e4c11e109a3e26f94f52c0aa163bc036f8a437449fcfd"
+    },
+    {
+      "archivo": "s4/mi-proyecto-speckit/tdd-logs/us1_green.log",
+      "sha256": "4d5d11aacc2b35e58f95c35baec55607342495c2a1d08d6458c1c7395382b55a"
+    },
+    {
+      "archivo": "s4/mi-proyecto-speckit/tdd-logs/us2_red.log",
+      "sha256": "e8d927654dbaa38ecb436dad65f8d8f8d7d55adee817c2f5621908ce9109dd5c"
+    },
+    {
+      "archivo": "s4/mi-proyecto-speckit/tdd-logs/us2_green.log",
+      "sha256": "ab001428d7c3e246f308efa8bbc80ea898dbbce5110ad31079adb56999f4d648"
+    },
+    {
+      "archivo": "s4/mi-proyecto-speckit/tdd-logs/us3_red.log",
+      "sha256": "9c399083ec8d8e5250fd7cffce58aebd544eaa8ceb8f35a31caebc5e20344dd4"
+    },
+    {
+      "archivo": "s4/mi-proyecto-speckit/tdd-logs/us3_green.log",
+      "sha256": "e25d4af29c225e3e14174f36d42d61d8be9ba4bc16829a57e1feb367739b940d"
+    },
+    {
+      "archivo": "s4/mi-proyecto-speckit/tdd-logs/final_suite.log",
+      "sha256": "3aa0edb043baa7112e73fc8a871544e85cdc7f24d8deee922928bb83e55cecdd"
+    },
+    {
+      "archivo": "evidencia/p03-p04/entorno-fresco/20260911T012311.495286Z/resultados.json",
+      "sha256": "6c878deee663d965cd811d6c360484b43d6b640ec362c572c92bb3f74e1c2886"
+    },
+    {
+      "archivo": "evidencia/p03-p04/entorno-fresco/20260911T013135.411265Z/resultados.json",
+      "sha256": "9a3091caf93c1ff507d9f34d5ffc4a65428a91c936485121ba266a12819c52d6"
+    },
+    {
+      "archivo": "evidencia/p03-p04/agy-manual-response.md",
+      "sha256": "e69bc442049a48ea11a70e790ce49c18b3ebbe044a9456481f14beb203f53d96"
+    },
+    {
+      "archivo": "s4/clase-sdd/spec_manual.md",
+      "sha256": "32e2299d3fa27a4311caec7686785e26687c4429f723cd3ba339eac2aab53ec9"
+    },
+    {
+      "archivo": "s4/clase-sdd/conversor_agy.py",
+      "sha256": "b3623f9986c9b5020145333a063a7c4fd78397542cc9e313b77c54d7ce2fb8da"
+    },
+    {
+      "archivo": "s4/mi-proyecto-speckit/specs/001-conversor-temperatura/spec.md",
+      "sha256": "f2f2f56926ca84b57bf0fec395fec1404229d962e8d83620f10f442648bb114b"
+    },
+    {
+      "archivo": "s4/mi-proyecto-speckit/specs/001-conversor-temperatura/plan.md",
+      "sha256": "20f804c68c577caa56da67ad4e494fa727c7230f1cc2a5f3496602282e5ea7f7"
+    },
+    {
+      "archivo": "s4/mi-proyecto-speckit/specs/001-conversor-temperatura/tasks.md",
+      "sha256": "7a217d95af7d40b22e1ff8b16abfe0e262b4bff39757a0bd57fdc0e7b2579714"
+    },
+    {
+      "archivo": "evidencia/p03-p04/comparacion-corridas/20260911T012725.506823Z/casos.json",
+      "sha256": "a18cb8fdcb62c9bc7b41061bb5989923bafe5e7f083aed9771f621183044c857"
+    }
+  ],
+  "entorno_nuevo": {
+    "primer_intento": {
+      "sync_exit": 0,
+      "cli_exit": 1,
+      "passed": 46,
+      "failed": 8,
+      "causa": "Proyecto virtual sin build-system; la instalación editable manual ocultaba el defecto."
+    },
+    "despues_correccion": {
+      "sync_exit": 0,
+      "cli_exit": 0,
+      "stdout": "32.00 F\n",
+      "passed": 55,
+      "failed": 0,
+      "segundos": 0.27
+    }
+  }
+}

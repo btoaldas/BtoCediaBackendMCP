@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "estado_preparacion": "Capturas reales guardadas y verificadas; fragmento listo para integrar, no input completo del generador",
+  "rutas_relativas_a": "Esta carpeta; ajustar rutas al integrar en input privado",
+  "instrucciones": "Copiar evidencias al input revisado y ajustar imagen/fuente a su carpeta. Los PNG originales se conservan sin editar. Revisar la legibilidad de la composición PDF y DOCX final.",
+  "evidencias": [
+    {
+      "id": "spec_manual",
+      "titulo": "Especificación manual y tres casos reales",
+      "tipo": "captura",
+      "imagen": "captura-visor-p03-spec-manual-20260910.png",
+      "fuente": "captura-visor-p03-spec-manual-20260910.png",
+      "descripcion": "Captura real del visor de registros conservados: spec manual resumida y tres comandos con stdout, stderr y exit exactos. No es la terminal original.",
+      "verificada": true,
+      "visor_preparado": "manual-v1.html",
+      "registro_textual": "registro-manual-v1.txt",
+      "sha256_imagen": "5a0f19568234178c8cefcf82972ce7eb7007b92568823a0f5f8514d2b2827a1f",
+      "sha256_fuente": "5a0f19568234178c8cefcf82972ce7eb7007b92568823a0f5f8514d2b2827a1f"
+    },
+    {
+      "id": "flujo_speckit",
+      "titulo": "Flujo real de Spec Kit y verificación de P3",
+      "tipo": "captura",
+      "imagen": "captura-visor-p03-flujo-speckit-20260910.png",
+      "fuente": "captura-visor-p03-flujo-speckit-20260910.png",
+      "descripcion": "Captura real del visor de registros conservados: cuatro comandos, artefactos, 55 pruebas (19 unitarias, 27 integración, 9 e2e) y corrección en un entorno nuevo. No es la TUI original.",
+      "verificada": true,
+      "visor_preparado": "flujo-v1.html",
+      "registro_textual": "registro-flujo-v1.txt",
+      "sha256_imagen": "6b542522fe6515d0b1bcc1793c344849afc217aca54c2be1a20b2d249fc4ffde",
+      "sha256_fuente": "6b542522fe6515d0b1bcc1793c344849afc217aca54c2be1a20b2d249fc4ffde"
+    }
+  ]
+}

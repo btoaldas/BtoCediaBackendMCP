@@ -1,0 +1,162 @@
+{
+  "version": 1,
+  "tipo": "Visores de registros reales conservados; no capturas",
+  "capturas_realizadas": false,
+  "navegador_abierto": false,
+  "fuentes": [
+    {
+      "archivo": "evidencia/p03-p04/publicable/p03-resultados-base.json",
+      "sha256": "4901fb3f8b019cff2f4bc5414aea3f73bfaae606dce8d2c1fa3a8cbb9499bc44"
+    },
+    {
+      "archivo": "s4/clase-sdd/spec_manual.md",
+      "sha256": "32e2299d3fa27a4311caec7686785e26687c4429f723cd3ba339eac2aab53ec9"
+    },
+    {
+      "archivo": "s4/comparacion.md",
+      "sha256": "b1054b751b1e08ae3d48f5ce724619077322a03ba783bd4f12dfdb13026e30e2"
+    },
+    {
+      "archivo": "s4/clase-sdd/resultados-3a.md",
+      "sha256": "eeb24057b5518e3bb0a30207aa17712038e9a411453399fcb27f55cfbed57802"
+    },
+    {
+      "archivo": "s4/mi-proyecto-speckit/resultados-3b.md",
+      "sha256": "0be487f24148714db16f607c882d2b26204f64f1f9afaa1ddaad2e5f8f7ccd8c"
+    },
+    {
+      "archivo": "evidencia/p03-p04/prompts/03b-01-specify.txt",
+      "sha256": "8374765ee5648b2660b98cecafd43391300d243f109a023ecf9a374d1d2395cd"
+    },
+    {
+      "archivo": "evidencia/p03-p04/prompts/03b-02-plan.txt",
+      "sha256": "1fa21b43cda621eea2ff2a85858951bb65a81522c72d133cf3585a5aa682d171"
+    },
+    {
+      "archivo": "evidencia/p03-p04/prompts/03b-03-tasks.txt",
+      "sha256": "e8fa1c28450bf5a98326bd94056495a84eec6616494fcbdcb2a7c111650a29ea"
+    },
+    {
+      "archivo": "evidencia/p03-p04/prompts/03b-04-implement.txt",
+      "sha256": "21c6a702b2d0a969a973fed2f21ae00c6f7940dd18cdb4be622dea19b67cfb4d"
+    },
+    {
+      "archivo": "s4/mi-proyecto-speckit/specs/001-conversor-temperatura/spec.md",
+      "sha256": "f2f2f56926ca84b57bf0fec395fec1404229d962e8d83620f10f442648bb114b"
+    },
+    {
+      "archivo": "s4/mi-proyecto-speckit/specs/001-conversor-temperatura/plan.md",
+      "sha256": "20f804c68c577caa56da67ad4e494fa727c7230f1cc2a5f3496602282e5ea7f7"
+    },
+    {
+      "archivo": "s4/mi-proyecto-speckit/specs/001-conversor-temperatura/tasks.md",
+      "sha256": "7a217d95af7d40b22e1ff8b16abfe0e262b4bff39757a0bd57fdc0e7b2579714"
+    },
+    {
+      "archivo": "s4/mi-proyecto-speckit/specs/001-conversor-temperatura/data-model.md",
+      "sha256": "29cc3c024228aa30cc6a5902332a2c51b5d4b9da70277629e58b7e2612f48916"
+    },
+    {
+      "archivo": "s4/mi-proyecto-speckit/specs/001-conversor-temperatura/research.md",
+      "sha256": "0d503643e2a008ae945895714c74ced67aa2955dc77ca86e434a1180248b6a0d"
+    },
+    {
+      "archivo": "s4/mi-proyecto-speckit/specs/001-conversor-temperatura/quickstart.md",
+      "sha256": "b6ae5e4efd878b91154fbc901ad6c21b8d61fe47dcec7f57ba51b5b5f81e7a80"
+    },
+    {
+      "archivo": "s4/mi-proyecto-speckit/specs/001-conversor-temperatura/contracts/cli-contract.md",
+      "sha256": "9bf5d428ca6ba0340b1e3c4cc0a16805326b72f037413287fb55248f7d5dd174"
+    },
+    {
+      "archivo": "s4/mi-proyecto-speckit/specs/001-conversor-temperatura/checklists/requirements.md",
+      "sha256": "a593e382f4ab2675b5626ee4e8846f75ac83f1f7f6f75989b25fd17a3a7c3f09"
+    }
+  ],
+  "fuentes_base_verificadas": [
+    {
+      "archivo": "s4/mi-proyecto-speckit/tdd-logs/us1_red.log",
+      "sha256": "9f7a7c7e9d4028f88472cc9f18ced0c211bbf1525d8de3353f51dc62385a3e36",
+      "coincide": true
+    },
+    {
+      "archivo": "s4/mi-proyecto-speckit/tdd-logs/us1_primer_intento_empaquetado_fallido.log",
+      "sha256": "02fcaafdc6add479134e4c11e109a3e26f94f52c0aa163bc036f8a437449fcfd",
+      "coincide": true
+    },
+    {
+      "archivo": "s4/mi-proyecto-speckit/tdd-logs/us1_green.log",
+      "sha256": "4d5d11aacc2b35e58f95c35baec55607342495c2a1d08d6458c1c7395382b55a",
+      "coincide": true
+    },
+    {
+      "archivo": "s4/mi-proyecto-speckit/tdd-logs/us2_red.log",
+      "sha256": "e8d927654dbaa38ecb436dad65f8d8f8d7d55adee817c2f5621908ce9109dd5c",
+      "coincide": true
+    },
+    {
+      "archivo": "s4/mi-proyecto-speckit/tdd-logs/us2_green.log",
+      "sha256": "ab001428d7c3e246f308efa8bbc80ea898dbbce5110ad31079adb56999f4d648",
+      "coincide": true
+    },
+    {
+      "archivo": "s4/mi-proyecto-speckit/tdd-logs/us3_red.log",
+      "sha256": "9c399083ec8d8e5250fd7cffce58aebd544eaa8ceb8f35a31caebc5e20344dd4",
+      "coincide": true
+    },
+    {
+      "archivo": "s4/mi-proyecto-speckit/tdd-logs/us3_green.log",
+      "sha256": "e25d4af29c225e3e14174f36d42d61d8be9ba4bc16829a57e1feb367739b940d",
+      "coincide": true
+    },
+    {
+      "archivo": "s4/mi-proyecto-speckit/tdd-logs/final_suite.log",
+      "sha256": "3aa0edb043baa7112e73fc8a871544e85cdc7f24d8deee922928bb83e55cecdd",
+      "coincide": true
+    },
+    {
+      "archivo": "evidencia/p03-p04/entorno-fresco/20260911T012311.495286Z/resultados.json",
+      "sha256": "6c878deee663d965cd811d6c360484b43d6b640ec362c572c92bb3f74e1c2886",
+      "coincide": true
+    },
+    {
+      "archivo": "evidencia/p03-p04/entorno-fresco/20260911T013135.411265Z/resultados.json",
+      "sha256": "9a3091caf93c1ff507d9f34d5ffc4a65428a91c936485121ba266a12819c52d6",
+      "coincide": true
+    },
+    {
+      "archivo": "evidencia/p03-p04/agy-manual-response.md",
+      "sha256": "e69bc442049a48ea11a70e790ce49c18b3ebbe044a9456481f14beb203f53d96",
+      "coincide": true
+    },
+    {
+      "archivo": "s4/clase-sdd/spec_manual.md",
+      "sha256": "32e2299d3fa27a4311caec7686785e26687c4429f723cd3ba339eac2aab53ec9",
+      "coincide": true
+    },
+    {
+      "archivo": "s4/clase-sdd/conversor_agy.py",
+      "sha256": "b3623f9986c9b5020145333a063a7c4fd78397542cc9e313b77c54d7ce2fb8da",
+      "coincide": true
+    },
+    {
+      "archivo": "s4/mi-proyecto-speckit/specs/001-conversor-temperatura/spec.md",
+      "sha256": "f2f2f56926ca84b57bf0fec395fec1404229d962e8d83620f10f442648bb114b",
+      "coincide": true
+    },
+    {
+      "archivo": "s4/mi-proyecto-speckit/specs/001-conversor-temperatura/plan.md",
+      "sha256": "20f804c68c577caa56da67ad4e494fa727c7230f1cc2a5f3496602282e5ea7f7",
+      "coincide": true
+    },
+    {
+      "archivo": "s4/mi-proyecto-speckit/specs/001-conversor-temperatura/tasks.md",
+      "sha256": "7a217d95af7d40b22e1ff8b16abfe0e262b4bff39757a0bd57fdc0e7b2579714",
+      "coincide": true
+    }
+  ],
+  "representacion": "Spec y comparación resumidas; comandos, stdout, stderr y exit conservan los valores exactos. Cadenas JSON preservan vacíos y saltos de línea.",
+  "alcance": "Base P3, antes de ampliaciones P4; no se ejecutaron de nuevo las fuentes.",
+  "validacion_visual_navegador": "Pendiente. Preparación estática sin abrir navegador.",
+  "layout": "Ancho máximo 1400 CSS px; dos columnas desde 951 px; preferir ancho >=1200 y captura nativa de página completa si no cabe."
+}

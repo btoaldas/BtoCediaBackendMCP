@@ -1,0 +1,16 @@
+{
+  "tipo": "Reverificación del snapshot histórico P3 en entorno propio",
+  "comando": [
+    "uv",
+    "run",
+    "--frozen",
+    "pytest",
+    "tests/",
+    "-q"
+  ],
+  "cwd": "s4/versiones/p3-base-55",
+  "exit_code": 0,
+  "stdout": ".......................................................                  [100%]\n55 passed in 0.31s\n",
+  "stderr": "",
+  "manifiesto_sha256": "8a48612bebdcf77d78a12e8bfc7ba336d4c6954ae0d513a9af3fc71b7540d62d"
+}

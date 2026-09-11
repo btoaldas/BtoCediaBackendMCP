@@ -1,0 +1,177 @@
+{
+  "version": 1,
+  "registrado": "2026-09-10T20:54:06.416056-05:00",
+  "tipo": "Capturas PNG originales de visores locales de registros conservados",
+  "metodo": "CUA nativa de Microsoft Edge y FireShot 2.1.4.18: Capturar página entera → Como Imagen → guardar PNG por diálogo nativo. Copia binaria exclusiva al proyecto; sin edición de píxeles.",
+  "alcance": "Es una captura real del visor local, no de la terminal/TUI original, aula ni una ejecución nueva. El resumen usa la base P3 antes de QA P4.",
+  "capturas": [
+    {
+      "id": "spec_manual",
+      "archivo": "captura-visor-p03-spec-manual-20260910.png",
+      "original_conservado": "Downloads/FireShot/captura-visor-p03-spec-manual-20260910.png",
+      "copia_bytes_identica": true,
+      "bytes": 566063,
+      "dimensiones_px": [
+        3008,
+        1612
+      ],
+      "sha256": "5a0f19568234178c8cefcf82972ce7eb7007b92568823a0f5f8514d2b2827a1f",
+      "creado_original": "2026-09-10T20:50:11.212266-05:00",
+      "url_visor": "http://127.0.0.1:8933/manual-v1.html",
+      "visor": "manual-v1.html",
+      "visor_sha256": "d861c65bbdba0af497af3c75c3d9f1feee9d9f7f96a1750537766e48fcdd8f59",
+      "fireshot_capture_id": 28,
+      "zoom_porcentaje": 100,
+      "alcance_captura": "Página completa; desplegable de original/argumentos permanece cerrado",
+      "qa_visual": "Inspección del PNG guardado: contenido requerido completo, texto legible, sin recorte ni edición posterior."
+    },
+    {
+      "id": "flujo_speckit",
+      "archivo": "captura-visor-p03-flujo-speckit-20260910.png",
+      "original_conservado": "Downloads/FireShot/captura-visor-p03-flujo-speckit-20260910.png",
+      "copia_bytes_identica": true,
+      "bytes": 601703,
+      "dimensiones_px": [
+        3008,
+        1700
+      ],
+      "sha256": "6b542522fe6515d0b1bcc1793c344849afc217aca54c2be1a20b2d249fc4ffde",
+      "creado_original": "2026-09-10T20:52:02.901194-05:00",
+      "url_visor": "http://127.0.0.1:8933/flujo-v1.html",
+      "visor": "flujo-v1.html",
+      "visor_sha256": "5ef61bc53ee5a8a01aa2bcc22cd8dc8d08a5d2dd0a9106dfc92fd0828ac15527",
+      "fireshot_capture_id": 29,
+      "zoom_porcentaje": 100,
+      "alcance_captura": "Página completa; desplegable de original/argumentos permanece cerrado",
+      "qa_visual": "Inspección del PNG guardado: contenido requerido completo, texto legible, sin recorte ni edición posterior."
+    }
+  ],
+  "verificacion_preparacion_preservada": [
+    {
+      "archivo": "manual-v1.html",
+      "sha256": "d861c65bbdba0af497af3c75c3d9f1feee9d9f7f96a1750537766e48fcdd8f59",
+      "coincide": true
+    },
+    {
+      "archivo": "flujo-v1.html",
+      "sha256": "5ef61bc53ee5a8a01aa2bcc22cd8dc8d08a5d2dd0a9106dfc92fd0828ac15527",
+      "coincide": true
+    },
+    {
+      "archivo": "registro-manual-v1.txt",
+      "sha256": "f306ce0df00798a756b2e6fb52f564b3125a44dc2bedd9074e26ecb91adba939",
+      "coincide": true
+    },
+    {
+      "archivo": "registro-flujo-v1.txt",
+      "sha256": "956b62316c0326dace5b434d021015e31910c4e078ddec8cafef15514bf8b2d5",
+      "coincide": true
+    },
+    {
+      "archivo": "procedencia-v1.json",
+      "sha256": "889a3c2d622a19bade5e22da8d20063bd87f2f8bfb0f879fbac5830348723e31",
+      "coincide": true
+    },
+    {
+      "archivo": "evidencias-pdf-pendientes-v1.json",
+      "sha256": "3a3be6c5e33af367a5c5cbbb21bb2416c073d8da05fc5574b2ffb37b0af2ebd4",
+      "coincide": true
+    }
+  ],
+  "verificacion_fuentes_base": [
+    {
+      "archivo": "s4/mi-proyecto-speckit/tdd-logs/us1_red.log",
+      "sha256": "9f7a7c7e9d4028f88472cc9f18ced0c211bbf1525d8de3353f51dc62385a3e36",
+      "coincide": true
+    },
+    {
+      "archivo": "s4/mi-proyecto-speckit/tdd-logs/us1_primer_intento_empaquetado_fallido.log",
+      "sha256": "02fcaafdc6add479134e4c11e109a3e26f94f52c0aa163bc036f8a437449fcfd",
+      "coincide": true
+    },
+    {
+      "archivo": "s4/mi-proyecto-speckit/tdd-logs/us1_green.log",
+      "sha256": "4d5d11aacc2b35e58f95c35baec55607342495c2a1d08d6458c1c7395382b55a",
+      "coincide": true
+    },
+    {
+      "archivo": "s4/mi-proyecto-speckit/tdd-logs/us2_red.log",
+      "sha256": "e8d927654dbaa38ecb436dad65f8d8f8d7d55adee817c2f5621908ce9109dd5c",
+      "coincide": true
+    },
+    {
+      "archivo": "s4/mi-proyecto-speckit/tdd-logs/us2_green.log",
+      "sha256": "ab001428d7c3e246f308efa8bbc80ea898dbbce5110ad31079adb56999f4d648",
+      "coincide": true
+    },
+    {
+      "archivo": "s4/mi-proyecto-speckit/tdd-logs/us3_red.log",
+      "sha256": "9c399083ec8d8e5250fd7cffce58aebd544eaa8ceb8f35a31caebc5e20344dd4",
+      "coincide": true
+    },
+    {
+      "archivo": "s4/mi-proyecto-speckit/tdd-logs/us3_green.log",
+      "sha256": "e25d4af29c225e3e14174f36d42d61d8be9ba4bc16829a57e1feb367739b940d",
+      "coincide": true
+    },
+    {
+      "archivo": "s4/mi-proyecto-speckit/tdd-logs/final_suite.log",
+      "sha256": "3aa0edb043baa7112e73fc8a871544e85cdc7f24d8deee922928bb83e55cecdd",
+      "coincide": true
+    },
+    {
+      "archivo": "evidencia/p03-p04/entorno-fresco/20260911T012311.495286Z/resultados.json",
+      "sha256": "6c878deee663d965cd811d6c360484b43d6b640ec362c572c92bb3f74e1c2886",
+      "coincide": true
+    },
+    {
+      "archivo": "evidencia/p03-p04/entorno-fresco/20260911T013135.411265Z/resultados.json",
+      "sha256": "9a3091caf93c1ff507d9f34d5ffc4a65428a91c936485121ba266a12819c52d6",
+      "coincide": true
+    },
+    {
+      "archivo": "evidencia/p03-p04/agy-manual-response.md",
+      "sha256": "e69bc442049a48ea11a70e790ce49c18b3ebbe044a9456481f14beb203f53d96",
+      "coincide": true
+    },
+    {
+      "archivo": "s4/clase-sdd/spec_manual.md",
+      "sha256": "32e2299d3fa27a4311caec7686785e26687c4429f723cd3ba339eac2aab53ec9",
+      "coincide": true
+    },
+    {
+      "archivo": "s4/clase-sdd/conversor_agy.py",
+      "sha256": "b3623f9986c9b5020145333a063a7c4fd78397542cc9e313b77c54d7ce2fb8da",
+      "coincide": true
+    },
+    {
+      "archivo": "s4/mi-proyecto-speckit/specs/001-conversor-temperatura/spec.md",
+      "sha256": "f2f2f56926ca84b57bf0fec395fec1404229d962e8d83620f10f442648bb114b",
+      "coincide": true
+    },
+    {
+      "archivo": "s4/mi-proyecto-speckit/specs/001-conversor-temperatura/plan.md",
+      "sha256": "20f804c68c577caa56da67ad4e494fa727c7230f1cc2a5f3496602282e5ea7f7",
+      "coincide": true
+    },
+    {
+      "archivo": "s4/mi-proyecto-speckit/specs/001-conversor-temperatura/tasks.md",
+      "sha256": "7a217d95af7d40b22e1ff8b16abfe0e262b4bff39757a0bd57fdc0e7b2579714",
+      "coincide": true
+    }
+  ],
+  "procedencia_anterior": {
+    "archivo": "procedencia-v1.json",
+    "sha256": "889a3c2d622a19bade5e22da8d20063bd87f2f8bfb0f879fbac5830348723e31",
+    "nota": "Conservada: sus campos pendientes describen el momento anterior a estas capturas."
+  },
+  "servidor": {
+    "bind": "127.0.0.1",
+    "puerto": 8933,
+    "carpeta_servida": "evidencia/p03-p04/capturas-p03",
+    "apagado": true,
+    "salida": 0
+  },
+  "zoom_final_porcentaje": 100,
+  "limite": "La captura y los hashes prueban representación e integridad; la aceptación académica no se acredita mediante este archivo."
+}
