@@ -8,8 +8,9 @@ corresponden a esta ejecución.
 En 3.A la spec manual se redactó antes del código. agy recibió esa spec completa
 por `--print`, devolvió código textual real y Codex lo guardó sin cambios y lo
 probó. Las herramientas del primer intento headless fueron denegadas; el código
-no procede de una llamada simulada ni de un mock. Se conserva el borrador Codex
-anterior por separado y no se lo cuenta como la implementación de agy.
+no procede de una llamada simulada ni de un mock. El borrador Codex
+anterior se conserva en el histórico local y en Git previo; la presentación
+actual incluye únicamente conversor_agy.py como implementación evaluada.
 
 En 3.B Specify CLI se instaló temporalmente con uvx desde el repositorio oficial
 GitHub Spec Kit, commit c173bf19a6654e3b05386ec3599349a55282b897. `specify init`

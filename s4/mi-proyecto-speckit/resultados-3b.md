@@ -1,4 +1,6 @@
-# Resultados 3.B — Spec Kit real
+# Resultados históricos 3.B — base P3 de 55 pruebas
+
+Este registro corresponde a P3. La [versión final P4](README.md) tiene 65 pruebas y 94,3 % de cobertura; véase el [reporte final](reporte-qa.html). La [base P3](../versiones/p3-base-55/README.md) se conserva separada para reproducir los resultados siguientes.
 
 Se inicializó Specify CLI desde el repositorio oficial `github/spec-kit`, commit
 `c173bf19a6654e3b05386ec3599349a55282b897`, usando la integración `agy`.

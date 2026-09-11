@@ -1,7 +1,7 @@
 [project]
 name = "experimento"
 version = "0.1.0"
-description = "Add your description here"
+description = "Entorno reproducible de las cuatro rondas de validación sin especificación de la práctica 2"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = []

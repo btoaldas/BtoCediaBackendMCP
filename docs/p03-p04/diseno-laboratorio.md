@@ -4,7 +4,8 @@ Actor: persona que convierte temperaturas mediante CLI. Objetivo: resultados
 correctos entre C, F y K, errores legibles y pruebas trazables a la spec.
 Nivel L. Datos sintéticos, cálculo local, sin persistencia, red, cuentas ni secretos.
 No alcance: API HTTP, interfaz web del producto, pagos, SRI, datos personales,
-servicios institucionales, carga, despliegue y repositorio remoto.
+servicios institucionales, pruebas de carga y despliegue de servicios. El código
+y la evidencia revisada se publicaron en el repositorio GitHub autorizado.
 
 Python 3.12 es exigido por el curso y ya está disponible; stdlib Decimal evita
 redondeo binario en los límites de temperatura. uv fija dependencias y ejecuta

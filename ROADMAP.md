@@ -2,17 +2,25 @@
 
 Actualizado 2026-09-10. Nivel L laboratorio.
 
-## Ahora
+## Entregas verificadas
 
-Obtener las guías 5 a 7 para continuar esas prácticas con sus requisitos reales. La descarga automática sigue bloqueada; se abrió Semana 3 para que el usuario las guarde en Descargas. Todavía no se ha recibido su contenido. Las entregas 1 a 4 están confirmadas y sus archivos descargados fueron verificados.
+Prácticas 1 a 4 enviadas para calificar y cuatro descargas AVAC idénticas a sus PDF finales. P1 conserva el 429 real no observado; P2 conserva su fallo experimental; P3 conserva la base de 55 pruebas; P4 cerró con 65 pruebas y 94,3 % de cobertura. Código y capturas están publicados y el commit P4 se instaló y probó desde un archivo Git nuevo.
+
+El respaldo conjunto local de código, ocho PDF/Word, manifiestos y comprobantes está verificado en Obsidian. Se conservan los originales históricos por separado. Las calificaciones docentes aún están pendientes.
 
 ## Siguiente
 
-Práctica 4 enviada a las 22:08, antes del cierre de 23:59, con PDF de cinco páginas descargado e idéntico al original revisado. Código y capturas publicados y accesibles anónimamente. La base final pasó 65 pruebas con 94,3 % de cobertura; una extracción del commit publicado se instaló desde cero y aprobó las 65 pruebas. Las prácticas 1 a 3 ya estaban enviadas y verificadas. P1 declara el 429 real no observado; P3 conserva su base histórica de 55 pruebas. Mantener respaldo conjunto de código, informes editables y comprobantes en Obsidian. Resolver prácticas 5 a 7 cuando se disponga de sus guías.
+Obtener `practica_05.md`, `practica_06.md` y `practica_07.md` para continuar con sus requisitos reales. La descarga automática de esos Markdown quedó bloqueada. Los tres PDF teóricos asociados ya fueron descargados, respaldados y revisados: 117 páginas; no contienen las guías completas. No se implementan actividades suponiendo enunciados desconocidos.
 
 ## Pendientes de decisión o evidencia
 
-Repositorio remoto: GitHub público btoaldas/BtoCediaBackendMCP, main, autorizado y con acceso anónimo comprobado. Gemini: dos ensayos reales acotados no produjeron 429; el tier no se ha verificado y no se incrementará la carga sin límite. Guías 5 a 7: descarga pendiente por bloqueo del navegador, sin contenido confirmado. Asistencia: requiere revisión del docente; no se modifica ni se afirma presencia sin evidencia. Semanas futuras: no disponibles al alumno. Calificaciones: dependen del docente. Obsidian: copias locales verificadas, sincronización remota de OneDrive no comprobada.
+- P1: dos ensayos reales de 20 solicitudes no produjeron 429. Mantener la observación y consultar al docente sobre la evidencia o una comprobación adicional acotada; el tier y su cuota no se verificaron.
+- P5–P7: obtener y leer los tres Markdown originales antes de implementar.
+- Asistencia: requiere revisión del docente; no se modifica ni se afirma presencia sin evidencia.
+- Calificaciones, semanas futuras y cierre: dependen del curso. Entrega registrada no equivale a aceptación académica.
+- Obsidian: copia local e integridad verificadas; sincronización remota de OneDrive no comprobada.
+
+Repositorio remoto autorizado y público: [btoaldas/BtoCediaBackendMCP](https://github.com/btoaldas/BtoCediaBackendMCP), rama `main`, con acceso anónimo comprobado.
 
 ## Aplicación del ciclo de software
 

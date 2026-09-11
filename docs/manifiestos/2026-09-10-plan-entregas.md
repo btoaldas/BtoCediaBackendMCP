@@ -1,3 +1,0 @@
-# Preparación de entregas AVAC
-
-Objetivo: completar las actividades del curso 932. Destino autorizado: CEDIA, tareas 48409, 48516, 48569 y 48846. Estado observado: ningún envío. Se crearán informes y evidencia local y se validarán contra guías antes de cargar. Publicación Git requiere definición del destino remoto. Antes de envío se comprobará archivo exacto, datos del participante, afirmaciones y posible declaración de autoría. Recuperación: conservar copias locales y no reemplazar envíos previos. Pruebas de cierre: estado enviado y lectura posterior de archivo/registro, sin afirmar calificación pendiente.

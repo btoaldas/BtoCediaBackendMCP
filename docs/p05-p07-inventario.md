@@ -2,7 +2,7 @@
 
 Consulta del 10 de septiembre de 2026, 19:51, America/Guayaquil. Fuente: semana 3 del curso **MOD2 Programación de Backend y MCP en Python para IA Generativa (08-26)**, curso 932, en la sesión autenticada del AVAC CEDIA.
 
-Estado: **materiales identificados, contenido pendiente por bloqueo del navegador**. No se obtuvieron los originales y no se crearon archivos sustitutos en `materiales/`.
+Estado actual: **tres PDF teóricos descargados, respaldados y revisados; guías Markdown 5–7 pendientes**. Los PDF suman 117 páginas y no sustituyen los enunciados completos. No se crearon archivos de práctica suponiendo requisitos desconocidos. El diagnóstico de descarga que se conserva abajo corresponde a los tres Markdown originales.
 
 ## Recursos oficiales identificados
 
@@ -34,7 +34,7 @@ Como material teórico asociado por título, la misma página ofrece:
 - **De la arquitectura al código**, recurso 48998.
 - **Del backend a los agentes**, recurso 49014.
 
-La correspondencia de títulos está confirmada en la página. No se inspeccionó el contenido teórico y no se atribuye una dependencia obligatoria sin el enunciado.
+La correspondencia de títulos está confirmada en la página. Después de esta consulta inicial se revisaron los tres PDF: Cimientos de un backend serio (39 páginas), De la arquitectura al código (38) y Del backend a los agentes (40). Se extrajo texto de las 117 páginas y se inspeccionaron ocho visualmente. Incluyen teoría, ejemplos y actividades breves, pero no contienen las guías completas ni sus rúbricas. No se deducen requisitos obligatorios a partir de esos ejemplos.
 
 ## Diagnóstico reproducible
 

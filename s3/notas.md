@@ -1,5 +1,13 @@
 # Práctica 2 — notas del experimento guiado
 
+## Estado final y lectura de estas notas
+
+La práctica 2 fue enviada para calificar a las 20:45 del 10/09/2026; la descarga AVAC coincide con el PDF final. Se aportaron tres capturas reales del visor, siete evidencias y tres reflexiones asistidas. La [comparación vigente con el instructor](../docs/p02/instructor-comparacion-v2.md) verifica las rondas 1–3; el resultado del cierre del instructor no fue confirmado. Véase la [QA final](../docs/p02/QA-entrega-v1.md).
+
+El registro que sigue se conserva literalmente: las frases «no disponible» y los pendientes de composición describen el momento previo a la consulta posterior y a la entrega. No son el estado actual. Se mantienen las predicciones prospectivas y la atribución de las reflexiones al asistente.
+
+## Registro histórico de ejecución
+
 Recuperación asincrónica ejecutada el 10 de septiembre de 2026 (America/Guayaquil), con Python 3.12.13, uv 0.11.14 y agy real, Gemini 3.8 Flash (High). Las predicciones y reflexiones técnicas pertenecen al agente asistente Codex; no se presentan como vivencias o respuestas personales de Alberto.
 
 Este documento consolida las notas después de la ejecución. Las predicciones originales fueron guardadas prospectivamente en `evidencia/p02/prediccion-01.json` a `prediccion-04.json`; la verificación de tiempos, pedidos y hashes está en `evidencia/p02/trazabilidad.txt`. No se dispone de resultados del instructor.

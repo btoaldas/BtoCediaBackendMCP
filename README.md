@@ -1,23 +1,36 @@
 # Curso de Backend y MCP en Python para IA Generativa
 
-Carpeta de formación con prácticas reproducibles, informes y evidencias. Curso CEDIA MOD2 agosto 2026, identificador 932.
+Resultados finales de las prácticas 1 a 4 del curso CEDIA MOD2 agosto 2026 (curso 932). Las cuatro entregas están **enviadas para calificar**; sus PDF descargados de AVAC son idénticos a los revisados. Los PDF y Word identificados, manifiestos y comprobantes se conservan en el respaldo privado de Obsidian.
 
-Estado al 10 de septiembre: prueba 10/10. Prácticas 1, 2, 3 y 4 enviadas para calificar a las 21:25, 20:45, 21:38 y 22:08; las cuatro copias descargadas de AVAC coinciden con los PDF revisados. P1 conserva una observación explícita: los dos ensayos reales acotados no produjeron 429. P3 conserva su base reproducible de 55 pruebas. P4 aprobó 65 pruebas y alcanzó 94,3 % de cobertura; se entregó antes del cierre de hoy 23:59. Las guías 5 a 7 figuran publicadas, pero todavía falta obtener su contenido tras el bloqueo de descarga automática. Semanas futuras y cierre no están habilitados al estudiante. Las entregas todavía no tienen calificación docente; esto no acredita la finalización total del curso.
+| Práctica | Entrega del 10/09/2026, Ecuador | Resultado verificado |
+|---|---|---|
+| 1 · clase 2 | 21:25 | Ocho turnos reales y 24 pruebas. Observación: dos ensayos de 20 llamadas no produjeron un 429 real. |
+| 2 · clase 3 | 20:45 | Cuatro rondas reales, predicciones prospectivas y fallo experimental conservado. |
+| 3 · clase 4 | 21:38 | Comparación manual/Spec Kit y base histórica reproducible de 55 pruebas. |
+| 4 · clase 5 | 22:08 | 65 pruebas aprobadas, 94,3 % de cobertura, bloqueo Stop y agentes nativos verificados. |
 
-Consultar ROADMAP.md y docs/bitacora/2026-09-10.md. Originales del docente en materiales (no versionados), desarrollos en s02, s3 y s4. Repositorio público: https://github.com/btoaldas/BtoCediaBackendMCP (rama main).
+La prueba del curso terminó con 10/10. Las entregas aún no tienen calificación docente; no se afirma finalización total del curso. La observación de P1 sobre el 429 sigue pendiente de evaluación.
 
-## Clase 2
+Repositorio público: [btoaldas/BtoCediaBackendMCP](https://github.com/btoaldas/BtoCediaBackendMCP), rama `main`. [Estado y pendientes](ROADMAP.md) · [Bitácora histórica](docs/bitacora/2026-09-10.md).
 
-[Implementación, reproducción y conversación completa de ocho turnos](s02/README.md). [Resultados y límites](docs/p01/RESULTADOS.md).
+## Práctica 1 — cliente y memoria
 
-## Clase 3
+[Implementación y conversación de ocho turnos](s02/README.md) · [Resultados y límites](docs/p01/RESULTADOS.md) · [QA del informe entregado](docs/p01/QA-entrega-v5.md).
 
-[Experimento de cuatro rondas con agy](s3/README.md), [reflexiones y predicciones asistidas](s3/notas.md), [comparación posterior con la grabación](docs/p02/instructor-comparacion-v2.md) y [verificación del informe](docs/p02/QA-entrega-v1.md). El fallo deliberadamente conservado es parte del experimento, no una implementación apta para uso real.
+## Práctica 2 — evolución sin especificación
 
-## Clase 4
+[Cuatro rondas reproducibles](s3/README.md) · [Notas y predicciones asistidas](s3/notas.md) · [Comparación posterior con el instructor](docs/p02/instructor-comparacion-v2.md) · [QA del informe entregado](docs/p02/QA-entrega-v1.md). El fallo de administradores es evidencia exigida por el experimento; no representa una implementación para uso real.
 
-[Versión manual](s4/clase-sdd/README.md), [comparación de las dos estrategias](s4/comparacion.md) y [base histórica reproducible de Spec Kit con 55 pruebas](s4/versiones/p3-base-55/README.md). Esta base conserva el código evaluado en P3.
+## Práctica 3 — comparación de estrategias
 
-## Clase 5
+[Versión manual evaluada](s4/clase-sdd/README.md) · [Comparación](s4/comparacion.md) · [Base histórica Spec Kit de 55 pruebas](s4/versiones/p3-base-55/README.md) · [QA del informe entregado](docs/p03-p04/QA-informe-p03-v2-final.md). La base reproduce P3 y conserva los límites numéricos descubiertos después.
 
-[Conversor final y comandos de reproducción](s4/mi-proyecto-speckit/README.md), [cierre técnico de P4](docs/p03-p04/cierre-p04.md), [reporte QA](s4/mi-proyecto-speckit/reporte-qa.html) y [segunda orquestación verificada](docs/p03-p04/replay-canonico-verificado.md). La versión final aprobó 65 pruebas, con 94,3 % de cobertura. Las [capturas y su procedencia](evidencia/p03-p04/capturas-p04/) documentan el bloqueo real y el reporte de E. Las [plantillas docentes](docs/p03-p04/atribucion-plantillas-docentes.md) tienen atribución separada.
+## Práctica 4 — conversor final y QA
+
+[Conversor final](s4/mi-proyecto-speckit/README.md) · [Reproducción desde un clon](docs/p03-p04/reproduccion-desde-clon.md) · [Cierre técnico](docs/p03-p04/cierre-p04.md) · [Reporte QA](s4/mi-proyecto-speckit/reporte-qa.html) · [Orquestación canónica verificada](docs/p03-p04/replay-canonico-verificado.md) · [QA del informe entregado](docs/p03-p04/QA-informe-p04-v2-final.md).
+
+Las [capturas y su procedencia](evidencia/p03-p04/capturas-p04/) conservan el bloqueo real B y el reporte E. Los agentes, skills y plantillas operativas siguen incluidos para reproducir el trabajo; las [plantillas docentes tienen atribución separada](docs/p03-p04/atribucion-plantillas-docentes.md).
+
+## Continuación del curso
+
+Los tres PDF teóricos de Semana 3 están respaldados y revisados: 117 páginas. Siguen pendientes los enunciados completos `practica_05.md`, `practica_06.md` y `practica_07.md`; los PDF no los sustituyen. Véase el [inventario actualizado](docs/p05-p07-inventario.md). Asistencia, calificaciones y cierre dependen de revisión o publicación del curso. La sincronización remota de OneDrive no está comprobada.

@@ -1,6 +1,6 @@
-# Práctica 2 — laboratorio de evolución sin spec
+# Práctica 2 — resultado final del experimento sin spec
 
-Los cuatro snapshots de `rondas/01-contrasenas` a `rondas/04-administradores` contienen exactamente el código que devolvió agy. `rondas/00-inicio` conserva el esqueleto inicial de uv. La carpeta `experimento` aporta el entorno Python; sus archivos iniciales no sustituyen a los snapshots.
+Informe enviado para calificar el 10/09/2026 a las 20:45; descarga AVAC idéntica al PDF final revisado. Los cuatro snapshots de `rondas/01-contrasenas` a `rondas/04-administradores` contienen exactamente el código que devolvió agy. La carpeta `experimento` conserva la configuración Python y las dependencias bloqueadas para ejecutar las comprobaciones. El esqueleto inicial está preservado en el histórico local y Git previo.
 
 Desde la raíz del proyecto:
 
@@ -22,4 +22,4 @@ La contraseña `12345` se rechaza directamente, pero pasa en un usuario construi
 
 `llamar_ronda.py` registra una llamada nueva a agy y usa creación exclusiva para no sobrescribir evidencias. No es necesario volver a invocar IA para reproducir las pruebas. `preparar_registros.py` crea imágenes nuevas desde fuentes textuales existentes y se niega a sobrescribirlas; requiere Pillow del runtime documental. Son registros renderizados, no capturas simuladas.
 
-Las notas están en `s3/notas.md`, el informe técnico en `docs/p02/informe.md`, las salidas en `evidencia/p02` y el insumo oficial en el directorio privado. Los logs del proveedor y sus estados locales se conservan fuera del material de entrega.
+[Notas y predicciones originales](notas.md) · [Comparación vigente con el instructor](../docs/p02/instructor-comparacion-v2.md) · [QA del informe final](../docs/p02/QA-entrega-v1.md) · [Salidas conservadas](../evidencia/p02/). El PDF, Word y comprobante AVAC identificados se conservan en el respaldo privado. Los logs del proveedor y sus estados locales permanecen fuera del material público.

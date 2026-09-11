@@ -35,3 +35,19 @@ s4/mi-proyecto-speckit/.agents/skills/qa-report/generar_reporte_guia_original.py
 .qa-gate-runs/
 .qa-runs/
 docs/inventario-curso-20260910.md
+
+# Non-final presentation artifacts retained locally and in prior Git history
+/docs/manifiestos/2026-09-10-plan-entregas.md
+/docs/p01/QA-informe-v3.md
+/docs/p02/informe.md
+/docs/p02/instructor-comparacion-v1.md
+/docs/p02/preparacion.md
+/docs/p03-p04/QA-informe-p03-v1.md
+/docs/plantilla/QA-informes-20260910.md
+/docs/plantilla/ejemplo-datos.json
+/s3/experimento/main.py
+/s3/rondas/00-inicio/.python-version
+/s3/rondas/00-inicio/README.md
+/s3/rondas/00-inicio/main.py
+/s3/rondas/00-inicio/pyproject.toml
+/s4/clase-sdd/conversor.py

@@ -14,4 +14,4 @@ no se atribuye la ejecución de los tests a agy.
 
 NaN no estaba contemplado en la spec manual. agy agregó validación de finitud por iniciativa; ese comportamiento se observó en la ejecución real.
 
-Evidencia: `../../evidencia/p03-p04/agy-manual-response.md` y `manual-agy-casos.json`. El borrador anterior `conversor.py` se conserva como preparación, separado de esta implementación agy.
+Evidencia pública: [resultados y procedencia](../../evidencia/p03-p04/publicable/p03-resultados-base-v2.json) y [captura del visor manual](../../evidencia/p03-p04/capturas-p03/manual-v1.html). La respuesta agy y los procesos originales se conservan localmente según sus hashes. El borrador Codex previo permanece en el histórico local y Git anterior; no forma parte de la implementación evaluada.
