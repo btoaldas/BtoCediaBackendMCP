@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "tipo": "Registro de consultas reales, no captura de UI",
+  "repositorio": "https://github.com/btoaldas/BtoCediaBackendMCP",
+  "verificado_utc": "2026-09-11T02:26:09.539517+00:00",
+  "verificado_ecuador": "2026-09-10T21:26:09.539517-05:00",
+  "metodo": "git ls-remote y HTTPS GET anónimo con Python urllib; sin cookies, tokens, Authorization ni perfiles de navegador",
+  "remote_head": "e455a5dc2acdf4d745a1cf1d66d08794f9c8b347",
+  "remote_main": "e455a5dc2acdf4d745a1cf1d66d08794f9c8b347",
+  "salida_ls_remote": "e455a5dc2acdf4d745a1cf1d66d08794f9c8b347\tHEAD\ne455a5dc2acdf4d745a1cf1d66d08794f9c8b347\trefs/heads/main\n",
+  "api_main": {
+    "url": "https://api.github.com/repos/btoaldas/BtoCediaBackendMCP/commits/main",
+    "url_final": "https://api.github.com/repos/btoaldas/BtoCediaBackendMCP/commits/main",
+    "http_status": 200,
+    "bytes": 76649,
+    "sha256": "032b4fda8dd04aff63fa3d739ebb51fd34ae76d86cdfa9c3f0e4077211fb32e6"
+  },
+  "api_main_commit": "e455a5dc2acdf4d745a1cf1d66d08794f9c8b347",
+  "base_implementacion_commit": "140f59af38bd654c5e6727b6ff832fae6ff921fd",
+  "base_es_ancestro": true,
+  "archivos": [
+    {
+      "url": "https://raw.githubusercontent.com/btoaldas/BtoCediaBackendMCP/e455a5dc2acdf4d745a1cf1d66d08794f9c8b347/s4/clase-sdd/README.md",
+      "url_final": "https://raw.githubusercontent.com/btoaldas/BtoCediaBackendMCP/e455a5dc2acdf4d745a1cf1d66d08794f9c8b347/s4/clase-sdd/README.md",
+      "http_status": 200,
+      "bytes": 781,
+      "sha256": "e9a9c50affe7809bee257a85460719663fee2dd846d3051342011f5a06f6e4a5",
+      "archivo": "s4/clase-sdd/README.md",
+      "sha256_git_show": "e9a9c50affe7809bee257a85460719663fee2dd846d3051342011f5a06f6e4a5",
+      "igualdad_binaria_commit": true,
+      "contenido_utf8": "# Bloque 3.A — Spec manual\n\nLa implementación evaluada es `conversor_agy.py`, código devuelto por una llamada\nreal a `agy --print` que recibió `spec_manual.md` completo. Codex guardó el bloque\nPython sin cambios y ejecutó las pruebas. Ejecutar:\n\n```bash\nuv run python conversor_agy.py 0 C F\nuv run python conversor_agy.py -273.15 C K\nuv run python conversor_agy.py NaN C F\n```\n\nLos dos primeros comandos producen `32.00 F` y `0.00 K`, respectivamente, con\nexit 0. El tercero rechaza el valor con mensaje en stderr y exit 2. Véase\n[resultados-3a.md](resultados-3a.md) para la evidencia y la intervención declarada.\n\n`conversor.py` conserva el borrador previo preparado con Codex durante el bloqueo\nde autenticación. No se cuenta como la implementación producida por agy.\n"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/btoaldas/BtoCediaBackendMCP/e455a5dc2acdf4d745a1cf1d66d08794f9c8b347/s4/versiones/p3-base-55/README.md",
+      "url_final": "https://raw.githubusercontent.com/btoaldas/BtoCediaBackendMCP/e455a5dc2acdf4d745a1cf1d66d08794f9c8b347/s4/versiones/p3-base-55/README.md",
+      "http_status": 200,
+      "bytes": 1074,
+      "sha256": "73ae4869ac5a4689395f36ba427ab48e77f7671da6d8232e160478e1c147be1f",
+      "archivo": "s4/versiones/p3-base-55/README.md",
+      "sha256_git_show": "73ae4869ac5a4689395f36ba427ab48e77f7671da6d8232e160478e1c147be1f",
+      "igualdad_binaria_commit": true,
+      "contenido_utf8": "# P3 — snapshot histórico de 55 pruebas\n\nEsta copia reproduce la base de P3 antes de ampliar la auditoría en P4. Proviene\nde `08-p3-reproducible`; `origen-sha256.json` registra hashes originales y de\nlas copias. Sólo se sanearon rutas absolutas de documentos. Fuentes Python,\npruebas, pyproject y uv.lock son copias exactas.\n\n```bash\nuv sync --frozen\nuv run --frozen pytest tests/ -q\nuv run --frozen python -m temperatura 0 C F\n```\n\nResultado original: 55 aprobadas (19 unitarias, 27 integración en memoria,\n9 e2e) y 108/122 líneas cubiertas. El bloque manual está en\n[clase-sdd](../../clase-sdd/) y la comparación en [comparacion.md](../../comparacion.md).\n\n## Limitaciones históricas identificadas después\n\nP4 detectó y corrigió en la base canónica el desbordamiento de `abs(Decimal)`\ncon `1e9999999`, y el doble redondeo del valor\n`1.0027777777777777777777777777 C F`. Este snapshot conserva esos comportamientos\npara reproducir la etapa: no es la versión final recomendada. La versión\ncorregida vive en [mi-proyecto-speckit](../../mi-proyecto-speckit/).\n"
+    }
+  ],
+  "resultado": "Acceso público anónimo HTTP 200 a ambos README; bytes idénticos a git show del commit publicado.",
+  "alcance": "Accesible sin autenticación para el docente o cualquier lector. No acredita que el docente haya visitado, revisado o aceptado la entrega.",
+  "preservacion_base_p3": "s4/versiones/p3-base-55 conserva la implementación y pruebas históricas de P3, anterior a QA P4; los README declaran sus límites."
+}

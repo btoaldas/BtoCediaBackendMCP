@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "estado_preparacion": "Captura real guardada y verificada; fragmento listo para integrar",
+  "rutas_relativas_a": "Esta carpeta; ajustar imagen/fuente al incorporar al input privado",
+  "instrucciones": "Conservar los PNG originales sin retocar. Para una página Letter, complementar el detalle con tabla o registro textual si la figura de350pt queda pequeña. Evidencia B en evidencias-pdf-bloqueo-v1.json.",
+  "evidencias": [
+    {
+      "id": "reporte_qa",
+      "titulo": "Reporte QA emitido por report-agent-native",
+      "tipo": "captura",
+      "imagen": "captura-p04-reporte-qa-e-20260910.png",
+      "fuente": "captura-p04-reporte-qa-e-20260910.png",
+      "verificada": true,
+      "sha256_imagen": "7fc41a84ec5dd3d98a7fe9ecde1853d2048faba29b9c3df963008e3c676b533a",
+      "sha256_fuente": "7fc41a84ec5dd3d98a7fe9ecde1853d2048faba29b9c3df963008e3c676b533a",
+      "html_original": "reporte-qa-e-original-v1.html",
+      "html_sha256": "5a5c1ba5c94b521e348e9b525d0e8a1a009d7d0653e387f5a854a0b0c1349f18",
+      "descripcion": "Captura real del HTML nativo del escenario E, generado tras ejecutar report-agent-native en Antigravity CLI según el manifiesto preservado. El script redactó el HTML determinísticamente: APROBADO, 65/65 pruebas, 0 fallos/errores, cobertura 94.3 %, higiene Git y patrón sin hallazgos. Fecha original: 11/09/2026 02:34:42 UTC (10/09/2026 21:34:42 Ecuador). No es una captura de la TUI ni una ejecución nueva; no constituye certificación de seguridad."
+    }
+  ]
+}

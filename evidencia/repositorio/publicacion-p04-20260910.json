@@ -1,0 +1,51 @@
+{
+  "fecha": "2026-09-10T21:59:13.313448-05:00",
+  "repositorio": "https://github.com/btoaldas/BtoCediaBackendMCP",
+  "publico": true,
+  "rama": "main",
+  "commit_local": "65a1b1225f9a8fb105308e8c076fc8b52b89eda3",
+  "commit_remoto": "65a1b1225f9a8fb105308e8c076fc8b52b89eda3",
+  "lectura_anonima": true,
+  "archivos": [
+    {
+      "ruta": "s4/mi-proyecto-speckit/README.md",
+      "url": "https://raw.githubusercontent.com/btoaldas/BtoCediaBackendMCP/65a1b1225f9a8fb105308e8c076fc8b52b89eda3/s4/mi-proyecto-speckit/README.md",
+      "http": 200,
+      "bytes": 1679,
+      "sha256": "c91fd759590f259e250fa98ddf73c5180a29257aed151ae3fa4f3d9e765e70ba",
+      "igual_a_git": true
+    },
+    {
+      "ruta": "s4/mi-proyecto-speckit/src/temperatura/dominio.py",
+      "url": "https://raw.githubusercontent.com/btoaldas/BtoCediaBackendMCP/65a1b1225f9a8fb105308e8c076fc8b52b89eda3/s4/mi-proyecto-speckit/src/temperatura/dominio.py",
+      "http": 200,
+      "bytes": 4870,
+      "sha256": "7d7e43c456c5403e0d4bb61daf238cbe1ec01b39f8d26577cd15055bf5f0280b",
+      "igual_a_git": true
+    },
+    {
+      "ruta": "s4/mi-proyecto-speckit/reporte-qa.html",
+      "url": "https://raw.githubusercontent.com/btoaldas/BtoCediaBackendMCP/65a1b1225f9a8fb105308e8c076fc8b52b89eda3/s4/mi-proyecto-speckit/reporte-qa.html",
+      "http": 200,
+      "bytes": 1609,
+      "sha256": "31d73df85213ffc0f77c5e509901e7905eecfaddecae5a9f15e2d02ea09a5782",
+      "igual_a_git": true
+    },
+    {
+      "ruta": "evidencia/p03-p04/publicable/p04-replay-canonico-final.json",
+      "url": "https://raw.githubusercontent.com/btoaldas/BtoCediaBackendMCP/65a1b1225f9a8fb105308e8c076fc8b52b89eda3/evidencia/p03-p04/publicable/p04-replay-canonico-final.json",
+      "http": 200,
+      "bytes": 1343,
+      "sha256": "bd8ae5d0b8bf3d01847818004c1fff91eb60babd4744a983e29ba68f054101f7",
+      "igual_a_git": true
+    },
+    {
+      "ruta": "s4/mi-proyecto-speckit/.agents/skills/qa-orchestrate/SKILL.md",
+      "url": "https://raw.githubusercontent.com/btoaldas/BtoCediaBackendMCP/65a1b1225f9a8fb105308e8c076fc8b52b89eda3/s4/mi-proyecto-speckit/.agents/skills/qa-orchestrate/SKILL.md",
+      "http": 200,
+      "bytes": 2254,
+      "sha256": "e559e58c36e206228e1e3a330eb2606d9915f3078d1f8f11118926b4a148a4b2",
+      "igual_a_git": true
+    }
+  ]
+}

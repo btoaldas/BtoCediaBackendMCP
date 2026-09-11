@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "tipo": "Visor de registros conservados; todavía no acredita captura",
+  "fuentes": [
+    {
+      "archivo": "p04-hook-bloqueando.log",
+      "sha256": "c1f4064a0bcab2190b38538b12d0110d3029dfcfdd37b5ff91efb03d9f146414"
+    },
+    {
+      "archivo": "p04-hook-bloqueando-manifiesto.json",
+      "sha256": "2a816972ee563124aafd247b544c207c6a5feb35370b4b7ab3ac84e8dd5708b1"
+    },
+    {
+      "archivo": "p04-hook-bloqueando-contexto.json",
+      "sha256": "2d7e4709381fade74b4a96c950c22699f4889a51e72710288e776a1267d79868"
+    }
+  ],
+  "fecha_utc": "2026-09-11T02:04:52+00:00",
+  "fecha_local": "2026-09-10T21:04:52-05:00",
+  "decision": {
+    "decision": "continue",
+    "reason": "Hay tests fallando. No te detengas: corrige el código antes de terminar. La evidencia y fuentes del fallo están en .qa-gate-runs."
+  },
+  "exit_code": 1,
+  "resumen_pytest": "9 failed, 51 passed in 0.28s",
+  "seleccion": "Tres fallos representativos extraídos literalmente del log completo: e2e, integración y unitaria. Cambio y fecha documentados en contexto público.",
+  "html_sha256": "3397977db80a498c5a7beae5a0b05b2f9e1126ed7997eafaf614de231e064cb1"
+}

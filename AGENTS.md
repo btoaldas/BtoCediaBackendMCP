@@ -8,11 +8,11 @@ Prácticas 1 a 7, prueba y seguimiento de entregas del curso MOD2 de agosto de 2
 
 ## Autoridad y seguridad
 
-El usuario autoriza crear y resolver las prácticas, reunir materiales, entregar lo solicitado y guardar copia en Obsidian. Antes de publicar un repositorio nuevo falta acordar propietario y visibilidad. No crear cuentas, comprar, aceptar términos, cambiar credenciales, desplegar o borrar. Anunciar cambios; no sobrescribir datos previos ni limpiar archivos sin aprobación. Secretos solo por variables de entorno; nunca en Git, logs o informes. Datos de laboratorio sintéticos.
+El usuario autoriza crear y resolver las prácticas, reunir materiales, entregar lo solicitado y guardar copia en Obsidian. Autorizó publicar código y evidencia revisados en GitHub público btoaldas/BtoCediaBackendMCP, rama main, incluyendo P3/P4 tras verificación. Los informes identificados y los materiales originales del docente quedan fuera. La autenticación de agy, sus términos sin cesión de interacciones y el permiso de archivos de la extensión del navegador recibieron autorización específica. Estas decisiones no autorizan otras cuentas, compras, términos, credenciales, despliegues o borrados. Anunciar cambios; preservar versiones previas y no limpiar archivos sin aprobación. Secretos solo por variables de entorno; nunca en Git, logs o informes. Datos de laboratorio sintéticos.
 
 ## Arquitectura y trabajo compartido
 
-Python 3.12 y uv. `s02` contiene API Gemini y memoria, `s3` el experimento de prompts sin especificación, `s4` las versiones manual y Spec Kit y su QA. `informes` conserva entregables; `materiales` originales del docente fuera de Git; `privado` evidencias con identificación fuera de Git. Cada trabajador tiene propiedad exclusiva asignada. No revertir cambios ajenos. Git local main, sin remoto por ahora. No commits globales ni git add indiscriminado.
+Python 3.12 y uv. `s02` contiene API Gemini y memoria, `s3` el experimento de prompts sin especificación, `s4` las versiones manual y Spec Kit y su QA. `informes` conserva entregables; `materiales` originales del docente fuera de Git; `privado` evidencias con identificación fuera de Git. Cada trabajador tiene propiedad exclusiva asignada. No revertir cambios ajenos. Git local main y remoto público autorizado. Publicar únicamente archivos revisados mediante una selección explícita; no usar git add indiscriminado.
 
 ## Validación y evidencia
 

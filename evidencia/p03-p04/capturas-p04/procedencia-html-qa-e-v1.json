@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "preparado_utc": "2026-09-11T02:37:15.233179+00:00",
+  "tipo": "Copia binaria exacta del HTML nativo, pendiente captura",
+  "archivo": "reporte-qa-e-original-v1.html",
+  "sha256": "5a5c1ba5c94b521e348e9b525d0e8a1a009d7d0653e387f5a854a0b0c1349f18",
+  "fuente_publica": "../publicable/p04-reporte-qa-e.html",
+  "manifiesto_publico": "../publicable/p04-reporte-qa-e-manifiesto.json",
+  "manifiesto_sha256": "ae8437a69fb27905cd43d0ea6c967fb07f4a4da2ceec81588993067e1089457c",
+  "seguridad_publica": "../publicable/p04-seguridad-final.md",
+  "seguridad_sha256": "cf248f649bf979125c2047f112caade530f31ad164e2ccaeb4aed8b0b42c235d",
+  "fuente_original_hash": "5a5c1ba5c94b521e348e9b525d0e8a1a009d7d0653e387f5a854a0b0c1349f18",
+  "transformacion": "Ninguna; HTML copiado byte a byte sin editar",
+  "autoria_ejecucion": "report-agent-native en Antigravity CLI según manifiesto público; HTML redactado determinísticamente por script, sin servicios IA para redactarlo",
+  "fecha_html_utc": "2026-09-11T02:34:42.523133+00:00",
+  "limite": "El HTML no rotula el nombre report-agent-native; su atribución se conserva aquí y se indicará en la descripción de la evidencia. No se altera el original para agregarla."
+}

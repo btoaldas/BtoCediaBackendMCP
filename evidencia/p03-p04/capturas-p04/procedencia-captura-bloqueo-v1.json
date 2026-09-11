@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "creado_utc": "2026-09-11T02:13:35.313723+00:00",
+  "metodo": "CUA nativo de Microsoft Edge > FireShot > Capturar página entera > Como Imagen > Guardar PNG",
+  "fireshot_capture_id": 30,
+  "url_visor": "http://127.0.0.1:8934/bloqueo-stop-v1.html",
+  "tab_propia": 1621279840,
+  "zoom_porcentaje": 100,
+  "captura_original": {
+    "archivo": "Downloads/FireShot/captura-visor-p04-hook-stop-20260910.png",
+    "preservada": true,
+    "fecha_creacion_utc": "2026-09-11T02:12:21.432462+00:00"
+  },
+  "copia": {
+    "archivo": "captura-visor-p04-hook-stop-20260910.png",
+    "sha256": "439e8a2c3c5431cffa936155e73e800d90604c71fbd11dd7b19d4ff6ecbf0bcf",
+    "bytes": 705776,
+    "dimensiones_px": [
+      3008,
+      2000
+    ],
+    "igualdad_binaria_original": true,
+    "pixeles_editados": false
+  },
+  "visor": {
+    "archivo": "bloqueo-stop-v1.html",
+    "sha256": "3397977db80a498c5a7beae5a0b05b2f9e1126ed7997eafaf614de231e064cb1",
+    "procedencia": "procedencia-visor-bloqueo-v1.json"
+  },
+  "fuentes_publicas": [
+    {
+      "archivo": "p04-hook-bloqueando.log",
+      "sha256": "c1f4064a0bcab2190b38538b12d0110d3029dfcfdd37b5ff91efb03d9f146414"
+    },
+    {
+      "archivo": "p04-hook-bloqueando-manifiesto.json",
+      "sha256": "2a816972ee563124aafd247b544c207c6a5feb35370b4b7ab3ac84e8dd5708b1"
+    },
+    {
+      "archivo": "p04-hook-bloqueando-contexto.json",
+      "sha256": "2d7e4709381fade74b4a96c950c22699f4889a51e72710288e776a1267d79868"
+    }
+  ],
+  "qa_visual": {
+    "verificada": true,
+    "alcance": "Página completa inspeccionada. Decisión, resumen 9 fallidas / 51 aprobadas, exit 1, cambio 32 a 32.05, tres fallos representativos, fecha UTC/Ecuador y fuentes legibles; sin recorte ni superposición de contenido. Cursor nativo visible preservado.",
+    "limite": "Captura de visor preparado de registros reales, no captura de terminal original ni prueba de una nueva ejecución. Revisar escala al componer PDF y DOCX."
+  },
+  "servidor": {
+    "puerto": 8934,
+    "host": "127.0.0.1",
+    "carpeta_servida": "evidencia/p03-p04/capturas-p04",
+    "detenido": true,
+    "verificacion": "Proceso salió con código 0 tras Ctrl-C; lsof no registra LISTEN en TCP 8934."
+  }
+}

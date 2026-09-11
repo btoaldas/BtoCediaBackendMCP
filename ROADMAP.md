@@ -4,11 +4,11 @@ Actualizado 2026-09-10. Nivel L laboratorio.
 
 ## Ahora
 
-Completar práctica 4 antes del cierre de hoy 23:59: agente de pruebas, hook bloqueando un fallo y orquestación completa de QA con reporte y hallazgos. La base de práctica 3 pasó 55 pruebas y una instalación independiente; QA encontró y corrigió problemas de exponentes y doble redondeo. El hook Stop ya bloqueó un error deliberado y permitió finalizar tras corregirlo; la orquestación E está en curso.
+Entregar práctica 4 antes del cierre de hoy 23:59. La base final pasó 65 pruebas y una instalación independiente; la cobertura medida es 94,3 %. El hook Stop bloqueó los errores deliberados B y E, se corrigieron dos defectos numéricos y se ejecutaron los tres roles nativos con reporte real. El informe está en revisión y la adaptación de reproducción canónica está en comprobación final.
 
 ## Siguiente
 
-Práctica 2 enviada para calificar; PDF descargado desde AVAC idéntico al original revisado, con comprobante en Obsidian. Práctica 1 tiene ocho turnos reales y 24 pruebas deterministas; repositorio público verificado e informe con observación de 429 no observado preparado para entrega. PDF de práctica 3 revisado; añadir enlace a la base publicada y entregar. Incorporar solo el contenido revisado al remoto autorizado. Resolver prácticas 5 a 7 cuando se disponga de sus guías. Cerrar con un snapshot completo y verificado en Obsidian.
+Prácticas 1, 2 y 3 enviadas para calificar; los tres PDF descargados desde AVAC son idénticos a los originales revisados y tienen comprobantes en Obsidian. P1 declara el 429 real no observado; P3 conserva una base histórica de 55 pruebas. Publicar P4 revisada, entregar su informe final y verificar la descarga. Resolver prácticas 5 a 7 cuando se disponga de sus guías. Cerrar con un snapshot completo y verificado en Obsidian.
 
 ## Pendientes de decisión o evidencia
 

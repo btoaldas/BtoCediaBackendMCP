@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "creado_utc": "2026-09-11T02:39:42.874116+00:00",
+  "metodo": "CUA nativo Edge > FireShot > Capturar página entera > Como Imagen > Guardar PNG",
+  "fireshot_capture_id": 31,
+  "url": "http://127.0.0.1:8934/reporte-qa-e-original-v1.html",
+  "tab_propia": 1621279884,
+  "zoom_porcentaje": 100,
+  "captura_original": {
+    "archivo": "Downloads/FireShot/captura-p04-reporte-qa-e-20260910.png",
+    "preservada": true,
+    "fecha_creacion_utc": "2026-09-11T02:38:10.539093+00:00"
+  },
+  "copia": {
+    "archivo": "captura-p04-reporte-qa-e-20260910.png",
+    "bytes": 409000,
+    "sha256": "7fc41a84ec5dd3d98a7fe9ecde1853d2048faba29b9c3df963008e3c676b533a",
+    "dimensiones_px": [
+      3008,
+      2103
+    ],
+    "igualdad_binaria_original": true,
+    "pixeles_editados": false
+  },
+  "fuente_html": {
+    "archivo": "reporte-qa-e-original-v1.html",
+    "sha256": "5a5c1ba5c94b521e348e9b525d0e8a1a009d7d0653e387f5a854a0b0c1349f18",
+    "copia_exacta_del_publico": true,
+    "procedencia": "procedencia-html-qa-e-v1.json"
+  },
+  "autoria": "report-agent-native en Antigravity CLI según manifiesto público; HTML redactado determinísticamente por script, sin servicios IA para redactarlo",
+  "fecha_reporte_utc": "2026-09-11T02:34:42.523133+00:00",
+  "qa_visual": {
+    "verificada": true,
+    "alcance": "Página completa inspeccionada: APROBADO, 65 pasaron/0 fallaron/0 errores, exit0,94.3%, higiene Git, patrón sin hallazgos, identificador de corrida, fecha y límite de seguridad legibles. Sin recorte ni alteraciones. Cursor nativo conservado.",
+    "limite": "Es captura del HTML nativo conservado, no de la terminal del agente ni una ejecución nueva. El nombre report-agent-native se atribuye mediante manifiesto y descripción, pues no está impreso en el HTML original. Revisar escala al componer el informe; si se reduce a 350pt de alto conviene añadir una tabla textual legible con los resultados."
+  },
+  "servidor": {
+    "host": "127.0.0.1",
+    "puerto": 8934,
+    "carpeta_servida": "evidencia/p03-p04/capturas-p04",
+    "detenido": true,
+    "verificacion": "Proceso propio terminó con exit0 tras Ctrl-C; lsof sin LISTEN en TCP8934."
+  }
+}

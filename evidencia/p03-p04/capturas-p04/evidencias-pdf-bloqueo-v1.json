@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "estado_preparacion": "Captura real guardada y verificada; fragmento listo para integrar, no input completo",
+  "rutas_relativas_a": "Esta carpeta; ajustar imagen y fuente al integrar en input privado",
+  "instrucciones": "Conservar PNG original sin editar. La captura QA E se integrará por separado cuando exista. Revisar escala en PDF y DOCX finales.",
+  "evidencias": [
+    {
+      "id": "hook_bloqueando",
+      "titulo": "Bloqueo real del cierre por pruebas fallidas",
+      "tipo": "captura",
+      "imagen": "captura-visor-p04-hook-stop-20260910.png",
+      "fuente": "captura-visor-p04-hook-stop-20260910.png",
+      "descripcion": "Captura real del visor de registros conservados del segundo cierre de B (10/09/2026, 21:04:52 Ecuador). Stop ejecutó pytest: 9 fallidas, 51 aprobadas, exit 1, decisión continue para pedir corrección. Incluye el cambio 32 a 32.05 y tres de los nueve fallos. No es la terminal original ni una nueva ejecución.",
+      "verificada": true,
+      "visor_preparado": "bloqueo-stop-v1.html",
+      "registro_textual": "../publicable/p04-hook-bloqueando.log",
+      "sha256_imagen": "439e8a2c3c5431cffa936155e73e800d90604c71fbd11dd7b19d4ff6ecbf0bcf",
+      "sha256_fuente": "439e8a2c3c5431cffa936155e73e800d90604c71fbd11dd7b19d4ff6ecbf0bcf"
+    }
+  ]
+}
