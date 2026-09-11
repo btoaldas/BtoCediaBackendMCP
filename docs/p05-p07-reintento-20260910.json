@@ -1,0 +1,11 @@
+{
+  "fecha_ecuador": "2026-09-10T21:31:48.820014-05:00",
+  "metodo": "CUA createBrowserTab en Edge; pestaña propia, sin UI nativa",
+  "url_solicitada": "https://cursos.cedia.org.ec/mod/resource/view.php?id=48935",
+  "tab_id": 1621279876,
+  "respuesta_literal": "Browser Use cannot open https://cursos.cedia.org.ec/mod/resource/view.php in tab 1621279876. Browser reported: net::ERR_BLOCKED_BY_CLIENT",
+  "resultado": "Mismo bloqueo del cliente; no se obtuvo contenido ni archivo por esta llamada.",
+  "alcance": "Un intento de P5. No se reintentaron P6/P7 después de reproducir el bloqueo. No se usaron descargas internas, variantes de URL, cookies, peticiones HTTP ni cambios de protección.",
+  "cierre": "Se detuvo el intento, sin insistir ni modificar la pestaña principal. La pestaña propia creada permanece preservada.",
+  "limite": "El error no identifica la extensión o política responsable ni prueba ausencia del archivo en el servidor."
+}

@@ -1,0 +1,108 @@
+{
+  "version": 1,
+  "tipo": "Reproducción independiente de P4 desde commit público sin artefactos de instalación previos",
+  "ejecucion_utc": "20260911T030239.378061Z",
+  "commit": "65a1b1225f9a8fb105308e8c076fc8b52b89eda3",
+  "remoto_main_observado": "3cc10686d9cbbdd55a156d8a0fc0e167ad7cbe1c",
+  "commit_presente_en_historia_remota": true,
+  "archive_command": [
+    "git",
+    "archive",
+    "--format=tar",
+    "65a1b1225f9a8fb105308e8c076fc8b52b89eda3",
+    "s4/mi-proyecto-speckit"
+  ],
+  "archive_sha256": "60afddedd06f63be7edcde2c399cd24f9b195b914d5ada3159d07259fb516fc5",
+  "archivos_extraidos": 74,
+  "preinstalacion": {
+    "egg_info_ausentes": true,
+    "feature_json_ausente": true,
+    "venv_ausente": true,
+    "sin_script_docente_original": true
+  },
+  "entorno": "Nuevo .venv y caché uv exclusivos del temporal; sin PYTHONPATH heredado ni descargas de intérprete.",
+  "ejecuciones": [
+    {
+      "etapa": "01-uv-sync",
+      "command": [
+        "uv",
+        "sync",
+        "--frozen"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "Using CPython 3.12.13 interpreter at: /opt/homebrew/opt/python@3.12/bin/python3.12\nCreating virtual environment at: .venv\n   Building conversor-temperatura @ file://<TEMP_ROOT>/archivo-git/s4/mi-proyecto-speckit\nDownloading pygments (1.2MiB)\n Downloaded pygments\n      Built conversor-temperatura @ file://<TEMP_ROOT>/archivo-git/s4/mi-proyecto-speckit\nPrepared 10 packages in 1.17s\nInstalled 10 packages in 10ms\n + conversor-temperatura==0.1.0 (from file://<TEMP_ROOT>/archivo-git/s4/mi-proyecto-speckit)\n + coverage==7.16.0\n + iniconfig==2.3.0\n + packaging==26.3\n + pluggy==1.6.0\n + pygments==2.21.0\n + pytest==9.1.1\n + pytest-cov==7.1.0\n + pytest-json-report==1.5.0\n + pytest-metadata==3.1.1\n",
+      "timeout": false,
+      "segundos": 1.277347
+    },
+    {
+      "etapa": "02-suite65",
+      "command": [
+        "uv",
+        "run",
+        "--frozen",
+        "pytest",
+        "tests/",
+        "-q"
+      ],
+      "exit_code": 0,
+      "stdout": ".................................................................        [100%]\n65 passed in 0.35s\n",
+      "stderr": "",
+      "timeout": false,
+      "segundos": 1.051903
+    },
+    {
+      "etapa": "03-cli-cero",
+      "command": [
+        "uv",
+        "run",
+        "--frozen",
+        "python",
+        "-m",
+        "temperatura",
+        "0",
+        "C",
+        "F"
+      ],
+      "exit_code": 0,
+      "stdout": "32.00 F\n",
+      "stderr": "",
+      "timeout": false,
+      "segundos": 0.036091,
+      "esperado_exit": 0,
+      "esperado_stdout": "32.00 F\n",
+      "cumple": true
+    },
+    {
+      "etapa": "04-cli-redondeo",
+      "command": [
+        "uv",
+        "run",
+        "--frozen",
+        "python",
+        "-m",
+        "temperatura",
+        "1.0027777777777777777777777777",
+        "C",
+        "F"
+      ],
+      "exit_code": 0,
+      "stdout": "33.80 F\n",
+      "stderr": "",
+      "timeout": false,
+      "segundos": 0.036223,
+      "esperado_exit": 0,
+      "esperado_stdout": "33.80 F\n",
+      "cumple": true
+    }
+  ],
+  "pruebas_aprobadas": 65,
+  "casos_cli_correctos": 2,
+  "fuentes_del_commit_estables": true,
+  "feature_json_ausente_tras_pruebas": true,
+  "resultado": "PASS",
+  "motivo": "Verificar empaquetado publicado después de excluir metadatos egg-info y el puntero local .specify/feature.json.",
+  "limite": "No se ejecutaron agentes ni hooks. Esta corrida verifica instalación, suite y dos casos CLI; no acredita aceptación académica ni seguridad universal.",
+  "registro_original_sha256": "c0cc47c9181f7e3c37f6a4d467d150d867f0da75b3228ca4a891093e1401bfe1",
+  "procedencia": "Registro íntegro y archivo Git conservados en un temporal local privado; no se afirma publicación de esos originales. Salidas públicas sustituyen raíces locales por marcadores."
+}

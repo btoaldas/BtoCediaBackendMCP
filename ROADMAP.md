@@ -4,11 +4,11 @@ Actualizado 2026-09-10. Nivel L laboratorio.
 
 ## Ahora
 
-Entregar práctica 4 antes del cierre de hoy 23:59. La base final pasó 65 pruebas y una instalación independiente; la cobertura medida es 94,3 %. El hook Stop bloqueó los errores deliberados B y E, se corrigieron dos defectos numéricos y se ejecutaron los tres roles nativos con reporte real. El informe está en revisión y la adaptación de reproducción canónica está en comprobación final.
+Obtener las guías 5 a 7 para continuar esas prácticas con sus requisitos reales. La descarga automática sigue bloqueada; se abrió Semana 3 para que el usuario las guarde en Descargas. Todavía no se ha recibido su contenido. Las entregas 1 a 4 están confirmadas y sus archivos descargados fueron verificados.
 
 ## Siguiente
 
-Prácticas 1, 2 y 3 enviadas para calificar; los tres PDF descargados desde AVAC son idénticos a los originales revisados y tienen comprobantes en Obsidian. P1 declara el 429 real no observado; P3 conserva una base histórica de 55 pruebas. Publicar P4 revisada, entregar su informe final y verificar la descarga. Resolver prácticas 5 a 7 cuando se disponga de sus guías. Cerrar con un snapshot completo y verificado en Obsidian.
+Práctica 4 enviada a las 22:08, antes del cierre de 23:59, con PDF de cinco páginas descargado e idéntico al original revisado. Código y capturas publicados y accesibles anónimamente. La base final pasó 65 pruebas con 94,3 % de cobertura; una extracción del commit publicado se instaló desde cero y aprobó las 65 pruebas. Las prácticas 1 a 3 ya estaban enviadas y verificadas. P1 declara el 429 real no observado; P3 conserva su base histórica de 55 pruebas. Mantener respaldo conjunto de código, informes editables y comprobantes en Obsidian. Resolver prácticas 5 a 7 cuando se disponga de sus guías.
 
 ## Pendientes de decisión o evidencia
 
