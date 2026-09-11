@@ -1,0 +1,122 @@
+{
+  "tipo": "Snapshot histórico publicable de P3, anterior a las correcciones P4",
+  "origen_snapshot": "08-p3-reproducible",
+  "pruebas_originales": 55,
+  "archivos": {
+    "src/temperatura/__init__.py": {
+      "sha256_original": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_copia": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "cambio": "Copia exacta"
+    },
+    "src/temperatura/cli.py": {
+      "sha256_original": "585de5c10a8694e51b3248524125f3e55f0b691d6f4f636c366d85462e35e787",
+      "sha256_copia": "585de5c10a8694e51b3248524125f3e55f0b691d6f4f636c366d85462e35e787",
+      "cambio": "Copia exacta"
+    },
+    "src/temperatura/dominio.py": {
+      "sha256_original": "944ffaa9fdc98fd23f9132b8d7cae305c997dedc77b1537f46c8c4d2a3d4b8d0",
+      "sha256_copia": "944ffaa9fdc98fd23f9132b8d7cae305c997dedc77b1537f46c8c4d2a3d4b8d0",
+      "cambio": "Copia exacta"
+    },
+    "src/temperatura/__main__.py": {
+      "sha256_original": "c387ad541f08ff4aec7c60b37893e3038d8486598d74330a98d36878f00b0fad",
+      "sha256_copia": "c387ad541f08ff4aec7c60b37893e3038d8486598d74330a98d36878f00b0fad",
+      "cambio": "Copia exacta"
+    },
+    "tests/__init__.py": {
+      "sha256_original": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_copia": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "cambio": "Copia exacta"
+    },
+    "tests/unit/__init__.py": {
+      "sha256_original": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_copia": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "cambio": "Copia exacta"
+    },
+    "tests/unit/test_dominio.py": {
+      "sha256_original": "c36d2df2a81f0d26263cf7d50da5edbb976d1bcafb6806a8199dbf16533edf33",
+      "sha256_copia": "c36d2df2a81f0d26263cf7d50da5edbb976d1bcafb6806a8199dbf16533edf33",
+      "cambio": "Copia exacta"
+    },
+    "tests/integration/test_cli_memoria.py": {
+      "sha256_original": "3cc53660fe0094b651efa52686a1bc55976170565045744aa24a35a02a556cf9",
+      "sha256_copia": "3cc53660fe0094b651efa52686a1bc55976170565045744aa24a35a02a556cf9",
+      "cambio": "Copia exacta"
+    },
+    "tests/integration/__init__.py": {
+      "sha256_original": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_copia": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "cambio": "Copia exacta"
+    },
+    "tests/e2e/__init__.py": {
+      "sha256_original": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "sha256_copia": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "cambio": "Copia exacta"
+    },
+    "tests/e2e/test_rendimiento.py": {
+      "sha256_original": "81f6a3823da69477215e5219133121016ababf8d144eaaf94a5d2237c2a98658",
+      "sha256_copia": "81f6a3823da69477215e5219133121016ababf8d144eaaf94a5d2237c2a98658",
+      "cambio": "Copia exacta"
+    },
+    "tests/e2e/test_cli_subprocess.py": {
+      "sha256_original": "1303b780f9fc86e3cba217612be828bf8354cf6de633b16c7c20744bee6281bc",
+      "sha256_copia": "1303b780f9fc86e3cba217612be828bf8354cf6de633b16c7c20744bee6281bc",
+      "cambio": "Copia exacta"
+    },
+    "specs/001-conversor-temperatura/quickstart.md": {
+      "sha256_original": "c88beff4b8e762633b8d587acc8a39e6a08780b6a7de4c9157d690fecfe74857",
+      "sha256_copia": "b6ae5e4efd878b91154fbc901ad6c21b8d61fe47dcec7f57ba51b5b5f81e7a80",
+      "cambio": "Sólo rutas documentales relativas"
+    },
+    "specs/001-conversor-temperatura/tasks.md": {
+      "sha256_original": "7a217d95af7d40b22e1ff8b16abfe0e262b4bff39757a0bd57fdc0e7b2579714",
+      "sha256_copia": "7a217d95af7d40b22e1ff8b16abfe0e262b4bff39757a0bd57fdc0e7b2579714",
+      "cambio": "Copia exacta"
+    },
+    "specs/001-conversor-temperatura/research.md": {
+      "sha256_original": "dbbf7d18ee84e5b7ae3d16ce0ae93c3c14ee8749c8b8a9eb06e47a5e804db23e",
+      "sha256_copia": "0d503643e2a008ae945895714c74ced67aa2955dc77ca86e434a1180248b6a0d",
+      "cambio": "Sólo rutas documentales relativas"
+    },
+    "specs/001-conversor-temperatura/data-model.md": {
+      "sha256_original": "6a8d5f9b99a8160f857a95f8257a3342c5102a12ee5a001618601b89734bad12",
+      "sha256_copia": "29cc3c024228aa30cc6a5902332a2c51b5d4b9da70277629e58b7e2612f48916",
+      "cambio": "Sólo rutas documentales relativas"
+    },
+    "specs/001-conversor-temperatura/plan.md": {
+      "sha256_original": "d16985382226f72b5c7d8c8211a5ada123de12d21a0aa2eb588b0387caef0dcb",
+      "sha256_copia": "20f804c68c577caa56da67ad4e494fa727c7230f1cc2a5f3496602282e5ea7f7",
+      "cambio": "Sólo rutas documentales relativas"
+    },
+    "specs/001-conversor-temperatura/spec.md": {
+      "sha256_original": "f2f2f56926ca84b57bf0fec395fec1404229d962e8d83620f10f442648bb114b",
+      "sha256_copia": "f2f2f56926ca84b57bf0fec395fec1404229d962e8d83620f10f442648bb114b",
+      "cambio": "Copia exacta"
+    },
+    "specs/001-conversor-temperatura/checklists/requirements.md": {
+      "sha256_original": "246f2032168ff40312d10e02593796cfc59e23f1ec8eb9dd950f65a7731c3d68",
+      "sha256_copia": "a593e382f4ab2675b5626ee4e8846f75ac83f1f7f6f75989b25fd17a3a7c3f09",
+      "cambio": "Sólo rutas documentales relativas"
+    },
+    "specs/001-conversor-temperatura/contracts/cli-contract.md": {
+      "sha256_original": "f6a224c8342ddec33d59e3b071796d7aebed6a7e576318d63c5cb98e169cb3aa",
+      "sha256_copia": "9bf5d428ca6ba0340b1e3c4cc0a16805326b72f037413287fb55248f7d5dd174",
+      "cambio": "Sólo rutas documentales relativas"
+    },
+    "pyproject.toml": {
+      "sha256_original": "76346bb6a113c6b16720eb27366cb6fb42243ff17a134a2b106c38241959dde4",
+      "sha256_copia": "76346bb6a113c6b16720eb27366cb6fb42243ff17a134a2b106c38241959dde4",
+      "cambio": "Copia exacta"
+    },
+    ".python-version": {
+      "sha256_original": "7b55f8e67b5623c4bef3fa691288da9437d79d3aba156de48d481db32ac7d16d",
+      "sha256_copia": "7b55f8e67b5623c4bef3fa691288da9437d79d3aba156de48d481db32ac7d16d",
+      "cambio": "Copia exacta"
+    },
+    "uv.lock": {
+      "sha256_original": "a808cc5c657d989d9fe1df41e378deba6d97b8bfe9af991ac4915bde1ee5667e",
+      "sha256_copia": "a808cc5c657d989d9fe1df41e378deba6d97b8bfe9af991ac4915bde1ee5667e",
+      "cambio": "Copia exacta"
+    }
+  }
+}

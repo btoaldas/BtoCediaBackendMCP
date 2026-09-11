@@ -1,0 +1,16 @@
+{
+  "fecha": "2026-09-10T21:12:39.341265-05:00",
+  "url": "https://github.com/btoaldas/BtoCediaBackendMCP",
+  "publico": true,
+  "rama": "main",
+  "commit_local": "51c8d8c69631328bd75a934d338299bd376db88e",
+  "commit_remoto": "51c8d8c69631328bd75a934d338299bd376db88e",
+  "consulta_anonima": {
+    "archivo": "s02/README.md",
+    "url_inmutable": "https://raw.githubusercontent.com/btoaldas/BtoCediaBackendMCP/51c8d8c69631328bd75a934d338299bd376db88e/s02/README.md",
+    "http": 200,
+    "sha256": "b9b2c34a680a82790afc5b03b66456ddbff97acb5569f0450203b81e94b61855",
+    "identico_al_commit_local": true
+  },
+  "limite": "Accesibilidad pública comprobada en esta fecha; no certifica revisión ni calificación del docente."
+}
