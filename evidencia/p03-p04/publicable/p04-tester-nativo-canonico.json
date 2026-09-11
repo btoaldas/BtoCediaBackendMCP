@@ -1,0 +1,67 @@
+{
+  "alcance": "Replay real del skill qa-orchestrate actualizado en la carpeta canónica: tester-agent-native por capas.",
+  "resultados": {
+    "e2e_report.json": {
+      "summary": {
+        "passed": 11,
+        "total": 11,
+        "collected": 11
+      },
+      "exitcode": 0,
+      "created": 1789094730.211276,
+      "duration": 0.3127889633178711,
+      "ruta": "s4/mi-proyecto-speckit/.qa-runs/orquestacion-final/e2e_report.json",
+      "sha256": "157946b8e953e2cb504bac4a7558e1aa71a94ae8d800b9d0866495b3b45746bd"
+    },
+    "integration_report.json": {
+      "summary": {
+        "passed": 31,
+        "total": 31,
+        "collected": 31
+      },
+      "exitcode": 0,
+      "created": 1789094684.280292,
+      "duration": 0.018831968307495117,
+      "ruta": "s4/mi-proyecto-speckit/.qa-runs/orquestacion-final/integration_report.json",
+      "sha256": "8f35ca52b8b367383eea98830793120172126e087078feae523bfd2ae64916b5"
+    },
+    "total_report.json": {
+      "summary": {
+        "passed": 65,
+        "total": 65,
+        "collected": 65
+      },
+      "exitcode": 0,
+      "created": 1789094772.223766,
+      "duration": 0.3544881343841553,
+      "ruta": "s4/mi-proyecto-speckit/.qa-runs/orquestacion-final/total_report.json",
+      "sha256": "da135ca7e7a1247effb22abae1aec8dfb26d5df0e984ddb52edcd781808481e8"
+    },
+    "unit_report.json": {
+      "summary": {
+        "passed": 23,
+        "total": 23,
+        "collected": 23
+      },
+      "exitcode": 0,
+      "created": 1789094648.036672,
+      "duration": 0.012337923049926758,
+      "ruta": "s4/mi-proyecto-speckit/.qa-runs/orquestacion-final/unit_report.json",
+      "sha256": "8cd7d5148ad851d880a9be3f8a392f0a8ecd0623148778c613cec77384527ee7"
+    }
+  },
+  "cobertura": {
+    "totals": {
+      "covered_lines": 116,
+      "num_statements": 123,
+      "percent_covered": 94.3089430894309,
+      "percent_covered_display": "94",
+      "missing_lines": 7,
+      "excluded_lines": 0,
+      "percent_statements_covered": 94.3089430894309,
+      "percent_statements_covered_display": "94"
+    },
+    "ruta": "s4/mi-proyecto-speckit/.qa-runs/orquestacion-final/coverage.json",
+    "sha256": "900e2b066471452212f6263586be14a9364718daddc1793e6090de36aabf2fc0"
+  }
+}

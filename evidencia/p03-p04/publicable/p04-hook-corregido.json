@@ -1,0 +1,30 @@
+{
+  "fecha_utc": "2026-09-11T02:09:03Z",
+  "alcance": "Escenario B histórico de 60 pruebas, después de restaurar +32; previo a la corrección de precisión intermedia de P4.",
+  "invocacion": "Hook Stop automático de Antigravity CLI 1.2.0",
+  "decision": {},
+  "tests": {
+    "passed": 60,
+    "failed": 0,
+    "seconds": 0.31
+  },
+  "fuentes": {
+    "s4/escenarios/bloque-b/.qa-gate-runs/20260911T020903Z-6791/pytest.log": "6516d88aa001db0de6d03fed019e66f43ffae61cdc6021f3bc6a38f99cbd9140",
+    "s4/escenarios/bloque-b/.qa-gate-runs/20260911T020903Z-6791/decision.json": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356",
+    "s4/escenarios/bloque-b/.qa-gate-runs/20260911T020903Z-6791/exit-code.txt": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+  },
+  "comparacion_fuentes": {
+    "src/temperatura/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/temperatura/__main__.py": "c387ad541f08ff4aec7c60b37893e3038d8486598d74330a98d36878f00b0fad",
+    "src/temperatura/cli.py": "64ed671381c37e7c85659281d944c9b76ec679bf6c010377c4666fbef2ad5301",
+    "src/temperatura/dominio.py": "b71169acc420f8bc345772f036bbcefc859733f187865c2238d18b7ed95036cd",
+    "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests/e2e/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests/e2e/test_cli_subprocess.py": "aebab65e9c0d2b8963a4e949219b9689eb76d601830b85441c492e7423a1fb31",
+    "tests/e2e/test_rendimiento.py": "81f6a3823da69477215e5219133121016ababf8d144eaaf94a5d2237c2a98658",
+    "tests/integration/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests/integration/test_cli_memoria.py": "7da02f70f9bab4371f20287133160ccfd3e0ce2e287aa2a0f9bcbe8727992a8b",
+    "tests/unit/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests/unit/test_dominio.py": "c06fdf74a6515c23cb8a7a36b2a57ab78d94b877ce6e636a820ea1db6899a19c"
+  }
+}

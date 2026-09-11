@@ -1,0 +1,101 @@
+REGISTRO DE EJECUCIÓN REAL — HOOK STOP EN AGY
+Escenario: s4/escenarios/bloque-b
+Intento: segundo cierre; primer turno no ejecutó Stop.
+Origen: s4/escenarios/bloque-b/.qa-gate-runs/20260911T020452Z-94978
+Comando real del hook: uv run pytest tests/ --tb=short -q
+
+F........FF..F................F...F....F......F........F....             [100%]
+=================================== FAILURES ===================================
+_____________________ test_us1_e2e_conversion_proceso_real _____________________
+tests/e2e/test_cli_subprocess.py:14: in test_us1_e2e_conversion_proceso_real
+    assert result.stdout.strip() == "212.00 F"
+E   AssertionError: assert '212.05 F' == '212.00 F'
+E     
+E     - 212.00 F
+E     ?      ^
+E     + 212.05 F
+E     ?      ^
+_______________ test_sc004_rendimiento_en_frio_ejecutable_python _______________
+tests/e2e/test_rendimiento.py:19: in test_sc004_rendimiento_en_frio_ejecutable_python
+    assert result.stdout.strip() == "212.00 F"
+E   AssertionError: assert '212.05 F' == '212.00 F'
+E     
+E     - 212.00 F
+E     ?      ^
+E     + 212.05 F
+E     ?      ^
+____________________ test_us1_cli_conversion_basica_stdout _____________________
+tests/integration/test_cli_memoria.py:11: in test_us1_cli_conversion_basica_stdout
+    assert captured.out.strip() == "212.00 F"
+E   AssertionError: assert '212.05 F' == '212.00 F'
+E     
+E     - 212.00 F
+E     ?      ^
+E     + 212.05 F
+E     ?      ^
+_________________________ test_us1_cli_negativo_valido _________________________
+tests/integration/test_cli_memoria.py:33: in test_us1_cli_negativo_valido
+    assert captured.out.strip() == "-40.00 F"
+E   AssertionError: assert '-39.95 F' == '-40.00 F'
+E     
+E     - -40.00 F
+E     + -39.95 F
+______________ test_us3_cli_longitud_valida_con_espacios_saneados ______________
+tests/integration/test_cli_memoria.py:122: in test_us3_cli_longitud_valida_con_espacios_saneados
+    assert captured.out.strip() == "212.00 F"
+E   AssertionError: assert '212.05 F' == '212.00 F'
+E     
+E     - 212.00 F
+E     ?      ^
+E     + 212.05 F
+E     ?      ^
+____________________ test_edge_cli_cero_con_signo_semantica ____________________
+tests/integration/test_cli_memoria.py:160: in test_edge_cli_cero_con_signo_semantica
+    assert cap2.out.strip() == "32.00 F"
+E   AssertionError: assert '32.05 F' == '32.00 F'
+E     
+E     - 32.00 F
+E     ?     ^
+E     + 32.05 F
+E     ?     ^
+___________________ test_us1_conversion_celsius_a_fahrenheit ___________________
+tests/unit/test_dominio.py:16: in test_us1_conversion_celsius_a_fahrenheit
+    assert resultado.formatear() == "212.00 F"
+E   AssertionError: assert '212.05 F' == '212.00 F'
+E     
+E     - 212.00 F
+E     ?      ^
+E     + 212.05 F
+E     ?      ^
+____________________ test_us1_negativo_valido_coincidencia _____________________
+tests/unit/test_dominio.py:51: in test_us1_negativo_valido_coincidencia
+    assert resultado.formatear() == "-40.00 F"
+E   AssertionError: assert '-39.95 F' == '-40.00 F'
+E     
+E     - -40.00 F
+E     + -39.95 F
+_____ test_edge_normalizacion_cero_con_signo_solo_cuando_resultado_es_cero _____
+tests/unit/test_dominio.py:114: in test_edge_normalizacion_cero_con_signo_solo_cuando_resultado_es_cero
+    assert res_no_cero.formatear() == "32.00 F"
+E   AssertionError: assert '32.05 F' == '32.00 F'
+E     
+E     - 32.00 F
+E     ?     ^
+E     + 32.05 F
+E     ?     ^
+=========================== short test summary info ============================
+FAILED tests/e2e/test_cli_subprocess.py::test_us1_e2e_conversion_proceso_real
+FAILED tests/e2e/test_rendimiento.py::test_sc004_rendimiento_en_frio_ejecutable_python
+FAILED tests/integration/test_cli_memoria.py::test_us1_cli_conversion_basica_stdout
+FAILED tests/integration/test_cli_memoria.py::test_us1_cli_negativo_valido - ...
+FAILED tests/integration/test_cli_memoria.py::test_us3_cli_longitud_valida_con_espacios_saneados
+FAILED tests/integration/test_cli_memoria.py::test_edge_cli_cero_con_signo_semantica
+FAILED tests/unit/test_dominio.py::test_us1_conversion_celsius_a_fahrenheit
+FAILED tests/unit/test_dominio.py::test_us1_negativo_valido_coincidencia - As...
+FAILED tests/unit/test_dominio.py::test_edge_normalizacion_cero_con_signo_solo_cuando_resultado_es_cero
+9 failed, 51 passed in 0.28s
+
+DECISIÓN DEL HOOK
+{"decision":"continue","reason":"Hay tests fallando. No te detengas: corrige el código antes de terminar. La evidencia y fuentes del fallo están en .qa-gate-runs."}
+
+Las fuentes fallidas están conservadas con hashes. El agente continuó y propuso corregir.

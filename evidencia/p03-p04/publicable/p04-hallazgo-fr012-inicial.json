@@ -1,0 +1,53 @@
+{
+  "tipo": "Registro derivado saneado de ejecución real",
+  "fuente": "evidencia/p03-p04/qa-sondeos/20260911T014057.387015Z/resultados.json",
+  "sha256_fuente_original": "4d634b9a96074c87f2225908ee2b14a625474a3d858f7d81e266d97b4438c08c",
+  "resultados": [
+    {
+      "command": [
+        "uv",
+        "run",
+        "python",
+        "-m",
+        "temperatura",
+        "1e9999999",
+        "C",
+        "F"
+      ],
+      "exit_code": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"s4/mi-proyecto-speckit/src/temperatura/__main__.py\", line 7, in <module>\n    sys.exit(main())\n             ^^^^^^\n  File \"s4/mi-proyecto-speckit/src/temperatura/cli.py\", line 50, in main\n    if abs(valor) > Decimal(\"1e12\"):\n       ^^^^^^^^^^\ndecimal.Overflow: [<class 'decimal.Overflow'>]\n"
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "python",
+        "-m",
+        "temperatura",
+        "sNaN",
+        "C",
+        "F"
+      ],
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "Error: Los valores literales 'nan' e 'inf' no están permitidos.\n"
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "python",
+        "-m",
+        "temperatura",
+        "NaN12",
+        "C",
+        "F"
+      ],
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "Error: Los valores literales 'nan' e 'inf' no están permitidos.\n"
+    }
+  ],
+  "interpretacion": "Fallo real FR-012 descubierto por auditoría independiente; no es un bug introducido para ejercicios B/E."
+}

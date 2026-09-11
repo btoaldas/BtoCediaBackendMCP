@@ -1,0 +1,9 @@
+{
+  "fecha_utc": "2026-09-11T02:30:54.349575+00:00",
+  "autor_fix": "Antigravity CLI, principal de escenario E, posterior al diagnóstico nativo de security-agent-native",
+  "aplicacion_base": "Codex copia exactamente cli.py de E a la base canónica; fuente previa conservada",
+  "antes_sha256": "64ed671381c37e7c85659281d944c9b76ec679bf6c010377c4666fbef2ad5301",
+  "despues_sha256": "52d21395dc45cb6f073577ca28fe35c9c6e1b9ea0381ef8fd4d61a44bf62ab08",
+  "dominio_modificado": false,
+  "tests_modificados": false
+}

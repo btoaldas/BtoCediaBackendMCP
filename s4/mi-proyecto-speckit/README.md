@@ -1,17 +1,58 @@
-# Conversor de temperatura — base P3
+# Conversor de Temperatura CLI
 
-Versión creada mediante el flujo Specify, Plan, Tasks e Implement de Spec Kit con agy. Conserva la etapa de P3 con 55 pruebas. Las mejoras de QA se registran después en P4. El snapshot idéntico de código se conserva en `../versiones/p3-base-55`.
+Herramienta de línea de comandos para la conversión precisa de temperaturas entre las escalas Celsius (C), Fahrenheit (F) y Kelvin (K) implementada en Python 3.12 con precisión `Decimal` y redondeo `ROUND_HALF_UP`.
 
-Desde este directorio:
+## Requisitos
+
+- Python 3.12+
+- `uv` (gestor de dependencias y entornos)
+
+## Instalación
+
+Para sincronizar el entorno virtual de forma reproducible utilizando el archivo de bloqueo:
 
 ```bash
 uv sync --frozen
-uv run --frozen pytest tests/ -q
-uv run --frozen python -m temperatura 0 C F
-uv run --frozen python -m temperatura -273.15 C K
-uv run --frozen python -m temperatura NaN C F
 ```
 
-Resultados: 32.00 F y 0.00 K con salida 0; NaN es rechazado con salida 2. Los documentos de requisitos, arquitectura y tareas están en `specs/001-conversor-temperatura`. Ver `../comparacion.md` y la versión manual `../clase-sdd`.
+Esto instalará las dependencias necesarias y empaquetará el módulo `temperatura` en modo editable dentro del entorno virtual.
 
-Límite histórico: la base55 conserva dos problemas encontrados posteriormente en P4 (exponentes fuera de rango y doble redondeo). Su finalidad es reproducir la etapa evaluada, no representar la versión corregida final.
+## Uso de la CLI
+
+Invoque el paquete directamente mediante el intérprete del entorno:
+
+```bash
+uv run python -m temperatura <valor> <unidad_origen> <unidad_destino>
+```
+
+### Ejemplos
+
+```bash
+# Conversión estándar de Celsius a Fahrenheit (Ebullición del agua)
+uv run python -m temperatura 100 C F
+# Salida: 212.00 F
+
+# Cero Celsius a Fahrenheit (preserva el resultado de 32.00 F)
+uv run python -m temperatura 0 C F
+# Salida: 32.00 F
+
+# Cero absoluto exacto en Celsius a Kelvin
+uv run python -m temperatura -273.15 C K
+# Salida: 0.00 K
+
+# Rechazo de temperatura por debajo del cero absoluto (código de salida 2)
+uv run python -m temperatura -300 C F
+# Salida en stderr: Error: La temperatura -300.00 C está por debajo del cero absoluto (-273.15 C).
+
+# Rechazo de literales especiales (código de salida 2)
+uv run python -m temperatura NaN C F
+# Salida en stderr: Error: Los valores literales 'nan' e 'inf' no están permitidos.
+```
+
+## Pruebas
+
+Ejecutar la suite completa de pruebas en tres capas (unitaria, integración en memoria y subprocesos e2e):
+
+```bash
+uv run pytest
+```

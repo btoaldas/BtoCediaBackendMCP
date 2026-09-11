@@ -177,3 +177,44 @@ def test_edge_cli_corte_exacto_fahrenheit(capsys):
     cap_invalido = capsys.readouterr()
     assert ret_invalido == 2
     assert "cero absoluto" in cap_invalido.err.lower()
+
+
+# --- Pruebas de Regresión FR-012 y FR-009 (Magnitudes Extremas y Finitud) ---
+
+
+def test_fr012_cli_magnitud_extrema_overflow(capsys):
+    """Verifica que magnitudes extremas como 1e9999999 retornan código 2 con mensaje claro en stderr sin desbordar."""
+    ret1 = main(["1e9999999", "C", "F"])
+    cap1 = capsys.readouterr()
+    assert ret1 == 2
+    assert "magnitud máxima permitida" in cap1.err
+
+    ret2 = main(["-1e9999999", "C", "F"])
+    cap2 = capsys.readouterr()
+    assert ret2 == 2
+    assert "magnitud máxima permitida" in cap2.err
+
+
+def test_fr009_cli_snan_is_finite(capsys):
+    """Verifica el rechazo de sNaN activando la verificación de finitud sin excepción no controlada."""
+    ret = main(["sNaN", "C", "F"])
+    cap = capsys.readouterr()
+    assert ret == 2
+    assert "no están permitidos" in cap.err or "no es un número válido" in cap.err
+
+
+# --- Pruebas de Regresión FR-008: Evitar Doble Redondeo en CLI ---
+
+
+def test_fr008_cli_evitar_doble_redondeo_umbral_inferior(capsys):
+    ret = main(["1.0027777777777777777777777777", "C", "F"])
+    captured = capsys.readouterr()
+    assert ret == 0
+    assert captured.out.strip() == "33.80 F"
+
+
+def test_fr008_cli_umbral_superior(capsys):
+    ret = main(["1.0027777777777777777777777778", "C", "F"])
+    captured = capsys.readouterr()
+    assert ret == 0
+    assert captured.out.strip() == "33.81 F"

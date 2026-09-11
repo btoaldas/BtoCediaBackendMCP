@@ -1,0 +1,12 @@
+{
+  "creado_utc": "2026-09-11T02:15:43.288230+00:00",
+  "autor_cambio": "Codex, preparación explícita del fallo de laboratorio",
+  "escenario": "s4/escenarios/bloque-e",
+  "funcion": "ResultadoConversion.formatear",
+  "antes": "rounding=ROUND_HALF_UP",
+  "fallo": "rounding=\"ROUND_DOWN\"",
+  "base_tests": 65,
+  "hash_antes": "7d7e43c456c5403e0d4bb61daf238cbe1ec01b39f8d26577cd15055bf5f0280b",
+  "hash_fallo": "7a85c2e5f01a7bbd43dda848e73ea9c4b78a28af485af782d46226d8cc777a25",
+  "alcance": "Solo formato de salida; distinto del bug de fórmula del bloque B. No se modifica la base canónica ni los tests."
+}

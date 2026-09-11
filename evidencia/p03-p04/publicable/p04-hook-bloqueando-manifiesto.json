@@ -1,0 +1,23 @@
+{
+  "tipo": "Registro real del hook Stop nativo de agy, segundo intento de cierre en B",
+  "fuente": "s4/escenarios/bloque-b/.qa-gate-runs/20260911T020452Z-94978",
+  "decision": {
+    "decision": "continue",
+    "reason": "Hay tests fallando. No te detengas: corrige el código antes de terminar. La evidencia y fuentes del fallo están en .qa-gate-runs."
+  },
+  "exit_code": 1,
+  "archivos": {
+    "decision.json": {
+      "sha256_original": "8d3dd39e2fbeab835dc7b875058f98cdb756d2a90ec2360aae0ae2cf0c1cf65b"
+    },
+    "pytest.log": {
+      "sha256_original": "5850a80a0ee82fddf889ade86f3f1ec267f101b4b6f3436cc210094f487daccb"
+    },
+    "exit-code.txt": {
+      "sha256_original": "4355a46b19d348dc2f57c046f8ef63d4538ebb936000f3c9ee954a27460dd865"
+    },
+    "estado-fallido/fuentes-sha256.json": {
+      "sha256_original": "43d6b60821f26d3dd5b3985b3caa11a7bcbb4da6a24558b76cdd8609fc06b496"
+    }
+  }
+}

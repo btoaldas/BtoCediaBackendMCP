@@ -1,0 +1,28 @@
+{
+  "veredicto": "APROBADO",
+  "tests": {
+    "pasaron": 65,
+    "fallaron": 0,
+    "errores": 0,
+    "total": 65,
+    "exit_code": 0,
+    "cobertura_pct": 94.3,
+    "evidencia": ".qa-runs/20260911T025132.777320Z"
+  },
+  "secretos": [],
+  "higiene": {
+    "env_example": true,
+    "env_existe": false,
+    "env_tracked": false,
+    "gitignore_ok": true
+  },
+  "alcance": "Replay canónico completo del skill qa-orchestrate actualizado, con tester-agent-native, security-agent-native y report-agent-native reales.",
+  "fuentes": {
+    "s4/mi-proyecto-speckit/reporte-qa.html": "31d73df85213ffc0f77c5e509901e7905eecfaddecae5a9f15e2d02ea09a5782",
+    "s4/mi-proyecto-speckit/hallazgos-seguridad.md": "0ec98e34ba129e3aabd9070eaccc96e226598b3ff71841d5ec79060e94c5a378",
+    "s4/mi-proyecto-speckit/.qa-runs/20260911T025132.777320Z/resumen.json": "baa5ac8401bd5f0e03ad28256a931a88441d77cdcf331fa36776e50f4d4a17c2",
+    "s4/mi-proyecto-speckit/.qa-runs/20260911T025132.777320Z/pytest.log": "bf365f7857f87d8d4b874b08700cce4aaa5c9c9a2b6a1df2ccf3f2ddc334a0ae",
+    "s4/mi-proyecto-speckit/.qa-runs/20260911T025132.777320Z/tests.json": "2268c40e313852922efb1279f28c5a7caca97ec78c4d204beeb6e21f223c5877",
+    "s4/mi-proyecto-speckit/.qa-runs/20260911T025132.777320Z/coverage.json": "3c70c737eb1792a0810361d3a22ae451bab956b386e9f681f96d8f8d878ed846"
+  }
+}

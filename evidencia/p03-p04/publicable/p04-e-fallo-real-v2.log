@@ -1,0 +1,59 @@
+REGISTRO DE EJECUCIÓN REAL — BLOQUE E
+Comando de hook Stop: uv run pytest tests/ --tb=short -q
+Fecha UTC: 2026-09-11T02:16:34Z
+5 fallos y 60 aprobados. El fallo de formato fue preparado por Codex en una copia aislada, antes de /qa-orchestrate real.
+
+.........F..........................F....F.................F....F        [100%]
+=================================== FAILURES ===================================
+_____________________ test_fr008_e2e_evitar_doble_redondeo _____________________
+tests/e2e/test_cli_subprocess.py:130: in test_fr008_e2e_evitar_doble_redondeo
+    assert result2.stdout.strip() == "33.81 F"
+E   AssertionError: assert '33.80 F' == '33.81 F'
+E     
+E     - 33.81 F
+E     ?     ^
+E     + 33.80 F
+E     ?     ^
+________________________ test_edge_cli_redondeo_half_up ________________________
+tests/integration/test_cli_memoria.py:167: in test_edge_cli_redondeo_half_up
+    assert captured.out.strip() == "25.56 C"
+E   AssertionError: assert '25.55 C' == '25.56 C'
+E     
+E     - 25.56 C
+E     ?     ^
+E     + 25.55 C
+E     ?     ^
+________________________ test_fr008_cli_umbral_superior ________________________
+tests/integration/test_cli_memoria.py:220: in test_fr008_cli_umbral_superior
+    assert captured.out.strip() == "33.81 F"
+E   AssertionError: assert '33.80 F' == '33.81 F'
+E     
+E     - 33.81 F
+E     ?     ^
+E     + 33.80 F
+E     ?     ^
+_______________________ test_edge_redondeo_round_half_up _______________________
+tests/unit/test_dominio.py:119: in test_edge_redondeo_round_half_up
+    assert res.formatear() == "25.56 C"
+E   AssertionError: assert '25.55 C' == '25.56 C'
+E     
+E     - 25.56 C
+E     ?     ^
+E     + 25.55 C
+E     ?     ^
+_____________________ test_fr008_precision_umbral_superior _____________________
+tests/unit/test_dominio.py:161: in test_fr008_precision_umbral_superior
+    assert res.formatear() == "33.81 F"
+E   AssertionError: assert '33.80 F' == '33.81 F'
+E     
+E     - 33.81 F
+E     ?     ^
+E     + 33.80 F
+E     ?     ^
+=========================== short test summary info ============================
+FAILED tests/e2e/test_cli_subprocess.py::test_fr008_e2e_evitar_doble_redondeo
+FAILED tests/integration/test_cli_memoria.py::test_edge_cli_redondeo_half_up
+FAILED tests/integration/test_cli_memoria.py::test_fr008_cli_umbral_superior
+FAILED tests/unit/test_dominio.py::test_edge_redondeo_round_half_up - Asserti...
+FAILED tests/unit/test_dominio.py::test_fr008_precision_umbral_superior - Ass...
+5 failed, 60 passed in 0.78s

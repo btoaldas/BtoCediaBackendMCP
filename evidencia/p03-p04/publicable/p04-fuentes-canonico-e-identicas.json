@@ -1,0 +1,17 @@
+{
+  "alcance": "Comparación byte a byte de src/tests entre canónico y escenario E; revisión de seguridad aplicable al mismo contenido.",
+  "archivos_sha256": {
+    "src/temperatura/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/temperatura/__main__.py": "c387ad541f08ff4aec7c60b37893e3038d8486598d74330a98d36878f00b0fad",
+    "src/temperatura/cli.py": "52d21395dc45cb6f073577ca28fe35c9c6e1b9ea0381ef8fd4d61a44bf62ab08",
+    "src/temperatura/dominio.py": "7d7e43c456c5403e0d4bb61daf238cbe1ec01b39f8d26577cd15055bf5f0280b",
+    "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests/e2e/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests/e2e/test_cli_subprocess.py": "66b0a0ae20df5957b3ae49bc46dce4cc5984a4c93ec508edd9dec00b7d741fa0",
+    "tests/e2e/test_rendimiento.py": "81f6a3823da69477215e5219133121016ababf8d144eaaf94a5d2237c2a98658",
+    "tests/integration/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests/integration/test_cli_memoria.py": "53524dc194ffdd602cd5b0321672b4005296632389a7ba5b0cdd0979d6a00af1",
+    "tests/unit/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests/unit/test_dominio.py": "c2148f7eb9c6d634f5740cef58b0925f57505dcbb0e4f1500958492d23cddd49"
+  }
+}

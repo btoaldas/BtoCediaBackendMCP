@@ -1,0 +1,23 @@
+{
+  "tipo": "Contexto verificado contra fuente fallida preservada",
+  "ejecucion_utc": "2026-09-11T02:04:52Z",
+  "ejecucion_ecuador": "2026-09-10T21:04:52-05:00",
+  "cambio_intencional": {
+    "archivo": "src/temperatura/dominio.py",
+    "funcion": "convertir",
+    "rama": "Celsius a Fahrenheit",
+    "antes": "(valor * Decimal(\"9\") / Decimal(\"5\")) + Decimal(\"32\")",
+    "fallo": "(valor * Decimal(\"9\") / Decimal(\"5\")) + Decimal(\"32.05\")"
+  },
+  "fuente_fallida": "s4/escenarios/bloque-b/.qa-gate-runs/20260911T020452Z-94978/estado-fallido/src/temperatura/dominio.py",
+  "sha256_fuente_fallida": "573da7ac86568e976d4e2e221b84b2fce581fdfeba0c1ebfd2c66c47e5588124",
+  "manifiesto": "p04-hook-bloqueando-manifiesto.json",
+  "registro": "p04-hook-bloqueando.log",
+  "resultado": {
+    "failed": 9,
+    "passed": 51,
+    "exit_code": 1,
+    "decision": "continue"
+  },
+  "observacion": "El primer turno no ejecutó Stop. En el segundo intento de cierre, sin pytest manual, el hook creó la evidencia y agy continuó con una propuesta de corrección. No se atribuye una causa confirmada a la primera omisión."
+}

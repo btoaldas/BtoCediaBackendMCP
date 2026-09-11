@@ -1,0 +1,516 @@
+{
+  "version": 1,
+  "tipo": "QA numérico post-fix independiente y acotado",
+  "ejecucion_utc": "2026-09-11T02:32:48.559251+00:00",
+  "alcance": "Seis sondas anteriores más los once casos del script existente; no suite completa ni búsqueda ampliada.",
+  "cwd_relativo": ".tmp/p04-revision-numerica/postfix-fuentes-v1",
+  "python": "Intérprete del entorno canónico; código importado exclusivamente desde la copia temporal mediante PYTHONPATH.",
+  "timeout_segundos": 2,
+  "sin_red": true,
+  "sin_bytecode": true,
+  "fuentes_antes": {
+    "s4/mi-proyecto-speckit/src/temperatura/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "s4/mi-proyecto-speckit/src/temperatura/__main__.py": "c387ad541f08ff4aec7c60b37893e3038d8486598d74330a98d36878f00b0fad",
+    "s4/mi-proyecto-speckit/src/temperatura/cli.py": "52d21395dc45cb6f073577ca28fe35c9c6e1b9ea0381ef8fd4d61a44bf62ab08",
+    "s4/mi-proyecto-speckit/src/temperatura/dominio.py": "7d7e43c456c5403e0d4bb61daf238cbe1ec01b39f8d26577cd15055bf5f0280b",
+    "s4/mi-proyecto-speckit/specs/001-conversor-temperatura/spec.md": "f2f2f56926ca84b57bf0fec395fec1404229d962e8d83620f10f442648bb114b",
+    "s4/mi-proyecto-speckit/specs/001-conversor-temperatura/contracts/cli-contract.md": "9bf5d428ca6ba0340b1e3c4cc0a16805326b72f037413287fb55248f7d5dd174"
+  },
+  "fuentes_despues": {
+    "s4/mi-proyecto-speckit/src/temperatura/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "s4/mi-proyecto-speckit/src/temperatura/__main__.py": "c387ad541f08ff4aec7c60b37893e3038d8486598d74330a98d36878f00b0fad",
+    "s4/mi-proyecto-speckit/src/temperatura/cli.py": "52d21395dc45cb6f073577ca28fe35c9c6e1b9ea0381ef8fd4d61a44bf62ab08",
+    "s4/mi-proyecto-speckit/src/temperatura/dominio.py": "7d7e43c456c5403e0d4bb61daf238cbe1ec01b39f8d26577cd15055bf5f0280b",
+    "s4/mi-proyecto-speckit/specs/001-conversor-temperatura/spec.md": "f2f2f56926ca84b57bf0fec395fec1404229d962e8d83620f10f442648bb114b",
+    "s4/mi-proyecto-speckit/specs/001-conversor-temperatura/contracts/cli-contract.md": "9bf5d428ca6ba0340b1e3c4cc0a16805326b72f037413287fb55248f7d5dd174"
+  },
+  "fuentes_copia_despues": {
+    "src/temperatura/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/temperatura/__main__.py": "c387ad541f08ff4aec7c60b37893e3038d8486598d74330a98d36878f00b0fad",
+    "src/temperatura/cli.py": "52d21395dc45cb6f073577ca28fe35c9c6e1b9ea0381ef8fd4d61a44bf62ab08",
+    "src/temperatura/dominio.py": "7d7e43c456c5403e0d4bb61daf238cbe1ec01b39f8d26577cd15055bf5f0280b",
+    "specs/001-conversor-temperatura/spec.md": "f2f2f56926ca84b57bf0fec395fec1404229d962e8d83620f10f442648bb114b",
+    "specs/001-conversor-temperatura/contracts/cli-contract.md": "9bf5d428ca6ba0340b1e3c4cc0a16805326b72f037413287fb55248f7d5dd174"
+  },
+  "fuentes_estables": true,
+  "script_once_casos": {
+    "ruta": "evidencia/p03-p04/verificar_estado_final.py",
+    "sha256": "80c8fa23475209ea17b4558e1d8ed5bed4f925eb5bd743bb62f89335c175556b"
+  },
+  "extraccion_once_casos": "Solo ast.literal_eval de la lista cases; el script del worker no se ejecutó ni modificó.",
+  "script_revisor_sha256": "13555f374a72110dbe41209c3dd8c7f80561f5dafa9de1fb76ad0b3b12bcb137",
+  "oracle": {
+    "entrada": "1.0027777777777777777777777777",
+    "formula": "T*9/5+32",
+    "metodos": [
+      "fractions.Fraction exacta",
+      "decimal.Decimal con precision 80"
+    ],
+    "numerador": 1690249999999999999999999999993,
+    "denominador": 50000000000000000000000000000,
+    "valor_decimal": "33.80499999999999999999999999986",
+    "residuo_menor_que_medio": true,
+    "centavos_half_up": 3380,
+    "salida_esperada": "33.80 F\n",
+    "ambos_oraculos_coinciden": true
+  },
+  "resultados": [
+    {
+      "exit_code": 0,
+      "stdout": "33.80 F\n",
+      "stderr": "",
+      "timeout": false,
+      "id": "half_up_pre_empate",
+      "grupo": "seis_sondas_previas",
+      "args": [
+        "1.0027777777777777777777777777",
+        "C",
+        "F"
+      ],
+      "esperado_exit": 0,
+      "esperado_stdout": "33.80 F\n",
+      "segundos": 0.051964,
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "temperatura",
+        "1.0027777777777777777777777777",
+        "C",
+        "F"
+      ],
+      "cumple": true
+    },
+    {
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "Error: La temperatura -273.15 C está por debajo del cero absoluto (-273.15 C).\n",
+      "timeout": false,
+      "id": "bajo_limite_c_preciso",
+      "grupo": "seis_sondas_previas",
+      "args": [
+        "-273.1500000000000000000000001",
+        "C",
+        "K"
+      ],
+      "esperado_exit": 2,
+      "esperado_stdout": "",
+      "segundos": 0.04638,
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "temperatura",
+        "-273.1500000000000000000000001",
+        "C",
+        "K"
+      ],
+      "cumple": true
+    },
+    {
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "Error: La temperatura -459.67 F está por debajo del cero absoluto (-459.67 F).\n",
+      "timeout": false,
+      "id": "bajo_limite_f_preciso",
+      "grupo": "seis_sondas_previas",
+      "args": [
+        "-459.6700000000000000000000001",
+        "F",
+        "K"
+      ],
+      "esperado_exit": 2,
+      "esperado_stdout": "",
+      "segundos": 0.044876,
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "temperatura",
+        "-459.6700000000000000000000001",
+        "F",
+        "K"
+      ],
+      "cumple": true
+    },
+    {
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "Error: La temperatura -0.00 K está por debajo del cero absoluto (0.00 K).\n",
+      "timeout": false,
+      "id": "kelvin_negativo_exponente_minimo",
+      "grupo": "seis_sondas_previas",
+      "args": [
+        "-1e-1000000",
+        "K",
+        "C"
+      ],
+      "esperado_exit": 2,
+      "esperado_stdout": "",
+      "segundos": 0.045806,
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "temperatura",
+        "-1e-1000000",
+        "K",
+        "C"
+      ],
+      "cumple": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "0.00 K\n",
+      "stderr": "",
+      "timeout": false,
+      "id": "kelvin_positivo_exponente_minimo",
+      "grupo": "seis_sondas_previas",
+      "args": [
+        "1e-1000000",
+        "K",
+        "K"
+      ],
+      "esperado_exit": 0,
+      "esperado_stdout": "0.00 K\n",
+      "segundos": 0.046039,
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "temperatura",
+        "1e-1000000",
+        "K",
+        "K"
+      ],
+      "cumple": true
+    },
+    {
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "Error: La longitud del valor numérico excede el límite permitido de 32 caracteres.\n",
+      "timeout": false,
+      "id": "longitud_bruta_33",
+      "grupo": "seis_sondas_previas",
+      "args": [
+        "               1                 ",
+        "C",
+        "F"
+      ],
+      "esperado_exit": 2,
+      "esperado_stdout": "",
+      "segundos": 0.045345,
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "temperatura",
+        "               1                 ",
+        "C",
+        "F"
+      ],
+      "cumple": true
+    },
+    {
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "Error: El valor '1e9999999' excede la magnitud máxima permitida (1e12).\n",
+      "timeout": false,
+      "id": "caso_existente_01",
+      "grupo": "once_casos_existentes",
+      "args": [
+        "1e9999999",
+        "C",
+        "F"
+      ],
+      "esperado_exit": 2,
+      "esperado_stdout": "",
+      "segundos": 0.045923,
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "temperatura",
+        "1e9999999",
+        "C",
+        "F"
+      ],
+      "cumple": true
+    },
+    {
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "Error: El valor '-1e9999999' excede la magnitud máxima permitida (1e12).\n",
+      "timeout": false,
+      "id": "caso_existente_02",
+      "grupo": "once_casos_existentes",
+      "args": [
+        "-1e9999999",
+        "C",
+        "F"
+      ],
+      "esperado_exit": 2,
+      "esperado_stdout": "",
+      "segundos": 0.049437,
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "temperatura",
+        "-1e9999999",
+        "C",
+        "F"
+      ],
+      "cumple": true
+    },
+    {
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "Error: La longitud del valor numérico excede el límite permitido de 32 caracteres.\n",
+      "timeout": false,
+      "id": "caso_existente_03",
+      "grupo": "once_casos_existentes",
+      "args": [
+        "1000000000000.0000000000000000001",
+        "C",
+        "F"
+      ],
+      "esperado_exit": 2,
+      "esperado_stdout": "",
+      "segundos": 0.051689,
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "temperatura",
+        "1000000000000.0000000000000000001",
+        "C",
+        "F"
+      ],
+      "cumple": true
+    },
+    {
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "Error: Los valores literales 'nan' e 'inf' no están permitidos.\n",
+      "timeout": false,
+      "id": "caso_existente_04",
+      "grupo": "once_casos_existentes",
+      "args": [
+        "sNaN",
+        "C",
+        "F"
+      ],
+      "esperado_exit": 2,
+      "esperado_stdout": "",
+      "segundos": 0.045825,
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "temperatura",
+        "sNaN",
+        "C",
+        "F"
+      ],
+      "cumple": true
+    },
+    {
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "Error: Los valores literales 'nan' e 'inf' no están permitidos.\n",
+      "timeout": false,
+      "id": "caso_existente_05",
+      "grupo": "once_casos_existentes",
+      "args": [
+        "NaN12",
+        "C",
+        "F"
+      ],
+      "esperado_exit": 2,
+      "esperado_stdout": "",
+      "segundos": 0.045644,
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "temperatura",
+        "NaN12",
+        "C",
+        "F"
+      ],
+      "cumple": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "1800000000032.00 F\n",
+      "stderr": "",
+      "timeout": false,
+      "id": "caso_existente_06",
+      "grupo": "once_casos_existentes",
+      "args": [
+        "1000000000000",
+        "C",
+        "F"
+      ],
+      "esperado_exit": 0,
+      "esperado_stdout": "1800000000032.00 F\n",
+      "segundos": 0.045773,
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "temperatura",
+        "1000000000000",
+        "C",
+        "F"
+      ],
+      "cumple": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "0.00 K\n",
+      "stderr": "",
+      "timeout": false,
+      "id": "caso_existente_07",
+      "grupo": "once_casos_existentes",
+      "args": [
+        "-273.15",
+        "C",
+        "K"
+      ],
+      "esperado_exit": 0,
+      "esperado_stdout": "0.00 K\n",
+      "segundos": 0.054275,
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "temperatura",
+        "-273.15",
+        "C",
+        "K"
+      ],
+      "cumple": true
+    },
+    {
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "Error: La temperatura -459.67 F está por debajo del cero absoluto (-459.67 F).\n",
+      "timeout": false,
+      "id": "caso_existente_08",
+      "grupo": "once_casos_existentes",
+      "args": [
+        "-459.671",
+        "F",
+        "K"
+      ],
+      "esperado_exit": 2,
+      "esperado_stdout": "",
+      "segundos": 0.051678,
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "temperatura",
+        "-459.671",
+        "F",
+        "K"
+      ],
+      "cumple": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "0.00 C\n",
+      "stderr": "",
+      "timeout": false,
+      "id": "caso_existente_09",
+      "grupo": "once_casos_existentes",
+      "args": [
+        "-0.004",
+        "C",
+        "C"
+      ],
+      "esperado_exit": 0,
+      "esperado_stdout": "0.00 C\n",
+      "segundos": 0.051934,
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "temperatura",
+        "-0.004",
+        "C",
+        "C"
+      ],
+      "cumple": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "25.56 C\n",
+      "stderr": "",
+      "timeout": false,
+      "id": "caso_existente_10",
+      "grupo": "once_casos_existentes",
+      "args": [
+        "25.555",
+        "C",
+        "C"
+      ],
+      "esperado_exit": 0,
+      "esperado_stdout": "25.56 C\n",
+      "segundos": 0.054978,
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "temperatura",
+        "25.555",
+        "C",
+        "C"
+      ],
+      "cumple": true
+    },
+    {
+      "exit_code": 0,
+      "stdout": "-148.00 F\n",
+      "stderr": "",
+      "timeout": false,
+      "id": "caso_existente_11",
+      "grupo": "once_casos_existentes",
+      "args": [
+        "-1e2",
+        "C",
+        "F"
+      ],
+      "esperado_exit": 0,
+      "esperado_stdout": "-148.00 F\n",
+      "segundos": 0.056923,
+      "command": [
+        "python",
+        "-B",
+        "-m",
+        "temperatura",
+        "-1e2",
+        "C",
+        "F"
+      ],
+      "cumple": true
+    }
+  ],
+  "pasaron": 17,
+  "total": 17,
+  "grupos": {
+    "seis_sondas_previas": {
+      "pasaron": 6,
+      "total": 6
+    },
+    "once_casos_existentes": {
+      "pasaron": 11,
+      "total": 11
+    }
+  },
+  "limite": "Acredita únicamente estos 17 procesos sobre estos hashes, no corrección universal, suite65, hook Stop, seguridad completa ni aceptación académica.",
+  "fuente_resultados_local": ".tmp/p04-revision-numerica/postfix-resultados-v1.json",
+  "nota_fuente_local": "El registro y la copia temporal quedan conservados localmente; su referencia no implica publicación."
+}

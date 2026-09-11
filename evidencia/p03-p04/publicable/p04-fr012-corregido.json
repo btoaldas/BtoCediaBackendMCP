@@ -1,0 +1,216 @@
+{
+  "tipo": "Registro de ejecución real independiente después de corregir FR-012",
+  "fuente": "evidencia/p03-p04/verificacion-final/20260911T014753.368247Z/resultados.json",
+  "sha256_fuente": "954131a3f294aa28580ec0153ea73c7ea23b3444d7d2576fbb9d8e9f70fe7984",
+  "resultados": [
+    {
+      "command": [
+        "uv",
+        "run",
+        "--frozen",
+        "python",
+        "-m",
+        "temperatura",
+        "1e9999999",
+        "C",
+        "F"
+      ],
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "Error: El valor '1e9999999' excede la magnitud máxima permitida (1e12).\n",
+      "esperado_exit": 2,
+      "esperado_stdout": "",
+      "ok": true
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "--frozen",
+        "python",
+        "-m",
+        "temperatura",
+        "-1e9999999",
+        "C",
+        "F"
+      ],
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "Error: El valor '-1e9999999' excede la magnitud máxima permitida (1e12).\n",
+      "esperado_exit": 2,
+      "esperado_stdout": "",
+      "ok": true
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "--frozen",
+        "python",
+        "-m",
+        "temperatura",
+        "1000000000000.0000000000000000001",
+        "C",
+        "F"
+      ],
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "Error: La longitud del valor numérico excede el límite permitido de 32 caracteres.\n",
+      "esperado_exit": 2,
+      "esperado_stdout": "",
+      "ok": true
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "--frozen",
+        "python",
+        "-m",
+        "temperatura",
+        "sNaN",
+        "C",
+        "F"
+      ],
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "Error: Los valores literales 'nan' e 'inf' no están permitidos.\n",
+      "esperado_exit": 2,
+      "esperado_stdout": "",
+      "ok": true
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "--frozen",
+        "python",
+        "-m",
+        "temperatura",
+        "NaN12",
+        "C",
+        "F"
+      ],
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "Error: Los valores literales 'nan' e 'inf' no están permitidos.\n",
+      "esperado_exit": 2,
+      "esperado_stdout": "",
+      "ok": true
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "--frozen",
+        "python",
+        "-m",
+        "temperatura",
+        "1000000000000",
+        "C",
+        "F"
+      ],
+      "exit_code": 0,
+      "stdout": "1800000000032.00 F\n",
+      "stderr": "",
+      "esperado_exit": 0,
+      "esperado_stdout": "1800000000032.00 F\n",
+      "ok": true
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "--frozen",
+        "python",
+        "-m",
+        "temperatura",
+        "-273.15",
+        "C",
+        "K"
+      ],
+      "exit_code": 0,
+      "stdout": "0.00 K\n",
+      "stderr": "",
+      "esperado_exit": 0,
+      "esperado_stdout": "0.00 K\n",
+      "ok": true
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "--frozen",
+        "python",
+        "-m",
+        "temperatura",
+        "-459.671",
+        "F",
+        "K"
+      ],
+      "exit_code": 2,
+      "stdout": "",
+      "stderr": "Error: La temperatura -459.67 F está por debajo del cero absoluto (-459.67 F).\n",
+      "esperado_exit": 2,
+      "esperado_stdout": "",
+      "ok": true
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "--frozen",
+        "python",
+        "-m",
+        "temperatura",
+        "-0.004",
+        "C",
+        "C"
+      ],
+      "exit_code": 0,
+      "stdout": "0.00 C\n",
+      "stderr": "",
+      "esperado_exit": 0,
+      "esperado_stdout": "0.00 C\n",
+      "ok": true
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "--frozen",
+        "python",
+        "-m",
+        "temperatura",
+        "25.555",
+        "C",
+        "C"
+      ],
+      "exit_code": 0,
+      "stdout": "25.56 C\n",
+      "stderr": "",
+      "esperado_exit": 0,
+      "esperado_stdout": "25.56 C\n",
+      "ok": true
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "--frozen",
+        "python",
+        "-m",
+        "temperatura",
+        "-1e2",
+        "C",
+        "F"
+      ],
+      "exit_code": 0,
+      "stdout": "-148.00 F\n",
+      "stderr": "",
+      "esperado_exit": 0,
+      "esperado_stdout": "-148.00 F\n",
+      "ok": true
+    }
+  ]
+}

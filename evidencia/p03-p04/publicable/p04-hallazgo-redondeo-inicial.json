@@ -1,0 +1,49 @@
+{
+  "tipo": "Prueba real de doble redondeo con oráculo racional independiente",
+  "fuente": "evidencia/p03-p04/qa-redondeo/20260911T015453.446522Z/resultados.json",
+  "sha256_fuente": "be551e5bab6cf1c8949501df90b88b77b2643404abfed6690c5c3e336669aa8d",
+  "resultados": [
+    {
+      "command": [
+        "uv",
+        "run",
+        "python",
+        "-m",
+        "temperatura",
+        "1.0027777777777777777777777777",
+        "C",
+        "F"
+      ],
+      "valor_exacto": "33.80499999999999999999999999986",
+      "racional": {
+        "numerador": 1690249999999999999999999999993,
+        "denominador": 50000000000000000000000000000
+      },
+      "esperado": "33.80 F\n",
+      "stdout": "33.81 F\n",
+      "stderr": "",
+      "exit_code": 0
+    },
+    {
+      "command": [
+        "uv",
+        "run",
+        "python",
+        "-m",
+        "temperatura",
+        "1.0027777777777777777777777778",
+        "C",
+        "F"
+      ],
+      "valor_exacto": "33.80500000000000000000000000004",
+      "racional": {
+        "numerador": 845125000000000000000000000001,
+        "denominador": 25000000000000000000000000000
+      },
+      "esperado": "33.81 F\n",
+      "stdout": "33.81 F\n",
+      "stderr": "",
+      "exit_code": 0
+    }
+  ]
+}

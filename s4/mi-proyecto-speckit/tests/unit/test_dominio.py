@@ -127,3 +127,35 @@ def test_edge_corte_exacto_fahrenheit_cero_absoluto():
     # Inferior por un milésimo: -459.671 F rechazado
     with pytest.raises(ErrorCeroAbsoluto):
         convertir(Decimal("-459.671"), Escala.FAHRENHEIT, Escala.CELSIUS)
+
+
+# --- Pruebas de Regresión FR-012 y FR-009 (Magnitudes Extremas y Finitud) ---
+
+
+def test_fr012_magnitud_extrema_overflow_dominio():
+    """Verifica que magnitudes extremas como 1e9999999 no provocan decimal.Overflow no controlado."""
+    with pytest.raises(ErrorEntradaInvalida):
+        LecturaTemperatura(valor=Decimal("1e9999999"), escala=Escala.CELSIUS)
+    with pytest.raises(ErrorEntradaInvalida):
+        LecturaTemperatura(valor=Decimal("-1e9999999"), escala=Escala.CELSIUS)
+
+
+def test_fr009_decimal_no_finito_snan_dominio():
+    """Verifica que un Decimal no finito (sNaN) active el rechazo por no finito."""
+    with pytest.raises(ErrorEntradaInvalida):
+        LecturaTemperatura(valor=Decimal("sNaN"), escala=Escala.CELSIUS)
+
+
+# --- Pruebas de Regresión FR-008: Evitar Doble Redondeo en Precisión Decimal ---
+
+
+def test_fr008_precision_evitar_doble_redondeo_umbral_inferior():
+    """Entrada con 28 decimales cuya conversión exacta es 33.804999... debe redondear a 33.80 F, no 33.81 F."""
+    res = convertir(Decimal("1.0027777777777777777777777777"), Escala.CELSIUS, Escala.FAHRENHEIT)
+    assert res.formatear() == "33.80 F"
+
+
+def test_fr008_precision_umbral_superior():
+    """Entrada con 28 decimales cuya conversión exacta es 33.805000... debe redondear a 33.81 F."""
+    res = convertir(Decimal("1.0027777777777777777777777778"), Escala.CELSIUS, Escala.FAHRENHEIT)
+    assert res.formatear() == "33.81 F"

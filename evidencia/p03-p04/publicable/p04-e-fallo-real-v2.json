@@ -1,0 +1,7 @@
+{
+  "correccion": "El encabezado derivado v1 abreviaba el comando; v2 incluye literalmente --tb=short presente en el hook ejecutado. El cuerpo de pytest permanece idéntico.",
+  "v1_conservada": "p04-e-fallo-real.log",
+  "v1_sha256": "41bcc1eac9514c3717df8ef19015d28faf9824441883930f9044fb5148866a6a",
+  "v2": "p04-e-fallo-real-v2.log",
+  "v2_sha256": "00b577dfd7df5b533feac062be853b2a7a43b93d8c75d980a707af2d0281eb93"
+}

@@ -1,0 +1,67 @@
+{
+  "alcance": "Pasada nativa tester-agent-native en E con JSON nuevos por capa; fuentes/tests sin cambios",
+  "archivos": {
+    "unit": {
+      "resumen": {
+        "passed": 23,
+        "total": 23,
+        "collected": 23
+      },
+      "exitcode": 0,
+      "created": 1789094262.1335711,
+      "duracion": 0.020644187927246094,
+      "ruta": "s4/escenarios/bloque-e/.qa-runs/verificacion-tester-final/unit.json",
+      "sha256": "a7d093db268fccd2eb130daee4496d67caa5205928567f0d190188d07521de5b"
+    },
+    "integration": {
+      "resumen": {
+        "passed": 31,
+        "total": 31,
+        "collected": 31
+      },
+      "exitcode": 0,
+      "created": 1789094263.7763221,
+      "duracion": 0.030663251876831055,
+      "ruta": "s4/escenarios/bloque-e/.qa-runs/verificacion-tester-final/integration.json",
+      "sha256": "c23d617d21b84029cd2f3d1c636ca454849cd99c16eceffdae4bfb3dca4b552b"
+    },
+    "e2e": {
+      "resumen": {
+        "passed": 11,
+        "total": 11,
+        "collected": 11
+      },
+      "exitcode": 0,
+      "created": 1789094266.003076,
+      "duracion": 0.4830892086029053,
+      "ruta": "s4/escenarios/bloque-e/.qa-runs/verificacion-tester-final/e2e.json",
+      "sha256": "0db4e5c950111e2fe363a05e46ad0b09f145b613e7147c344914b00c0db18747"
+    },
+    "all": {
+      "resumen": {
+        "passed": 65,
+        "total": 65,
+        "collected": 65
+      },
+      "exitcode": 0,
+      "created": 1789094270.8906581,
+      "duracion": 0.6699912548065186,
+      "ruta": "s4/escenarios/bloque-e/.qa-runs/verificacion-tester-final/all.json",
+      "sha256": "8e2ddb632830cfd8871757f62f7dd0d94337636c7e613ebfc83df26c09fe0939"
+    }
+  },
+  "cobertura": {
+    "totals": {
+      "covered_lines": 116,
+      "num_statements": 123,
+      "percent_covered": 94.3089430894309,
+      "percent_covered_display": "94",
+      "missing_lines": 7,
+      "excluded_lines": 0,
+      "percent_statements_covered": 94.3089430894309,
+      "percent_statements_covered_display": "94"
+    },
+    "ruta": "s4/escenarios/bloque-e/.qa-runs/verificacion-tester-final/coverage.json",
+    "sha256": "f73abe89d8ced86acc43a9e588bc55cc41aaee613af88dbcd1821db9f506f7ba"
+  }
+}

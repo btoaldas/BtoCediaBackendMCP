@@ -1,0 +1,28 @@
+{
+  "veredicto": "APROBADO",
+  "tests": {
+    "pasaron": 65,
+    "fallaron": 0,
+    "errores": 0,
+    "total": 65,
+    "exit_code": 0,
+    "cobertura_pct": 94.3,
+    "evidencia": ".qa-runs/20260911T023441.858341Z"
+  },
+  "secretos": [],
+  "higiene": {
+    "env_example": true,
+    "env_existe": false,
+    "env_tracked": false,
+    "gitignore_ok": true
+  },
+  "alcance": "Escenario E, reporte emitido mediante ejecución real de report-agent-native en Antigravity CLI",
+  "fuentes": {
+    "s4/escenarios/bloque-e/reporte-qa.html": "5a5c1ba5c94b521e348e9b525d0e8a1a009d7d0653e387f5a854a0b0c1349f18",
+    "s4/escenarios/bloque-e/hallazgos-seguridad.md": "cf248f649bf979125c2047f112caade530f31ad164e2ccaeb4aed8b0b42c235d",
+    "s4/escenarios/bloque-e/.qa-runs/20260911T023441.858341Z/resumen.json": "e27a020dba839eaa7943baa9bd162bf17646255908a797169afb6d307d8b2314",
+    "s4/escenarios/bloque-e/.qa-runs/20260911T023441.858341Z/tests.json": "2e8760524ae79d85ba4c8058e4dbaf5d8470a1923d6bd25be5950ab9511d8759",
+    "s4/escenarios/bloque-e/.qa-runs/20260911T023441.858341Z/coverage.json": "db6481c1551fced148b3746d1fd9da2acd4f12fa6a80427e228a881771db8284",
+    "s4/escenarios/bloque-e/.qa-runs/20260911T023441.858341Z/pytest.log": "69248582defbf0876a5ab50e2a9393f854c69c490cd3fbfbced1487afb0ba78c"
+  }
+}

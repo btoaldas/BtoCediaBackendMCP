@@ -1,0 +1,56 @@
+{
+  "alcance": "Código canónico después de las correcciones numéricas y de seguridad, verificación externa al agente de implementación",
+  "fuente": "evidencia/p03-p04/entorno-fresco/20260911T023153.961018Z/resultados.json",
+  "fuente_sha256": "5c7f15f8bca01fb8fa2ce84c3781fc3d8c8bf057700720452723ef9e2bc0d611",
+  "comprobaciones": [
+    {
+      "comando": [
+        "uv",
+        "sync",
+        "--frozen"
+      ],
+      "exit_code": 0,
+      "stdout": ""
+    },
+    {
+      "comando": [
+        "uv",
+        "run",
+        "--frozen",
+        "python",
+        "-m",
+        "temperatura",
+        "0",
+        "C",
+        "F"
+      ],
+      "exit_code": 0,
+      "stdout": "32.00 F\n"
+    },
+    {
+      "comando": [
+        "uv",
+        "run",
+        "--frozen",
+        "pytest",
+        "tests/",
+        "-q"
+      ],
+      "exit_code": 0,
+      "stdout": ".................................................................        [100%]\n65 passed in 0.82s\n"
+    }
+  ],
+  "suite": {
+    "passed": 65,
+    "failed": 0,
+    "unit": 23,
+    "integration": 31,
+    "e2e": 11
+  },
+  "cobertura": {
+    "lineas_cubiertas": 116,
+    "lineas_medidas": 123,
+    "pct": 94.3089430894309,
+    "nota": "Comprobada además con pytest --cov=src --cov-report=term-missing en la base; los procesos e2e prueban __main__, pero el colector no agrega cobertura de subprocess."
+  }
+}

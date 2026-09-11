@@ -92,3 +92,39 @@ def test_us3_e2e_unidad_invalida():
     )
     assert result.returncode == 2
     assert "no válida" in result.stderr
+
+
+# --- Pruebas de Regresión FR-012 E2E ---
+
+
+def test_fr012_e2e_magnitud_extrema_overflow():
+    """Verifica en subproceso real que 1e9999999 concluye con returncode 2 sin Traceback."""
+    result = subprocess.run(
+        [sys.executable, "-m", "temperatura", "1e9999999", "C", "F"],
+        capture_output=True,
+        text=True,
+    )
+    assert result.returncode == 2
+    assert "Traceback" not in result.stderr
+    assert "magnitud máxima permitida" in result.stderr
+
+
+# --- Pruebas de Regresión FR-008 E2E: Doble Redondeo ---
+
+
+def test_fr008_e2e_evitar_doble_redondeo():
+    result1 = subprocess.run(
+        [sys.executable, "-m", "temperatura", "1.0027777777777777777777777777", "C", "F"],
+        capture_output=True,
+        text=True,
+    )
+    assert result1.returncode == 0
+    assert result1.stdout.strip() == "33.80 F"
+
+    result2 = subprocess.run(
+        [sys.executable, "-m", "temperatura", "1.0027777777777777777777777778", "C", "F"],
+        capture_output=True,
+        text=True,
+    )
+    assert result2.returncode == 0
+    assert result2.stdout.strip() == "33.81 F"

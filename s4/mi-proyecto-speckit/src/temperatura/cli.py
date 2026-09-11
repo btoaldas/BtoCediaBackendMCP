@@ -38,16 +38,16 @@ def main(argv: list[str] | None = None) -> int:
     # 5. Conversión a Decimal y verificación de número válido
     try:
         valor = Decimal(valor_limpio)
-    except (InvalidOperation, Exception):
+    except InvalidOperation:
         sys.stderr.write(f"Error: El valor '{valor_limpio}' no es un número válido.\n")
         return 2
 
-    # 6. Finitud y magnitud
+    # 6. Finitud y magnitud (usando copy_abs() para evitar Overflow por contexto)
     if not valor.is_finite():
         sys.stderr.write("Error: Los valores literales 'nan' e 'inf' no están permitidos.\n")
         return 2
 
-    if abs(valor) > Decimal("1e12"):
+    if valor.copy_abs() > Decimal("1e12"):
         sys.stderr.write(f"Error: El valor '{valor_limpio}' excede la magnitud máxima permitida (1e12).\n")
         return 2
 
@@ -60,7 +60,4 @@ def main(argv: list[str] | None = None) -> int:
         return 0
     except ErrorTemperatura as err:
         sys.stderr.write(f"{err}\n")
-        return 2
-    except Exception as err:
-        sys.stderr.write(f"Error: {err}\n")
         return 2

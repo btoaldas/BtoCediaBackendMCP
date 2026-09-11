@@ -1,7 +1,7 @@
 """Módulo de dominio para el conversor de temperatura."""
 
 from dataclasses import dataclass
-from decimal import Decimal, ROUND_HALF_UP
+from decimal import Decimal, ROUND_HALF_UP, localcontext
 from enum import Enum
 
 
@@ -62,7 +62,7 @@ class LecturaTemperatura:
     def __post_init__(self):
         if not self.valor.is_finite():
             raise ErrorEntradaInvalida("Error: Los valores literales 'nan' e 'inf' no están permitidos.")
-        if abs(self.valor) > Decimal("1e12"):
+        if self.valor.copy_abs() > Decimal("1e12"):
             raise ErrorEntradaInvalida(f"Error: El valor '{self.valor}' excede la magnitud máxima permitida (1e12).")
         if self.valor < self.escala.cero_absoluto:
             raise ErrorCeroAbsoluto(self.valor, self.escala)
@@ -78,38 +78,42 @@ class ResultadoConversion:
     escala_destino: Escala
 
     def formatear(self) -> str:
-        """Formatea el resultado a dos decimales con redondeo ROUND_HALF_UP."""
-        cuantizado = self.valor_convertido.quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
-        if cuantizado.is_zero():
-            cuantizado = Decimal("0.00")
-        return f"{cuantizado:.2f} {self.escala_destino.value}"
+        """Formatea el resultado a dos decimales con redondeo ROUND_HALF_UP usando precisión extendida."""
+        with localcontext() as ctx:
+            ctx.prec = 80
+            cuantizado = self.valor_convertido.quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
+            if cuantizado.is_zero():
+                cuantizado = Decimal("0.00")
+            return f"{cuantizado:.2f} {self.escala_destino.value}"
 
 
 def convertir(
     valor: Decimal, escala_origen: Escala, escala_destino: Escala
 ) -> ResultadoConversion:
-    """Convierte una temperatura entre dos escalas usando aritmética Decimal."""
+    """Convierte una temperatura entre dos escalas usando aritmética Decimal de alta precisión local."""
     # Validación termodinámica y de magnitud
     LecturaTemperatura(valor=valor, escala=escala_origen)
 
-    if escala_origen == escala_destino:
-        valor_destino = valor
-    elif escala_origen == Escala.CELSIUS and escala_destino == Escala.FAHRENHEIT:
-        valor_destino = (valor * Decimal("9") / Decimal("5")) + Decimal("32")
-    elif escala_origen == Escala.FAHRENHEIT and escala_destino == Escala.CELSIUS:
-        valor_destino = (valor - Decimal("32")) * Decimal("5") / Decimal("9")
-    elif escala_origen == Escala.CELSIUS and escala_destino == Escala.KELVIN:
-        valor_destino = valor + Decimal("273.15")
-    elif escala_origen == Escala.KELVIN and escala_destino == Escala.CELSIUS:
-        valor_destino = valor - Decimal("273.15")
-    elif escala_origen == Escala.FAHRENHEIT and escala_destino == Escala.KELVIN:
-        celsius = (valor - Decimal("32")) * Decimal("5") / Decimal("9")
-        valor_destino = celsius + Decimal("273.15")
-    elif escala_origen == Escala.KELVIN and escala_destino == Escala.FAHRENHEIT:
-        celsius = valor - Decimal("273.15")
-        valor_destino = (celsius * Decimal("9") / Decimal("5")) + Decimal("32")
-    else:
-        raise NotImplementedError(f"Conversión no implementada: {escala_origen} -> {escala_destino}")
+    with localcontext() as ctx:
+        ctx.prec = 80
+        if escala_origen == escala_destino:
+            valor_destino = valor
+        elif escala_origen == Escala.CELSIUS and escala_destino == Escala.FAHRENHEIT:
+            valor_destino = (valor * Decimal("9") / Decimal("5")) + Decimal("32")
+        elif escala_origen == Escala.FAHRENHEIT and escala_destino == Escala.CELSIUS:
+            valor_destino = (valor - Decimal("32")) * Decimal("5") / Decimal("9")
+        elif escala_origen == Escala.CELSIUS and escala_destino == Escala.KELVIN:
+            valor_destino = valor + Decimal("273.15")
+        elif escala_origen == Escala.KELVIN and escala_destino == Escala.CELSIUS:
+            valor_destino = valor - Decimal("273.15")
+        elif escala_origen == Escala.FAHRENHEIT and escala_destino == Escala.KELVIN:
+            celsius = (valor - Decimal("32")) * Decimal("5") / Decimal("9")
+            valor_destino = celsius + Decimal("273.15")
+        elif escala_origen == Escala.KELVIN and escala_destino == Escala.FAHRENHEIT:
+            celsius = valor - Decimal("273.15")
+            valor_destino = (celsius * Decimal("9") / Decimal("5")) + Decimal("32")
+        else:
+            raise NotImplementedError(f"Conversión no implementada: {escala_origen} -> {escala_destino}")
 
     return ResultadoConversion(
         valor_original=valor,
