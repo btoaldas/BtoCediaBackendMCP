@@ -45,12 +45,14 @@ AVISOS_ESTADO = {
     "entrega_con_observaciones": "INFORME DE ENTREGA CON OBSERVACIONES",
 }
 TIPOS = {"captura", "registro_renderizado", "simulacion"}
-PRACTICAS_CON_REPOSITORIO = {1, 3, 4}
+PRACTICAS_CON_REPOSITORIO = {1, 3, 4, 8, "integrador"}
 EVIDENCIAS_OBLIGATORIAS = {
     1: {"conversacion_8_turnos", "manejo_429", "repositorio"},
     2: {"cierre"},
     3: {"spec_manual", "flujo_speckit"},
     4: {"hook_bloqueando", "reporte_qa"},
+    8: {"cobertura", "desviacion_corregida"},
+    "integrador": {"rest_en_vivo", "mcp_inspector", "cobertura", "desviacion_corregida"},
 }
 
 
@@ -115,9 +117,18 @@ def cargar(path: Path) -> dict:
     if estado not in ESTADOS:
         raise ValueError("estado debe ser final, borrador, prueba o entrega_con_observaciones")
     datos["estado"] = estado
+    alto = datos.get("alto_imagen", ALTO_IMAGEN)
+    if not isinstance(alto, (int, float)) or not 200 <= alto <= 600:
+        raise ValueError("alto_imagen debe estar entre 200 y 600 puntos")
     practica = datos.get("practica")
-    if not isinstance(practica, dict) or practica.get("numero") not in (1, 2, 3, 4):
-        raise ValueError("practica.numero debe estar entre 1 y 4")
+    if not isinstance(practica, dict):
+        raise ValueError("practica debe ser un objeto")
+    tipo_entrega = practica.get("tipo", "practica")
+    if tipo_entrega == "proyecto_integrador":
+        practica["numero"] = "integrador"
+    elif tipo_entrega != "practica" or practica.get("numero") not in (1, 2, 3, 4, 8):
+        raise ValueError("practica.numero debe ser 1 a 4 u 8, o practica.tipo proyecto_integrador")
+    practica["tipo"] = tipo_entrega
     practica["titulo"] = texto(practica.get("titulo"), "practica.titulo")
     practica["clase"] = texto(practica.get("clase", ""), "practica.clase", opcional=True)
     estudiante = datos.get("estudiante")
@@ -231,6 +242,8 @@ def cargar(path: Path) -> dict:
 
 def subtitulo(d: dict) -> str:
     p = d["practica"]
+    if p["tipo"] == "proyecto_integrador":
+        return f"Proyecto Integrador: {p['titulo']} | {CURSO}"
     clase = f" - Clase {p['clase']}" if p["clase"] else ""
     return f"Práctica {p['numero']}{clase}: {p['titulo']} | {CURSO}"
 
@@ -260,10 +273,10 @@ def parrafos_observaciones(d: dict) -> list[str]:
     ]
 
 
-def dimensiones(path: Path) -> tuple[float, float]:
+def dimensiones(path: Path, alto_maximo: float = ALTO_IMAGEN) -> tuple[float, float]:
     with PILImage.open(path) as im:
         w, h = im.size
-    escala = min(ANCHO / w, ALTO_IMAGEN / h)
+    escala = min(ANCHO / w, alto_maximo / h)
     return w * escala, h * escala
 
 
@@ -319,7 +332,7 @@ def pdf_bytes(d: dict) -> bytes:
         story.append(p("Evidencia fotográfica", "h"))
         story.append(p("Pendiente de incorporar capturas verificadas de las ejecuciones.", "small"))
     for n, e in enumerate(d["evidencias"], 1):
-        w, h = dimensiones(e["_imagen"])
+        w, h = dimensiones(e["_imagen"], d.get("alto_imagen", ALTO_IMAGEN))
         img = Image(str(e["_imagen"]), width=w, height=h)
         img.hAlign = "CENTER"
         heading = [p("Evidencia fotográfica", "h")] if n == 1 else []
@@ -476,7 +489,7 @@ def docx_bytes(d: dict) -> bytes:
         doc.add_paragraph("Pendiente de incorporar capturas verificadas de las ejecuciones.")
     for n, e in enumerate(d["evidencias"], 1):
         doc.add_paragraph(etiqueta_evidencia(e, n), "Caption")
-        w, h = dimensiones(e["_imagen"])
+        w, h = dimensiones(e["_imagen"], d.get("alto_imagen", ALTO_IMAGEN))
         p = doc.add_paragraph()
         p.alignment = WD_ALIGN_PARAGRAPH.CENTER
         p.paragraph_format.keep_with_next = True
@@ -536,7 +549,10 @@ def generar(d: dict, salida: Path) -> dict:
     evidencia = [{"id": e["id"], "tipo": e["tipo"], "imagen": e["_imagen"].name,
                   "fuente": e["_fuente"].name, "sha256_imagen": e["_sha256_imagen"],
                   "sha256_fuente": e["_sha256_fuente"], "verificada": e.get("verificada", False)} for e in d["evidencias"]]
-    nombre = f"Informe-Practica-{d['practica']['numero']:02d}"
+    if d["practica"]["tipo"] == "proyecto_integrador":
+        nombre = "Informe-Proyecto-Integrador"
+    else:
+        nombre = f"Informe-Practica-{d['practica']['numero']:02d}"
     archivos = {nombre + ".pdf": pdf, nombre + ".docx": docx}
     manifiesto = {"version": 1, "estado": d["estado"], "practica": d["practica"]["numero"],
                   "generado": datetime.now(ZoneInfo("America/Guayaquil")).isoformat(),
